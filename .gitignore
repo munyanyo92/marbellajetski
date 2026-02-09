@@ -1,0 +1,30 @@
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Raw source media (too large for git)
+VIDEOS FOTOS WEB/
+
+# Large video files (exceed GitHub 100MB limit — host externally)
+assets/media/racing/*.mp4
+assets/media/videos/*.mp4
+
+# VS Code
+.vscode/
+
+# Backups (not needed in production)
+*.bak
+*.bak.*
+
+# Test files
+test.html
+
+# Node (if added later)
+node_modules/
+npm-debug.log
+
+# Environment files
+.env
+.env.local
