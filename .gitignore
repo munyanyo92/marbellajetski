@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# VS Code
+.vscode/
+
+# Backups (not needed in production)
+*.bak
+*.bak.*
+
+# Test files
+test.html
+
+# Node (if added later)
+node_modules/
+npm-debug.log
+
+# Environment files
+.env
+.env.local

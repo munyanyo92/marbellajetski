@@ -1,0 +1,74 @@
+{
+    "name": "Marbella JetSki - Water Sports Experience",
+    "short_name": "Marbella JetSki",
+    "description": "Premier jet ski hire, luxury boat rentals & water sports on Costa del Sol. Book your Summer 2026 adventure!",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0a1628",
+    "theme_color": "#0ea5e9",
+    "orientation": "portrait-primary",
+    "categories": ["sports", "travel", "entertainment"],
+    "lang": "en",
+    "icons": [
+        {
+            "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌊</text></svg>",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any"
+        },
+        {
+            "src": "https://marbellajetski.com/wp-content/uploads/2021/05/MJS_16_500x500.png",
+            "sizes": "500x500",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "https://marbellajetski.com/wp-content/uploads/2021/05/2021-Yamaha-VXCRUISERHO-EU-Yellow-Action-001-03-1.jpg",
+            "sizes": "1280x720",
+            "type": "image/jpeg",
+            "label": "Jet Ski Experience"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Book Now",
+            "short_name": "Book",
+            "description": "Book your water sports adventure",
+            "url": "/#booking",
+            "icons": [
+                {
+                    "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📅</text></svg>",
+                    "sizes": "96x96"
+                }
+            ]
+        },
+        {
+            "name": "WhatsApp",
+            "short_name": "Chat",
+            "description": "Chat with us on WhatsApp",
+            "url": "https://api.whatsapp.com/send?phone=34655442232",
+            "icons": [
+                {
+                    "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💬</text></svg>",
+                    "sizes": "96x96"
+                }
+            ]
+        },
+        {
+            "name": "Services",
+            "short_name": "Services",
+            "description": "View our water sports services",
+            "url": "/#services",
+            "icons": [
+                {
+                    "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏄</text></svg>",
+                    "sizes": "96x96"
+                }
+            ]
+        }
+    ],
+    "related_applications": [],
+    "prefer_related_applications": false
+}
