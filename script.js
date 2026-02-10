@@ -216,9 +216,8 @@ function initSwiper() {
 /* ========== Gallery Lightbox ========== */
 const galleryImages = [
     'https://marbellajetski.com/wp-content/uploads/2023/05/IMG_0052-scaled.webp',
-    'https://marbellajetski.com/wp-content/uploads/2023/05/DSC_0062-scaled.webp',
-    'https://marbellajetski.com/wp-content/uploads/2025/08/2021-cranchi-endurance-39-power-9670500-20250131064459679-1_LARGE.jpg',
-    'https://marbellajetski.com/wp-content/uploads/2023/05/DSC_0245-scaled.webp',
+    'assets/media/photos/cranchi-39.jpg',
+    'assets/media/photos/azimut-39.jpg',
     'https://marbellajetski.com/wp-content/uploads/2023/05/IMG_3961-scaled.webp',
     'https://marbellajetski.com/wp-content/uploads/2021/07/IMG_6208-scaled.jpg',
     'https://marbellajetski.com/wp-content/uploads/2023/05/IMG_3846-scaled.webp',
@@ -226,7 +225,15 @@ const galleryImages = [
     'https://marbellajetski.com/wp-content/uploads/2023/05/DSC_0031-scaled.webp',
     'assets/media/racing/racing-benalmadena-1.jpg',
     'assets/media/racing/racing-circuit-benidorm.png',
-    'assets/media/racing/promo-racing.jpg'
+    'assets/media/racing/promo-racing.jpg',
+    'assets/media/racing/dani-stiers-race-start.jpg',
+    'assets/media/racing/racing-jetskis-trailers.jpg',
+    'assets/media/photos/blue-jetski.jpg',
+    'assets/media/photos/high-res-jetski.jpg',
+    'assets/media/photos/waterski-action.jpg',
+    'assets/media/photos/catamaran-bali.jpg',
+    'assets/media/photos/rinker-296-alt.jpg',
+    'assets/media/photos/waterski-action-2.jpg'
 ];
 
 let currentImageIndex = 0;
@@ -452,7 +459,7 @@ console.log(`
 %cCosta del Sol's Premier Water Sports Experience
 
 %c✨ Looking for a job? We're always looking for talented people!
-   Contact us at: danistiers@hotmail.com
+   Contact us at: jetskimarbella@gmail.com
 
 %c🏆 Built with passion for Summer 2026
    Owner: Daniel Stiers - Pro Racing Champion

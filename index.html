@@ -91,7 +91,7 @@
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
     <link rel="dns-prefetch" href="https://unpkg.com">
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -140,7 +140,7 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#home" class="nav-logo">
-                <img src="https://marbellajetski.com/wp-content/uploads/2021/05/MJS_16_500x500-removebg-preview.png" alt="Marbella JetSki Logo" class="logo-image" style="height: 45px;">
+                <img src="assets/media/photos/logo-blue.png" alt="Marbella JetSki Logo" class="logo-image" style="height: 65px; border-radius: 50%;">
                 <span class="logo-text">MARBELLA<span class="logo-highlight">JETSKI</span></span>
             </a>
             
@@ -150,6 +150,7 @@
                 <a href="#jetski" class="nav-link">Jet Ski</a>
                 <a href="#watersports" class="nav-link">Water Sports</a>
                 <a href="#boats" class="nav-link">Yachts</a>
+                <a href="about-daniel.html#racing-videos" class="nav-link">Racing</a>
                 <a href="about-daniel.html" class="nav-link">About &amp; Lessons</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
@@ -173,24 +174,21 @@
         </div>
     </nav>
 
-    <!-- Summer Discount Banner -->
-    <div class="summer-banner" data-aos="fade-down">
-        <div class="container">
-            <span class="summer-banner-icon">☀️</span>
-            <div class="summer-banner-text">
-                <strong>Book Before Summer &amp; Save 15%!</strong>
-                <span class="banner-sub">Early bird discount on all jet ski &amp; yacht bookings for June–September 2026</span>
+    <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <!-- Promo Overlay -->
+        <div class="hero-promo-overlay" data-aos="fade-down" data-aos-delay="1200">
+            <span class="hero-promo-icon">☀️</span>
+            <div class="hero-promo-text">
+                <strong>Book Before Summer &amp; Save 10%!</strong>
+                <span>Early bird discount on all jet ski &amp; yacht bookings for June–September 2026</span>
             </div>
-            <a href="booking.html" class="btn-banner">
+            <a href="booking.html" class="hero-promo-btn">
                 <i class="fas fa-calendar-check"></i>
                 Book Now
             </a>
         </div>
-    </div>
-
-    <main id="main-content">
-    <!-- Hero Section -->
-    <section class="hero" id="home">
         <!-- Video Background — Jet Ski Drone Tracking (Pexels #4115690, free to use) -->
         <div class="hero-video-container">
             <video autoplay muted loop playsinline poster="https://marbellajetski.com/wp-content/uploads/2021/09/18328-mar-scaled.jpg">
@@ -323,7 +321,7 @@
                 
                 <div class="service-card premium-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="service-icon">
-                        <img src="https://marbellajetski.com/wp-content/uploads/2025/08/ChatGPT-Image-12-ago-2025-11_28_51.png" alt="Yacht Charter">
+                        <img src="assets/media/photos/catamaran-bali.jpg" alt="Catamaran Yacht Charter Marbella" loading="lazy" style="object-position:center">
                         <div class="icon-overlay">
                             <i class="fas fa-ship"></i>
                         </div>
@@ -334,7 +332,7 @@
                         <p>Cruise the coast in style. Captain, fuel, drinks and paddleboard included.</p>
                         <div class="service-price">
                             <span class="from">From</span>
-                            <span class="price">€400</span>
+                            <span class="price">€250</span>
                             <span class="duration">/ hour</span>
                         </div>
                         <a href="#boats" class="service-link link-underline">
@@ -369,7 +367,7 @@
                 
                 <div class="service-card premium-card" data-aos="fade-up" data-aos-delay="400">
                     <div class="service-icon">
-                        <img src="https://marbellajetski.com/wp-content/uploads/2023/05/2022-Yamaha-VXCRUISERHO-EU-Cyan-Action-006-03.webp" alt="Guided Jet Ski Excursions on the Costa del Sol" loading="lazy">
+                        <img src="assets/media/photos/jetski-excursion.jpg" alt="Guided Jet Ski Excursions on the Costa del Sol" loading="lazy" style="object-position:center">
                         <div class="icon-overlay">
                             <i class="fas fa-route"></i>
                         </div>
@@ -404,15 +402,15 @@
             
             <div class="usp-grid">
                 <div class="usp-card featured" data-aos="fade-up" data-aos-delay="100">
-                    <div class="usp-icon"><i class="fas fa-water"></i></div>
-                    <h4>Direct Sea Access</h4>
-                    <p>Acceso directo a la playa para disfrutar de tu moto de agua sin esperas. Sin colas — pisa la arena y sube a tu jet ski.</p>
+                    <div class="usp-icon"><i class="fas fa-satellite-dish"></i></div>
+                    <h4>GPS-Tracked Fleet (OtoTrak)</h4>
+                    <p>Every jet ski is <strong>live-tracked via OtoTrak GPS</strong> for real-time monitoring. Our operations centre tracks speed, position, and perimeter — ensuring total safety at all times.</p>
                 </div>
                 
                 <div class="usp-card" data-aos="fade-up" data-aos-delay="150">
                     <div class="usp-icon"><i class="fas fa-trophy"></i></div>
-                    <h4>Led by a Champion</h4>
-                    <p>Owner Daniel Stiers is a <strong>4x Spanish National Champion</strong> (RFEM 2024) with 7 medals. His racing expertise shapes everything — from safety to training.</p>
+                    <h4>Premium Jet Ski Experiences</h4>
+                    <p>We combine <strong>safety, quality, and excitement</strong> to deliver the best jet ski experience on the Costa del Sol. Professional equipment, expert team, and unforgettable memories.</p>
                 </div>
                 
                 <div class="usp-card" data-aos="fade-up" data-aos-delay="200">
@@ -424,7 +422,7 @@
                 <div class="usp-card" data-aos="fade-up" data-aos-delay="250">
                     <div class="usp-icon"><i class="fas fa-camera"></i></div>
                     <h4>Professional Photos</h4>
-                    <p>Our team captures <strong>professional photos during your activity</strong>. After the session, browse and purchase a book of 30–50 edited photos for just <strong>€25</strong>. Leave your phone safe on shore!</p>
+                    <p>Our team captures <strong>high-quality digital photos during your activity</strong>. After the session, browse and purchase your memories. Leave your phone safe on shore!</p>
                 </div>
                 
                 <div class="usp-card" data-aos="fade-up" data-aos-delay="300">
@@ -491,20 +489,17 @@
                                 <span class="duration"><i class="fas fa-clock"></i> 20 minutes</span>
                                 <span class="price">€70</span>
                             </div>
-                            <div class="price-row">
+                            <div class="price-row popular">
+                                <span class="popular-badge">Most Popular</span>
                                 <span class="duration"><i class="fas fa-clock"></i> 30 minutes</span>
                                 <span class="price">€90</span>
                             </div>
-                            <div class="price-row popular">
-                                <span class="popular-badge">Most Popular</span>
+                            <div class="price-row">
                                 <span class="duration"><i class="fas fa-clock"></i> 1 hour</span>
                                 <span class="price">€170</span>
                             </div>
-                            <div class="price-row">
-                                <span class="duration"><i class="fas fa-clock"></i> 2 hours</span>
-                                <span class="price">€330</span>
-                            </div>
                         </div>
+                        <p class="vat-note"><i class="fas fa-receipt"></i> All prices include VAT (IVA)</p>
                         
                         <div class="option-features">
                             <div class="feature"><i class="fas fa-check-circle"></i> Safety briefing included</div>
@@ -549,8 +544,9 @@
                                 <span>Moderate</span>
                             </div>
                         </div>
-                        <p>Guided excursions in the open sea along the stunning Costa del Sol coastline. Choose from Puerto Banús, Fuengirola, or our signature Marbella Coastal Tour. Discover hidden coves and breathtaking views of Marbella's coast and landmarks. Possible dolphin sightings along the route (not guaranteed). Minimum 2 jet skis required. All jet skis are GPS-tracked for your safety.</p>
-                        <p class="info-note" style="background:rgba(0,180,216,0.08);border-left:3px solid var(--primary);padding:10px 14px;border-radius:6px;font-size:0.9em;margin-top:8px;"><i class="fas fa-info-circle" style="color:var(--primary);margin-right:6px;"></i>Each jet ski can carry 2 people and you can swap driver during the session — same price.</p>
+                        <p>Guided excursions in the open sea along the stunning Costa del Sol coastline. Choose from Puerto Banús, Fuengirola, or our signature Marbella Coastal Tour. Discover hidden coves and breathtaking views of Marbella's coast and landmarks. Possible dolphin sightings along the route (not guaranteed). All jet skis are GPS-tracked for your safety.</p>
+                        <p class="info-note" style="background:rgba(255,193,7,0.12);border-left:3px solid var(--accent-gold);padding:10px 14px;border-radius:6px;font-size:0.9em;margin-top:8px;"><i class="fas fa-exclamation-triangle" style="color:var(--accent-gold);margin-right:6px;"></i><strong>Minimum 2 jet skis required. Maximum 4 jet skis per excursion.</strong></p>
+                        <p class="info-note" style="background:rgba(0,180,216,0.08);border-left:3px solid var(--primary);padding:10px 14px;border-radius:6px;font-size:0.9em;margin-top:8px;"><i class="fas fa-info-circle" style="color:var(--primary);margin-right:6px;"></i>Each jet ski can carry 2 people (1–2 persons) and you can swap driver during the session — same price per jet ski.</p>
                         
                         <div class="excursion-routes">
                             <div class="route">
@@ -567,12 +563,18 @@
                             </div>
                         </div>
                         
-                        <div class="excursion-price">
-                            <div class="price-big">
-                                <span class="amount">€170</span>
-                                <span class="per">/ 1 hour excursion</span>
+                        <div class="pricing-table">
+                            <div class="price-row popular">
+                                <span class="popular-badge">Most Popular</span>
+                                <span class="duration"><i class="fas fa-clock"></i> 1 hour excursion</span>
+                                <span class="price">€170<small>/jet ski</small></span>
+                            </div>
+                            <div class="price-row">
+                                <span class="duration"><i class="fas fa-clock"></i> 2 hour excursion</span>
+                                <span class="price">€330<small>/jet ski</small></span>
                             </div>
                         </div>
+                        <p class="vat-note"><i class="fas fa-receipt"></i> All prices include VAT (IVA)</p>
                         
                         <div class="option-features">
                             <div class="feature"><i class="fas fa-check-circle"></i> Guided tour with expert</div>
@@ -614,7 +616,7 @@
                 <!-- Wakeboarding -->
                 <div class="activity-card" data-category="individual thrill" data-aos="fade-up" data-aos-delay="100">
                     <div class="activity-image">
-                        <img src="https://marbellajetski.com/wp-content/uploads/2025/08/wakeboard-wakeboard-saltando-al-atardecer-scaled.jpg" alt="Wakeboarding in Marbella" loading="lazy">
+                        <img src="assets/media/photos/wakeboard.jpg" alt="Wakeboarding in Marbella" loading="lazy">
                         <div class="activity-overlay">
                             <span class="activity-duration"><i class="fas fa-clock"></i> 20 min</span>
                             <span class="activity-price">€90</span>
@@ -633,7 +635,7 @@
                 <!-- Water Skiing -->
                 <div class="activity-card" data-category="individual thrill" data-aos="fade-up" data-aos-delay="150">
                     <div class="activity-image">
-                        <img src="https://marbellajetski.com/wp-content/uploads/2023/05/DSC_0111-scaled.webp" alt="Water Skiing in Marbella" loading="lazy">
+                        <img src="assets/media/photos/waterski-action.jpg" alt="Water Skiing in Marbella" loading="lazy">
                         <div class="activity-overlay">
                             <span class="activity-duration"><i class="fas fa-clock"></i> 20 min</span>
                             <span class="activity-price">€90</span>
@@ -712,7 +714,7 @@
                 <!-- Air Stream -->
                 <div class="activity-card" data-category="thrill" data-aos="fade-up" data-aos-delay="350">
                     <div class="activity-image">
-                        <img src="https://marbellajetski.com/wp-content/uploads/2025/08/DSCF6926-scaled.jpeg" alt="Air Stream towable in Marbella" loading="lazy">
+                        <img src="assets/media/photos/airstream-action.jpg" alt="Air Stream towable in Marbella" loading="lazy">
                         <div class="activity-overlay">
                             <span class="activity-duration"><i class="fas fa-clock"></i> 10 min</span>
                             <span class="activity-price">€20<small>/person</small></span>
@@ -752,7 +754,7 @@
                 <!-- Stand-Up Paddleboarding -->
                 <div class="activity-card" data-category="relaxed individual" data-aos="fade-up" data-aos-delay="450">
                     <div class="activity-image">
-                        <img src="https://marbellajetski.com/wp-content/uploads/2023/05/IMG_3961-scaled.webp" alt="Stand Up Paddleboarding in Marbella" loading="lazy">
+                        <img src="assets/media/photos/paddle-surf.jpg" alt="Stand Up Paddleboarding in Marbella" loading="lazy">
                         <div class="activity-overlay">
                             <span class="activity-duration"><i class="fas fa-clock"></i> 1 hour</span>
                             <span class="activity-price">€25</span>
@@ -771,7 +773,7 @@
                 <!-- Pedal Boats -->
                 <div class="activity-card" data-category="relaxed family" data-aos="fade-up" data-aos-delay="500">
                     <div class="activity-image">
-                        <img src="https://marbellajetski.com/wp-content/uploads/2021/05/IMG_6830-1-scaled.jpg" alt="Pedal Boats in Marbella" loading="lazy">
+                        <img src="assets/media/photos/hidropedal.jpg" alt="Pedal Boats in Marbella" loading="lazy">
                         <div class="activity-overlay">
                             <span class="activity-duration"><i class="fas fa-clock"></i> 1 hour</span>
                             <span class="activity-price">€30</span>
@@ -787,7 +789,28 @@
                         <a href="booking.html" class="activity-book">Book Now <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
+                
+                <!-- Double Kayaks -->
+                <div class="activity-card" data-category="relaxed family individual" data-aos="fade-up" data-aos-delay="550">
+                    <div class="activity-image">
+                        <img src="https://images.pexels.com/photos/1655038/pexels-photo-1655038.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Double Kayak in Marbella" loading="lazy">
+                        <div class="activity-overlay">
+                            <span class="activity-duration"><i class="fas fa-clock"></i> 1 hour</span>
+                            <span class="activity-price">€30</span>
+                        </div>
+                        <div class="capacity-badge"><i class="fas fa-users"></i> 2 people</div>
+                    </div>
+                    <div class="activity-content">
+                        <div class="activity-difficulty">
+                            <span class="difficulty-badge easy">Easy</span>
+                        </div>
+                        <h4>Double Kayaks</h4>
+                        <p>Explore the coastline together! Perfect for couples and friends who love paddling.</p>
+                        <a href="booking.html" class="activity-book">Book Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
             </div>
+            <p class="vat-note" style="text-align:center;margin-top:24px;"><i class="fas fa-receipt"></i> All prices include VAT (IVA)</p>
         </div>
     </section>
 
@@ -826,87 +849,136 @@
             </div>
             
             <div class="yacht-fleet">
-                <div class="yacht-card" data-aos="fade-up" data-aos-delay="100">
+                <!-- Rinker 296 Captiva -->
+                <div class="yacht-card" data-aos="fade-up" data-aos-delay="150">
                     <div class="yacht-image">
-                        <img src="https://marbellajetski.com/wp-content/uploads/2025/08/ChatGPT-Image-12-ago-2025-11_28_51.png" alt="Sea Ray 240">
-                        <div class="yacht-badge">Popular Choice</div>
+                        <img src="assets/media/photos/rinker-296-alt.jpg" alt="Rinker 296 Captiva">
+                        <div class="yacht-badge">Value Pick</div>
                     </div>
                     <div class="yacht-info">
-                        <h3>Sea Ray 240</h3>
+                        <h3>Rinker 296 Captiva</h3>
                         <div class="yacht-specs">
-                            <span><i class="fas fa-ruler"></i> 24ft</span>
+                            <span><i class="fas fa-ruler"></i> 9.4 m</span>
                             <span><i class="fas fa-users"></i> 8 guests</span>
-                            <span><i class="fas fa-tachometer-alt"></i> 35 knots</span>
+                            <span><i class="fas fa-anchor"></i> Puerto Banús Dock 5</span>
                         </div>
-                        <p>Perfect for day trips and small groups. Sporty and fun!</p>
-                        <a href="booking.html" class="btn btn-outline-light">Charter Now</a>
+                        <p>Spacious cruiser with cabin. Welcome drink, stereo, fuel & VAT all included.</p>
+                        <div class="yacht-pricing-inline">
+                            <span class="yacht-from">From <strong>€250</strong>/h</span>
+                            <button class="yacht-toggle-btn" onclick="this.closest('.yacht-card').classList.toggle('expanded')">
+                                Full Prices <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <div class="yacht-price-details">
+                            <div class="yacht-price-row"><span>1 hour</span><span>€250</span></div>
+                            <div class="yacht-price-row"><span>2 hours</span><span>€400</span></div>
+                            <div class="yacht-price-row"><span>3 hours</span><span>€600</span></div>
+                            <div class="yacht-price-row"><span>4 hours</span><span>€800</span></div>
+                            <div class="yacht-price-row"><span>6 hours</span><span>€1,100</span></div>
+                            <div class="yacht-price-row"><span>8 hours</span><span>€1,400</span></div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send?phone=34655442232&text=Hi!%20I%27d%20like%20to%20book%20the%20Rinker%20296" class="btn btn-outline-light" target="_blank" rel="noopener noreferrer">Book This Boat</a>
                     </div>
                 </div>
                 
-                <div class="yacht-card featured" data-aos="fade-up" data-aos-delay="200">
+                <!-- Cranchi 39 -->
+                <div class="yacht-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="yacht-image">
-                        <img src="https://marbellajetski.com/wp-content/uploads/2025/08/2021-cranchi-endurance-39-power-9670500-20250131064459679-1_LARGE.jpg" alt="Cranchi 39">
+                        <img src="assets/media/photos/cranchi-39.jpg" alt="Cranchi 39">
                         <div class="yacht-badge premium">Premium</div>
                     </div>
                     <div class="yacht-info">
                         <h3>Cranchi 39</h3>
                         <div class="yacht-specs">
-                            <span><i class="fas fa-ruler"></i> 39ft</span>
-                            <span><i class="fas fa-users"></i> 12 guests</span>
-                            <span><i class="fas fa-tachometer-alt"></i> 32 knots</span>
+                            <span><i class="fas fa-ruler"></i> 12.3 m</span>
+                            <span><i class="fas fa-users"></i> 9 guests</span>
+                            <span><i class="fas fa-bed"></i> Lower Cabin</span>
                         </div>
-                        <p>Elegant Italian design. Perfect for celebrations and VIP experiences.</p>
-                        <a href="booking.html" class="btn btn-primary">Charter Now</a>
+                        <p>Elegant Italian open-concept design with lower cabin. Ideal for celebrations and VIP experiences.</p>
+                        <div class="yacht-pricing-inline">
+                            <span class="yacht-from">From <strong>€380</strong>/h</span>
+                            <button class="yacht-toggle-btn" onclick="this.closest('.yacht-card').classList.toggle('expanded')">
+                                Full Prices <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <div class="yacht-price-details">
+                            <div class="yacht-price-row"><span>1 hour</span><span>€380</span></div>
+                            <div class="yacht-price-row"><span>2 hours</span><span>€550</span></div>
+                            <div class="yacht-price-row"><span>3 hours</span><span>€680</span></div>
+                            <div class="yacht-price-row"><span>4 hours</span><span>€850</span></div>
+                            <div class="yacht-price-row"><span>6 hours</span><span>€1,150</span></div>
+                            <div class="yacht-price-row"><span>8 hours</span><span>€1,550</span></div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send?phone=34655442232&text=Hi!%20I%27d%20like%20to%20book%20the%20Cranchi%2039" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Book This Boat</a>
                     </div>
                 </div>
                 
-                <div class="yacht-card" data-aos="fade-up" data-aos-delay="300">
+                <!-- Azimut 39 Fly -->
+                <div class="yacht-card featured" data-aos="fade-up" data-aos-delay="250">
                     <div class="yacht-image">
-                        <img src="https://marbellajetski.com/wp-content/uploads/2025/08/676709ae66657-l.jpeg" alt="Azimut 39 Fly">
-                        <div class="yacht-badge luxury">Ultimate Luxury</div>
+                        <img src="assets/media/photos/azimut-39.jpg" alt="Azimut 39 Fly">
+                        <div class="yacht-badge luxury">Flybridge Luxury</div>
                     </div>
                     <div class="yacht-info">
                         <h3>Azimut 39 Fly</h3>
                         <div class="yacht-specs">
-                            <span><i class="fas fa-ruler"></i> 39ft</span>
+                            <span><i class="fas fa-ruler"></i> 12.3 m</span>
                             <span><i class="fas fa-users"></i> 12 guests</span>
                             <span><i class="fas fa-layer-group"></i> Flybridge</span>
                         </div>
-                        <p>The ultimate luxury experience with flybridge. Unforgettable moments await.</p>
-                        <a href="booking.html" class="btn btn-outline-light">Charter Now</a>
+                        <p>The ultimate luxury flybridge yacht. Two champagne bottles, wine, paddle surf, and full insurance included.</p>
+                        <div class="yacht-pricing-inline">
+                            <span class="yacht-from">From <strong>€400</strong>/h</span>
+                            <button class="yacht-toggle-btn" onclick="this.closest('.yacht-card').classList.toggle('expanded')">
+                                Full Prices <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <div class="yacht-price-details">
+                            <div class="yacht-price-row"><span>1 hour</span><span>€400</span></div>
+                            <div class="yacht-price-row"><span>2 hours</span><span>€600</span></div>
+                            <div class="yacht-price-row"><span>3 hours</span><span>€800</span></div>
+                            <div class="yacht-price-row"><span>4 hours</span><span>€1,000</span></div>
+                            <div class="yacht-price-row"><span>6 hours</span><span>€1,500</span></div>
+                            <div class="yacht-price-row"><span>8 hours</span><span>€1,800</span></div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send?phone=34655442232&text=Hi!%20I%27d%20like%20to%20book%20the%20Azimut%2039%20Fly" class="btn btn-outline-light" target="_blank" rel="noopener noreferrer">Book This Boat</a>
+                    </div>
+                </div>
+                
+                <!-- Catamaran Bali 4.0 -->
+                <div class="yacht-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="yacht-image">
+                        <img src="assets/media/photos/catamaran-bali.jpg" alt="Catamaran Bali 4.0">
+                        <div class="yacht-badge luxury">Catamaran</div>
+                    </div>
+                    <div class="yacht-info">
+                        <h3>Catamaran Bali 4.0 <small>(2020)</small></h3>
+                        <div class="yacht-specs">
+                            <span><i class="fas fa-ruler"></i> 12.5 m</span>
+                            <span><i class="fas fa-users"></i> 12 guests + crew</span>
+                            <span><i class="fas fa-bed"></i> 4 cabins / 4 WC</span>
+                        </div>
+                        <p>Spacious catamaran with 7 m beam and twin Volvo engines. Includes towels, paddle surf, snorkel, rosé, beer, cava & soft drinks.</p>
+                        <div class="yacht-pricing-inline">
+                            <span class="yacht-from">From <strong>€750</strong>/2h</span>
+                            <button class="yacht-toggle-btn" onclick="this.closest('.yacht-card').classList.toggle('expanded')">
+                                Full Prices <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <div class="yacht-price-details">
+                            <div class="yacht-price-row"><span>2 hours</span><span>€750</span></div>
+                            <div class="yacht-price-row"><span>3 hours</span><span>€1,000</span></div>
+                            <div class="yacht-price-row"><span>4 hours</span><span>€1,150</span></div>
+                            <div class="yacht-price-row"><span>6 hours</span><span>€1,750</span></div>
+                            <div class="yacht-price-row"><span>8 hours</span><span>€2,250</span></div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send?phone=34655442232&text=Hi!%20I%27d%20like%20to%20book%20the%20Catamaran%20Bali%204.0" class="btn btn-outline-light" target="_blank" rel="noopener noreferrer">Book This Boat</a>
                     </div>
                 </div>
             </div>
             
-            <div class="yacht-pricing" data-aos="fade-up" data-aos-delay="400">
-                <h4>Charter Rates</h4>
-                <div class="pricing-options">
-                    <div class="price-option">
-                        <span class="hours">1h</span>
-                        <span class="amount">€400</span>
-                    </div>
-                    <div class="price-option">
-                        <span class="hours">2h</span>
-                        <span class="amount">€600</span>
-                    </div>
-                    <div class="price-option">
-                        <span class="hours">3h</span>
-                        <span class="amount">€800</span>
-                    </div>
-                    <div class="price-option popular">
-                        <span class="popular-tag">Best Value</span>
-                        <span class="hours">4h</span>
-                        <span class="amount">€1,000</span>
-                    </div>
-                    <div class="price-option">
-                        <span class="hours">6h</span>
-                        <span class="amount">€1,500</span>
-                    </div>
-                    <div class="price-option">
-                        <span class="hours">8h</span>
-                        <span class="amount">€1,800</span>
-                    </div>
-                </div>
+            <div class="yacht-note" data-aos="fade-up" data-aos-delay="400" style="text-align:center;margin-top:40px;padding:20px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;">
+                <p style="color:rgba(255,255,255,0.7);font-size:0.9rem;margin:0;"><i class="fas fa-info-circle" style="margin-right:8px;color:var(--primary);"></i>All boats operated by <strong>Marbella Ocean Boats</strong> from Puerto Banús. Every charter includes professional captain, fuel, insurance, and refreshments. All prices include VAT (IVA). <a href="https://api.whatsapp.com/send?phone=34655442232&text=Hi!%20I%27d%20like%20information%20about%20yacht%20charters" target="_blank" rel="noopener noreferrer" style="color:var(--primary);">Contact us for custom packages.</a></p>
             </div>
         </div>
     </section>
@@ -918,12 +990,12 @@
                 <div class="about-content" data-aos="fade-right">
                     <span class="section-tag">Our Story</span>
                     <h2 class="section-title">About <span class="gradient-text">Us</span></h2>
-                    <h3 class="about-subtitle">Family Business Since 1998 — Led by a Champion</h3>
+                    <h3 class="about-subtitle">Family Business Since 1998</h3>
                     
                     <div class="about-text">
-                        <p class="lead">Director of <strong>STIERS E HIJOS S.L.</strong> and active competitor at the highest national and international level, Daniel Stiers brings competition-grade expertise to every experience at Marbella JetSki.</p>
+                        <p class="lead"><strong>Marbella JetSki</strong> (STIERS E HIJOS S.L.) has been the Costa del Sol's trusted water sports centre since 1998. We offer jet ski rides, coastal excursions, yacht charters, water sports, and professional racing lessons.</p>
                         
-                        <p>Since 1998, this family business has operated on the Costa del Sol. Daniel's background as a <strong>professional jet ski racer</strong> and certified champion ensures the highest standards of safety, performance, and service.</p>
+                        <p>Our director, Daniel Stiers, is also a <strong>professional jet ski racing pilot</strong> — 4x Spanish National Champion, Andalusia Champion, and Copa del Rey medallist. He offers private racing lessons for customers looking for the ultimate experience.</p>
                     </div>
                     
                     <div class="about-achievements">
@@ -1039,79 +1111,128 @@
                     </div>
                 </div>
                 <div class="gallery-item" onclick="openLightbox(1)">
-                    <img src="https://marbellajetski.com/wp-content/uploads/2025/08/ChatGPT-Image-12-ago-2025-11_28_51.png" alt="Sea Ray 240 Yacht" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span class="gallery-tag">Sea Ray 240</span>
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </div>
-                <div class="gallery-item" onclick="openLightbox(2)">
-                    <img src="https://marbellajetski.com/wp-content/uploads/2025/08/2021-cranchi-endurance-39-power-9670500-20250131064459679-1_LARGE.jpg" alt="Cranchi 39 Yacht" loading="lazy">
+                    <img src="assets/media/photos/cranchi-39.jpg" alt="Cranchi 39 Yacht" loading="lazy">
                     <div class="gallery-overlay">
                         <span class="gallery-tag">Cranchi 39</span>
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
-                <div class="gallery-item tall" onclick="openLightbox(3)">
-                    <img src="https://marbellajetski.com/wp-content/uploads/2025/08/676709ae66657-l.jpeg" alt="Azimut 39 Fly Yacht" loading="lazy">
+                <div class="gallery-item tall" onclick="openLightbox(2)">
+                    <img src="assets/media/photos/azimut-39.jpg" alt="Azimut 39 Fly Yacht" loading="lazy">
                     <div class="gallery-overlay">
                         <span class="gallery-tag">Azimut 39 Fly</span>
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
-                <div class="gallery-item" onclick="openLightbox(4)">
+                <div class="gallery-item" onclick="openLightbox(3)">
                     <img src="https://marbellajetski.com/wp-content/uploads/2023/05/IMG_3961-scaled.webp" alt="Marbella Beach Location" loading="lazy">
                     <div class="gallery-overlay">
                         <span class="gallery-tag">Our Beach</span>
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
-                <div class="gallery-item" onclick="openLightbox(5)">
+                <div class="gallery-item" onclick="openLightbox(4)">
                     <img src="https://marbellajetski.com/wp-content/uploads/2021/07/IMG_6208-scaled.jpg" alt="Luxury yacht charter Marbella" loading="lazy">
                     <div class="gallery-overlay">
                         <span class="gallery-tag">Yacht Charter</span>
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
-                <div class="gallery-item" onclick="openLightbox(6)">
+                <div class="gallery-item" onclick="openLightbox(5)">
                     <img src="https://marbellajetski.com/wp-content/uploads/2023/05/IMG_3846-scaled.webp" alt="Water sports action on the Costa del Sol" loading="lazy">
                     <div class="gallery-overlay">
                         <span class="gallery-tag">Water Fun</span>
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
-                <div class="gallery-item wide" onclick="openLightbox(7)">
+                <div class="gallery-item wide" onclick="openLightbox(6)">
                     <img src="https://marbellajetski.com/wp-content/uploads/2023/05/DSC_0055-scaled.webp" alt="Jet Ski Excursion Costa del Sol" loading="lazy">
                     <div class="gallery-overlay">
                         <span class="gallery-tag">Excursions</span>
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
-                <div class="gallery-item" onclick="openLightbox(8)">
+                <div class="gallery-item" onclick="openLightbox(7)">
                     <img src="https://marbellajetski.com/wp-content/uploads/2023/05/DSC_0031-scaled.webp" alt="Water sports fleet Marbella" loading="lazy">
                     <div class="gallery-overlay">
                         <span class="gallery-tag">Luxury Fleet</span>
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
-                <div class="gallery-item" onclick="openLightbox(9)">
+                <div class="gallery-item" onclick="openLightbox(8)">
                     <img src="assets/media/racing/racing-benalmadena-1.jpg" alt="Daniel Stiers racing at Benalmádena championship" loading="lazy">
                     <div class="gallery-overlay">
                         <span class="gallery-tag">Racing</span>
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
-                <div class="gallery-item wide" onclick="openLightbox(10)">
+                <div class="gallery-item wide" onclick="openLightbox(9)">
                     <img src="assets/media/racing/racing-circuit-benidorm.png" alt="Circuit racing Benidorm Valencia" loading="lazy">
                     <div class="gallery-overlay">
                         <span class="gallery-tag">Circuit Race</span>
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
-                <div class="gallery-item" onclick="openLightbox(11)">
+                <div class="gallery-item" onclick="openLightbox(10)">
                     <img src="assets/media/racing/promo-racing.jpg" alt="Jet ski racing promo" loading="lazy">
                     <div class="gallery-overlay">
                         <span class="gallery-tag">Pro Racing</span>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item tall" onclick="openLightbox(11)">
+                    <img src="assets/media/racing/dani-stiers-race-start.jpg" alt="Dani Stiers #7 race start" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Race Start</span>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item wide" onclick="openLightbox(12)">
+                    <img src="assets/media/racing/racing-jetskis-trailers.jpg" alt="Racing jet skis on trailers" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Race Fleet</span>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(13)">
+                    <img src="assets/media/photos/blue-jetski.jpg" alt="Blue jet ski Marbella" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Jet Ski</span>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item tall" onclick="openLightbox(14)">
+                    <img src="assets/media/photos/high-res-jetski.jpg" alt="Professional jet ski photography" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Action Shot</span>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(15)">
+                    <img src="assets/media/photos/waterski-action.jpg" alt="Water skiing in Marbella" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Water Skiing</span>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item wide" onclick="openLightbox(16)">
+                    <img src="assets/media/photos/yacht-action-1.jpg" alt="Yacht charter action Marbella" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Yacht Charter</span>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(17)">
+                    <img src="assets/media/photos/yacht-action-2.jpg" alt="Yacht on the Costa del Sol" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Boat Day</span>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(18)">
+                    <img src="assets/media/photos/waterski-action-2.jpg" alt="Water skiing action" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Water Skiing</span>
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
@@ -1376,7 +1497,7 @@
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>We accept credit/debit cards (Visa, Mastercard, Amex), PayPal, bank transfer, and cash on-site. Online bookings require either a 30% deposit or full payment — the balance is due on arrival.</p>
+                        <p>We accept credit/debit cards (Visa, Mastercard), bank transfer, and cash on-site.</p>
                     </div>
                 </div>
                 
@@ -1396,7 +1517,7 @@
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>Our main season runs from April to October, with peak availability during summer months. We may operate on good weather days during off-season — contact us to check availability!</p>
+                        <p>Our main season runs from May to October, with peak availability during summer months. We may operate on good weather days during off-season — contact us to check availability!</p>
                     </div>
                 </div>
                 
@@ -1416,7 +1537,7 @@
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>Yes! Professional photos and videos of your experience are included free of charge with every activity. Our staff capture the action so you can focus on the fun. With your consent, we may also use images for promotional purposes.</p>
+                        <p>Yes! Professional photos and videos of your experience are available with every activity. Our staff capture the action so you can focus on the fun. With your consent, we may also use images for promotional purposes.</p>
                     </div>
                 </div>
                 
@@ -1456,7 +1577,7 @@
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>Safety is our top priority. Every participant receives a <strong>10-15 minute mandatory safety briefing</strong> covering handling, hand signals, navigation rules, and emergency procedures. We provide ISO 12402-5 life jackets and CE helmets, and our 2024-2025 Yamaha VX jet skis are GPS-tracked (OtoTrak) with automatic power cut-off. A <strong>professional support boat with a qualified skipper</strong> is always within 300m, equipped with a first aid kit and AED defibrillator. We also monitor real-time weather conditions via State Ports and AEMET before every session.</p>
+                        <p>Safety is our top priority. Every participant receives a <strong>10-15 minute mandatory safety briefing</strong> covering handling, hand signals, navigation rules, and emergency procedures. We provide ISO 12402-5 life jackets and CE helmets, and our 2024-2025 Yamaha VX jet skis are GPS-tracked (OtoTrak) with automatic power cut-off. A <strong>professional support boat with a qualified skipper</strong> is always within 300m, equipped with a first aid kit. We also monitor real-time weather conditions via State Ports and AEMET before every session.</p>
                     </div>
                 </div>
                 
@@ -1503,13 +1624,13 @@
                             </div>
                         </a>
                         
-                        <a href="mailto:danistiers@hotmail.com" class="contact-method">
+                        <a href="mailto:jetskimarbella@gmail.com" class="contact-method">
                             <div class="method-icon">
                                 <i class="fas fa-envelope"></i>
                             </div>
                             <div class="method-details">
                                 <strong>Email</strong>
-                                <span>danistiers@hotmail.com</span>
+                                <span>jetskimarbella@gmail.com</span>
                             </div>
                         </a>
                         
@@ -1580,7 +1701,7 @@
                 <div class="footer-grid">
                     <div class="footer-brand">
                         <a href="#home" class="footer-logo">
-                            <img src="https://marbellajetski.com/wp-content/uploads/2021/05/MJS_16_500x500-removebg-preview.png" alt="Marbella JetSki Logo" style="height: 60px; margin-bottom: 15px;">
+                            <img src="assets/media/photos/logo-blue.png" alt="Marbella JetSki Logo" style="height: 70px; margin-bottom: 15px; border-radius: 50%;">
                             <span class="logo-text">MARBELLA<span class="logo-highlight">JETSKI</span></span>
                         </a>
                         <p>Costa del Sol's premier water sports destination. Family-owned since 1998, led by 4x Spanish National Champion Daniel Stiers.</p>
@@ -1629,7 +1750,7 @@
                         </div>
                         <div class="footer-contact-item">
                             <i class="fas fa-envelope"></i>
-                            <a href="mailto:danistiers@hotmail.com">danistiers@hotmail.com</a>
+                            <a href="mailto:jetskimarbella@gmail.com">jetskimarbella@gmail.com</a>
                         </div>
                         <div class="footer-contact-item">
                             <i class="fas fa-map-marker-alt"></i>
