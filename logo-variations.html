@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marbella JetSki — Logo Redesign Preview</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: #0d0d1a;
+            color: #fff;
+            padding: 40px 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 6px;
+            background: linear-gradient(135deg, #00b4d8, #F5D442);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle { text-align: center; color: #888; margin-bottom: 40px; }
+
+        .section-title {
+            text-align: center;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #00b4d8;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin: 50px 0 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(0,180,216,0.2);
+        }
+        .section-desc {
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+        }
+
+        /* === COMPARISON GRID === */
+        .comparison-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            max-width: 1400px;
+            margin: 0 auto 40px;
+        }
+        .logo-card {
+            border-radius: 16px;
+            overflow: hidden;
+            background: #14142a;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .logo-card .preview {
+            height: 320px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+        }
+        .logo-card .preview img {
+            max-width: 240px;
+            max-height: 240px;
+            object-fit: contain;
+        }
+        .logo-card .preview-svg {
+            max-width: 220px;
+            max-height: 220px;
+        }
+        .logo-card .info {
+            padding: 16px 20px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
+        .logo-card .info .label {
+            font-weight: 800;
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+        .logo-card .info .detail {
+            color: #888;
+            font-size: 0.82rem;
+        }
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            margin-right: 4px;
+        }
+        .badge-png { background: #0e4429; color: #3fb950; }
+        .badge-svg { background: #1e3a5f; color: #58a6ff; }
+        .badge-fav { background: #3d1f00; color: #f0883e; }
+
+        /* Backgrounds */
+        .bg-dark { background: #0a0a1a; }
+        .bg-white { background: #ffffff; }
+        .bg-gray { background: #e5e7eb; }
+        .bg-navy { background: #0d1b2a; }
+        .bg-ocean { background: linear-gradient(135deg, #0077b6, #00b4d8); }
+        .bg-checker {
+            background-color: #fff;
+            background-image:
+                linear-gradient(45deg, #e0e0e0 25%, transparent 25%),
+                linear-gradient(-45deg, #e0e0e0 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, #e0e0e0 75%),
+                linear-gradient(-45deg, transparent 75%, #e0e0e0 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+        }
+
+        /* BG test strip */
+        .bg-test-strip {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 0;
+            border-radius: 12px;
+            overflow: hidden;
+            max-width: 1000px;
+            margin: 20px auto;
+            height: 160px;
+        }
+        .bg-test-strip .cell {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+        .bg-test-strip .cell img {
+            max-width: 100px;
+            max-height: 100px;
+            object-fit: contain;
+        }
+
+        /* Favicon preview */
+        .favicon-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .favicon-item {
+            text-align: center;
+        }
+        .favicon-item img {
+            display: block;
+            margin: 0 auto 6px;
+            image-rendering: auto;
+        }
+        .favicon-item .size-label {
+            font-size: 0.75rem;
+            color: #888;
+        }
+
+        /* Download links */
+        .download-section {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #14142a;
+            border-radius: 16px;
+        }
+        .download-section h3 {
+            color: #00b4d8;
+            margin-bottom: 16px;
+        }
+        .dl-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+        }
+        .dl-link {
+            display: block;
+            padding: 10px 16px;
+            background: rgba(0,180,216,0.1);
+            border: 1px solid rgba(0,180,216,0.2);
+            border-radius: 8px;
+            color: #00b4d8;
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: background 0.2s;
+        }
+        .dl-link:hover {
+            background: rgba(0,180,216,0.2);
+        }
+        .dl-link .dl-name { font-weight: 700; display: block; }
+        .dl-link .dl-info { color: #666; font-size: 0.75rem; }
+    </style>
+</head>
+<body>
+
+<h1>Logo Redesign — Marbella JetSki</h1>
+<p class="subtitle">3 typography variations + cleaned original — NO outer ring, transparent PNG &amp; SVG</p>
+
+<!-- ============ CLEANED ORIGINAL ============ -->
+<div class="section-title">Cleaned Original (Ring Removed)</div>
+<p class="section-desc">White ring deleted, clean edges, transparent background</p>
+
+<div class="bg-test-strip">
+    <div class="cell bg-dark"><img src="assets/media/logos/logo-clean-original.png" alt="Clean on dark"></div>
+    <div class="cell bg-white"><img src="assets/media/logos/logo-clean-original.png" alt="Clean on white"></div>
+    <div class="cell bg-gray"><img src="assets/media/logos/logo-clean-original.png" alt="Clean on gray"></div>
+    <div class="cell bg-ocean"><img src="assets/media/logos/logo-clean-original.png" alt="Clean on ocean"></div>
+    <div class="cell bg-checker"><img src="assets/media/logos/logo-clean-original.png" alt="Clean on checker"></div>
+</div>
+
+<!-- ============ VARIATION A ============ -->
+<div class="section-title">A — Bold Modern Sans-Serif</div>
+<p class="section-desc">Montserrat Black — premium, sporty, confident</p>
+
+<div class="comparison-row">
+    <div class="logo-card">
+        <div class="preview bg-dark"><img src="assets/media/logos/logo-A-bold-modern.png" alt="A on dark"></div>
+        <div class="info">
+            <div class="label">Dark Background</div>
+            <div class="detail"><span class="badge badge-png">PNG 2048px</span> Transparent cutout</div>
+        </div>
+    </div>
+    <div class="logo-card">
+        <div class="preview bg-white"><img src="assets/media/logos/logo-A-bold-modern.png" alt="A on white"></div>
+        <div class="info">
+            <div class="label">White Background</div>
+            <div class="detail">Clean transparency verified</div>
+        </div>
+    </div>
+    <div class="logo-card">
+        <div class="preview bg-checker"><img src="assets/media/logos/logo-A-bold-modern.png" alt="A on checker"></div>
+        <div class="info">
+            <div class="label">Transparency Check</div>
+            <div class="detail">Checkerboard — no halo, no ring</div>
+        </div>
+    </div>
+</div>
+
+<div class="comparison-row" style="max-width:700px;">
+    <div class="logo-card">
+        <div class="preview bg-dark" style="height:280px;"><img src="assets/media/logos/logo-A-bold-modern.svg" alt="A SVG" class="preview-svg"></div>
+        <div class="info">
+            <div class="label">SVG Vector Version</div>
+            <div class="detail"><span class="badge badge-svg">SVG</span> Scalable vector — uses Google Fonts (Montserrat)</div>
+        </div>
+    </div>
+</div>
+
+<!-- Favicon sizes -->
+<div class="favicon-row">
+    <div class="favicon-item"><img src="assets/media/logos/logo-A-bold-modern-256.png" width="256" height="256" alt="256"><div class="size-label">256px</div></div>
+    <div class="favicon-item"><img src="assets/media/logos/logo-A-bold-modern-128.png" width="128" height="128" alt="128"><div class="size-label">128px</div></div>
+    <div class="favicon-item"><img src="assets/media/logos/logo-A-bold-modern-64.png" width="64" height="64" alt="64"><div class="size-label">64px</div></div>
+    <div class="favicon-item"><img src="assets/media/logos/logo-A-bold-modern-32.png" width="32" height="32" alt="32"><div class="size-label">32px</div></div>
+</div>
+
+<!-- ============ VARIATION B ============ -->
+<div class="section-title">B — Condensed Racing</div>
+<p class="section-desc">Barlow Condensed ExtraBold — aggressive, motorsport, speed</p>
+
+<div class="comparison-row">
+    <div class="logo-card">
+        <div class="preview bg-dark"><img src="assets/media/logos/logo-B-racing.png" alt="B on dark"></div>
+        <div class="info">
+            <div class="label">Dark Background</div>
+            <div class="detail"><span class="badge badge-png">PNG 2048px</span> Transparent cutout</div>
+        </div>
+    </div>
+    <div class="logo-card">
+        <div class="preview bg-white"><img src="assets/media/logos/logo-B-racing.png" alt="B on white"></div>
+        <div class="info">
+            <div class="label">White Background</div>
+            <div class="detail">Clean transparency verified</div>
+        </div>
+    </div>
+    <div class="logo-card">
+        <div class="preview bg-checker"><img src="assets/media/logos/logo-B-racing.png" alt="B on checker"></div>
+        <div class="info">
+            <div class="label">Transparency Check</div>
+            <div class="detail">Checkerboard — no halo, no ring</div>
+        </div>
+    </div>
+</div>
+
+<div class="comparison-row" style="max-width:700px;">
+    <div class="logo-card">
+        <div class="preview bg-dark" style="height:280px;"><img src="assets/media/logos/logo-B-racing.svg" alt="B SVG" class="preview-svg"></div>
+        <div class="info">
+            <div class="label">SVG Vector Version</div>
+            <div class="detail"><span class="badge badge-svg">SVG</span> Scalable vector — uses Google Fonts (Barlow Condensed)</div>
+        </div>
+    </div>
+</div>
+
+<div class="favicon-row">
+    <div class="favicon-item"><img src="assets/media/logos/logo-B-racing-256.png" width="256" height="256" alt="256"><div class="size-label">256px</div></div>
+    <div class="favicon-item"><img src="assets/media/logos/logo-B-racing-128.png" width="128" height="128" alt="128"><div class="size-label">128px</div></div>
+    <div class="favicon-item"><img src="assets/media/logos/logo-B-racing-64.png" width="64" height="64" alt="64"><div class="size-label">64px</div></div>
+    <div class="favicon-item"><img src="assets/media/logos/logo-B-racing-32.png" width="32" height="32" alt="32"><div class="size-label">32px</div></div>
+</div>
+
+<!-- ============ VARIATION C ============ -->
+<div class="section-title">C — Elegant Nautical</div>
+<p class="section-desc">Playfair Display Bold — premium coastal, refined, luxury</p>
+
+<div class="comparison-row">
+    <div class="logo-card">
+        <div class="preview bg-dark"><img src="assets/media/logos/logo-C-nautical.png" alt="C on dark"></div>
+        <div class="info">
+            <div class="label">Dark Background</div>
+            <div class="detail"><span class="badge badge-png">PNG 2048px</span> Transparent cutout</div>
+        </div>
+    </div>
+    <div class="logo-card">
+        <div class="preview bg-white"><img src="assets/media/logos/logo-C-nautical.png" alt="C on white"></div>
+        <div class="info">
+            <div class="label">White Background</div>
+            <div class="detail">Clean transparency verified</div>
+        </div>
+    </div>
+    <div class="logo-card">
+        <div class="preview bg-checker"><img src="assets/media/logos/logo-C-nautical.png" alt="C on checker"></div>
+        <div class="info">
+            <div class="label">Transparency Check</div>
+            <div class="detail">Checkerboard — no halo, no ring</div>
+        </div>
+    </div>
+</div>
+
+<div class="comparison-row" style="max-width:700px;">
+    <div class="logo-card">
+        <div class="preview bg-dark" style="height:280px;"><img src="assets/media/logos/logo-C-nautical.svg" alt="C SVG" class="preview-svg"></div>
+        <div class="info">
+            <div class="label">SVG Vector Version</div>
+            <div class="detail"><span class="badge badge-svg">SVG</span> Scalable vector — uses Google Fonts (Playfair Display)</div>
+        </div>
+    </div>
+</div>
+
+<div class="favicon-row">
+    <div class="favicon-item"><img src="assets/media/logos/logo-C-nautical-256.png" width="256" height="256" alt="256"><div class="size-label">256px</div></div>
+    <div class="favicon-item"><img src="assets/media/logos/logo-C-nautical-128.png" width="128" height="128" alt="128"><div class="size-label">128px</div></div>
+    <div class="favicon-item"><img src="assets/media/logos/logo-C-nautical-64.png" width="64" height="64" alt="64"><div class="size-label">64px</div></div>
+    <div class="favicon-item"><img src="assets/media/logos/logo-C-nautical-32.png" width="32" height="32" alt="32"><div class="size-label">32px</div></div>
+</div>
+
+<!-- ============ SIDE-BY-SIDE COMPARISON ============ -->
+<div class="section-title">Side-by-Side Comparison</div>
+<p class="section-desc">All 3 variations + cleaned original at a glance</p>
+
+<div class="comparison-row" style="grid-template-columns: repeat(4, 1fr);">
+    <div class="logo-card">
+        <div class="preview bg-dark" style="height:260px;"><img src="assets/media/logos/logo-clean-original.png" alt="Original" style="max-width:180px;"></div>
+        <div class="info"><div class="label">Original (cleaned)</div></div>
+    </div>
+    <div class="logo-card">
+        <div class="preview bg-dark" style="height:260px;"><img src="assets/media/logos/logo-A-bold-modern.png" alt="A" style="max-width:180px;"></div>
+        <div class="info"><div class="label">A — Bold Modern</div></div>
+    </div>
+    <div class="logo-card">
+        <div class="preview bg-dark" style="height:260px;"><img src="assets/media/logos/logo-B-racing.png" alt="B" style="max-width:180px;"></div>
+        <div class="info"><div class="label">B — Racing</div></div>
+    </div>
+    <div class="logo-card">
+        <div class="preview bg-dark" style="height:260px;"><img src="assets/media/logos/logo-C-nautical.png" alt="C" style="max-width:180px;"></div>
+        <div class="info"><div class="label">C — Nautical</div></div>
+    </div>
+</div>
+
+<!-- All on white -->
+<div class="comparison-row" style="grid-template-columns: repeat(4, 1fr);">
+    <div class="logo-card">
+        <div class="preview bg-white" style="height:260px;"><img src="assets/media/logos/logo-clean-original.png" alt="Original" style="max-width:180px;"></div>
+        <div class="info"><div class="label">Original — on white</div></div>
+    </div>
+    <div class="logo-card">
+        <div class="preview bg-white" style="height:260px;"><img src="assets/media/logos/logo-A-bold-modern.png" alt="A" style="max-width:180px;"></div>
+        <div class="info"><div class="label">A — on white</div></div>
+    </div>
+    <div class="logo-card">
+        <div class="preview bg-white" style="height:260px;"><img src="assets/media/logos/logo-B-racing.png" alt="B" style="max-width:180px;"></div>
+        <div class="info"><div class="label">B — on white</div></div>
+    </div>
+    <div class="logo-card">
+        <div class="preview bg-white" style="height:260px;"><img src="assets/media/logos/logo-C-nautical.png" alt="C" style="max-width:180px;"></div>
+        <div class="info"><div class="label">C — on white</div></div>
+    </div>
+</div>
+
+<!-- ============ DOWNLOADS ============ -->
+<div class="download-section">
+    <h3>All Files</h3>
+    <div class="dl-grid">
+        <a class="dl-link" href="assets/media/logos/logo-clean-original.png"><span class="dl-name">Cleaned Original</span><span class="dl-info">PNG — ring removed</span></a>
+        <a class="dl-link" href="assets/media/logos/logo-A-bold-modern.png"><span class="dl-name">A — Bold Modern PNG</span><span class="dl-info">2048px transparent</span></a>
+        <a class="dl-link" href="assets/media/logos/logo-A-bold-modern.svg"><span class="dl-name">A — Bold Modern SVG</span><span class="dl-info">Vector (Montserrat)</span></a>
+        <a class="dl-link" href="assets/media/logos/logo-B-racing.png"><span class="dl-name">B — Racing PNG</span><span class="dl-info">2048px transparent</span></a>
+        <a class="dl-link" href="assets/media/logos/logo-B-racing.svg"><span class="dl-name">B — Racing SVG</span><span class="dl-info">Vector (Barlow Condensed)</span></a>
+        <a class="dl-link" href="assets/media/logos/logo-C-nautical.png"><span class="dl-name">C — Nautical PNG</span><span class="dl-info">2048px transparent</span></a>
+        <a class="dl-link" href="assets/media/logos/logo-C-nautical.svg"><span class="dl-name">C — Nautical SVG</span><span class="dl-info">Vector (Playfair Display)</span></a>
+    </div>
+</div>
+
+<p style="text-align:center;margin-top:40px;color:#555;font-size:0.85rem;">
+    Quality verified: NO white ring, NO halo, clean transparency on all backgrounds.<br>
+    Tell me which variation you prefer!
+</p>
+
+</body>
+</html>

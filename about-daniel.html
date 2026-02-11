@@ -19,8 +19,8 @@
     <meta property="og:image" content="https://marbellajetski.com/wp-content/uploads/2021/05/About_us.jpg">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="https://marbellajetski.com/wp-content/uploads/2021/05/MJS_16_500x500-removebg-preview.png">
-    <link rel="apple-touch-icon" href="https://marbellajetski.com/wp-content/uploads/2021/05/MJS_16_500x500-removebg-preview.png">
+    <link rel="icon" type="image/png" href="assets/media/photos/logo-circular.png">
+    <link rel="apple-touch-icon" href="assets/media/photos/logo-circular.png">
     
     <!-- PWA Manifest -->
     <link rel="manifest" href="manifest.json">
@@ -912,7 +912,7 @@
         
         .racing-video-card video {
             width: 100%;
-            aspect-ratio: 16/9;
+            aspect-ratio: 4/3;
             display: block;
             object-fit: cover;
             background: #000;
@@ -955,8 +955,7 @@
         }
 
         .racing-featured-video video {
-            aspect-ratio: 21/9;
-            max-height: 500px;
+            aspect-ratio: 16/9;
         }
 
         /* ============================================================
@@ -1167,113 +1166,7 @@
             }
         }
 
-        /* ============================================================
-           TESTIMONIALS CAROUSEL
-        ============================================================ */
-        .testimonials-section {
-            padding: 120px 20px;
-            background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
-        }
-        
-        .testimonials-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .testimonials-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-        
-        .testimonials-header h2 {
-            font-size: clamp(32px, 4.5vw, 50px);
-            font-weight: 800;
-            color: var(--dark);
-            margin-bottom: 15px;
-        }
-        
-        .testimonials-header p {
-            font-size: 18px;
-            color: var(--gray-600);
-        }
-        
-        .testimonial-swiper {
-            padding: 20px 0 60px;
-        }
-        
-        .testimonial-card {
-            background: white;
-            border-radius: 24px;
-            padding: 40px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
-            border: 1px solid var(--gray-200);
-            height: auto;
-        }
-        
-        .testimonial-card .stars {
-            color: var(--gold);
-            font-size: 20px;
-            margin-bottom: 20px;
-        }
-        
-        .testimonial-card .quote {
-            font-family: var(--font-display);
-            font-size: 20px;
-            font-style: italic;
-            color: var(--dark);
-            line-height: 1.7;
-            margin-bottom: 30px;
-        }
-        
-        .testimonial-card .author {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        
-        .testimonial-card .author-avatar {
-            width: 56px;
-            height: 56px;
-            border-radius: 50%;
-            background: var(--gradient-primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            font-weight: 700;
-            color: white;
-        }
-        
-        .testimonial-card .author-info .name {
-            font-size: 16px;
-            font-weight: 700;
-            color: var(--dark);
-        }
-        
-        .testimonial-card .author-info .source {
-            font-size: 13px;
-            color: var(--gray-500);
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        
-        .testimonial-card .author-info .source i {
-            color: var(--primary);
-        }
-        
-        .swiper-pagination-bullet {
-            width: 12px;
-            height: 12px;
-            background: var(--gray-300);
-            opacity: 1;
-        }
-        
-        .swiper-pagination-bullet-active {
-            background: var(--primary);
-            width: 30px;
-            border-radius: 6px;
-        }
+
 
         /* ============================================================
            LESSONS SECTION - Premium Cards
@@ -1353,6 +1246,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: 50% 18%;
             transition: transform 0.6s ease;
         }
         
@@ -1360,6 +1254,11 @@
             transform: scale(1.1);
         }
         
+        .lesson-card.advanced .card-image img {
+            object-position: center 35%;
+            object-fit: cover;
+        }
+
         .lesson-card .level-tag {
             position: absolute;
             top: 20px;
@@ -2479,7 +2378,7 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="index.html#home" class="nav-logo">
-                <img src="https://marbellajetski.com/wp-content/uploads/2021/05/MJS_16_500x500-removebg-preview.png" alt="Marbella JetSki Logo" class="logo-image" style="height: 45px;">
+                <img src="assets/media/photos/logo-circular.png" alt="Marbella JetSki Logo" class="logo-image" style="height: 45px;">
                 <span class="logo-text">MARBELLA<span class="logo-highlight">JETSKI</span></span>
             </a>
             
@@ -2527,30 +2426,30 @@
         
         <div class="daniel-hero-content">
             <div class="hero-badge-animated" data-aos="fade-down" data-aos-delay="200">
-                <i class="fas fa-trophy"></i>
-                <span>4x Spanish National Champion 2024 • Campeón de Andalucía 2025</span>
+                <i class="fas fa-anchor"></i>
+                <span>Family Business Since 1998 • Costa del Sol, Marbella</span>
             </div>
             
             <h1 data-aos="fade-up" data-aos-delay="400">
                 About Us<br>
-                <span class="name-highlight">Daniel Stiers</span>
+                <span class="name-highlight">Marbella JetSki</span>
             </h1>
             
             <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="600">
-                Spanish Jet Ski Racing Champion &bull; Copa del Rey Medallist &bull; RFEM Licensed<br>
-                Director of <strong>Marbella JetSki</strong> &mdash; a family business since 1998
+                Premium watersports operator on the Costa del Sol &bull; Jet Ski &bull; Boat Excursions &bull; Paddleboard<br>
+                Operated by <strong>STIERS E HIJOS S.L.</strong> &mdash; over 25 years of experience
             </p>
             
             <!-- Hero stat-cards removed -->
             
             <div class="hero-cta-group" data-aos="fade-up" data-aos-delay="1000">
-                <a href="#lessons" class="hero-btn hero-btn-primary">
-                    <i class="fas fa-graduation-cap"></i>
-                    Book a Lesson
+                <a href="#who-we-are" class="hero-btn hero-btn-primary">
+                    <i class="fas fa-info-circle"></i>
+                    Who We Are
                 </a>
-                <a href="#championships" class="hero-btn hero-btn-secondary">
-                    <i class="fas fa-medal"></i>
-                    View Achievements
+                <a href="#meet-daniel" class="hero-btn hero-btn-secondary">
+                    <i class="fas fa-user"></i>
+                    Meet Our Pilot
                 </a>
             </div>
         </div>
@@ -2561,8 +2460,64 @@
         </div>
     </section>
 
-    <!-- ========== STORY SECTION ========== -->
-    <section class="story-section">
+    <!-- ========== COMPANY SECTION — WHO WE ARE ========== -->
+    <section class="story-section" id="who-we-are">
+        <div class="story-container">
+            <div class="story-grid">
+                <div class="story-visual" data-aos="fade-right">
+                    <div class="story-main-image">
+                        <img src="assets/media/photos/jetski-excursion.jpg" alt="Marbella JetSki — Watersports on the Costa del Sol" style="object-position:center 30%;">
+                    </div>
+                </div>
+                
+                <div class="story-content" data-aos="fade-left">
+                    <span class="section-label">Who We Are</span>
+                    
+                    <h2>Marbella JetSki — <span class="gradient-text">Watersports Since 1998</span></h2>
+                    
+                    <p class="story-lead"><strong>Marbella JetSki</strong> is a family-owned watersports company operated by <strong>STIERS E HIJOS S.L.</strong>, based on the Costa del Sol. We have been offering premium water activities in Marbella for over 25 years.</p>
+                    
+                    <p class="story-text">From jet ski excursions and boat trips to paddleboarding, kayaking, and private racing lessons, our goal is to deliver safe, exciting, and memorable experiences on the Mediterranean Sea.</p>
+                    
+                    <p class="story-text">We operate with full licences and insurance, hold <strong>ISO 9001</strong> (Quality) and <strong>ISO 14001</strong> (Environmental) certifications, and use professional-grade, well-maintained equipment for every activity.</p>
+                    
+                    <div class="credentials-row">
+                        <div class="credential-card">
+                            <div class="icon"><i class="fas fa-building"></i></div>
+                            <div class="text">
+                                <strong>STIERS E HIJOS S.L.</strong>
+                                <span>Registered Company</span>
+                            </div>
+                        </div>
+                        <div class="credential-card">
+                            <div class="icon"><i class="fas fa-calendar-alt"></i></div>
+                            <div class="text">
+                                <strong>Since 1998</strong>
+                                <span>25+ Years Experience</span>
+                            </div>
+                        </div>
+                        <div class="credential-card">
+                            <div class="icon"><i class="fas fa-certificate"></i></div>
+                            <div class="text">
+                                <strong>ISO 9001 & 14001</strong>
+                                <span>Quality & Environment</span>
+                            </div>
+                        </div>
+                        <div class="credential-card">
+                            <div class="icon"><i class="fas fa-shield-alt"></i></div>
+                            <div class="text">
+                                <strong>Fully Licenced & Insured</strong>
+                                <span>Professional Operations</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== DANIEL STIERS — MEET OUR PILOT ========== -->
+    <section class="story-section" id="meet-daniel" style="background:linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%);">
         <div class="story-container">
             <div class="story-grid">
                 <div class="story-visual" data-aos="fade-right">
@@ -2574,11 +2529,11 @@
                 </div>
                 
                 <div class="story-content" data-aos="fade-left">
-                    <span class="section-label">Meet Our Professional Pilot</span>
+                    <span class="section-label">Meet Our Pilot</span>
                     
                     <h2>Daniel Stiers — <span class="gradient-text">Professional Pilot & Instructor</span></h2>
                     
-                    <p class="story-lead">Marbella JetSki has been a family business since 1998, operated by <strong>STIERS E HIJOS S.L.</strong> on the Costa del Sol. Our director, Daniel Stiers, is also a professional jet ski racing pilot who competes at the highest national and international level.</p>
+                    <p class="story-lead">Our director, <strong>Daniel Stiers</strong>, is a professional jet ski racing pilot who competes at the highest national and international level. He brings championship-level expertise to every lesson and excursion at Marbella JetSki.</p>
                     
                     <p class="story-text">Daniel's competition highlights include <strong>Campe&oacute;n de Espa&ntilde;a 2024</strong> (circuito, rallyjet, offshore), <strong>Campe&oacute;n de Andaluc&iacute;a 2025</strong>, and a podium finish at the <strong>Basquet Cup International Offshore</strong> (Getaria).</p>
                     
@@ -2864,116 +2819,22 @@
         <button class="lightbox-nav lightbox-next" onclick="changeRacingPhoto(1)"><i class="fas fa-chevron-right"></i></button>
     </div>
 
-    <!-- ========== TESTIMONIALS SECTION ========== -->
-    <section class="testimonials-section">
-        <div class="testimonials-container">
-            <div class="testimonials-header" data-aos="fade-up">
-                <span class="section-label">What Riders Say</span>
-                <h2>Trusted by <span class="gradient-text">Thousands of</span> Riders</h2>
-                <p>Real reviews from real customers across Google, TripAdvisor, and social media.</p>
-            </div>
-            
-            <div class="swiper testimonial-swiper" data-aos="fade-up" data-aos-delay="200">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="testimonial-card">
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <p class="quote">"Daniel is amazing! We had no experience and he made us feel completely safe. The jet skis are brand new and the location is stunning. Best activity we did in Marbella!"</p>
-                            <div class="author">
-                                <div class="author-avatar">JT</div>
-                                <div class="author-info">
-                                    <span class="name">James Thompson</span>
-                                    <span class="source"><i class="fab fa-tripadvisor"></i> TripAdvisor Review</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="swiper-slide">
-                        <div class="testimonial-card">
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <p class="quote">"We didn't know Daniel was a national champion until after the lesson! No wonder the instruction was so professional. The racing masterclass was INCREDIBLE. 100% recommend."</p>
-                            <div class="author">
-                                <div class="author-avatar">SC</div>
-                                <div class="author-info">
-                                    <span class="name">Sophie Carter</span>
-                                    <span class="source"><i class="fab fa-google"></i> Google Review</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="swiper-slide">
-                        <div class="testimonial-card">
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <p class="quote">"My stag do group had the best day ever! Daniel sorted everything - jet skis, the banana boat, even a boat trip. Super professional but fun at the same time. The lads are still talking about it."</p>
-                            <div class="author">
-                                <div class="author-avatar">MR</div>
-                                <div class="author-info">
-                                    <span class="name">Mike Reynolds</span>
-                                    <span class="source"><i class="fab fa-google"></i> Google Review</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="swiper-slide">
-                        <div class="testimonial-card">
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <p class="quote">"My kids (16 and 14) wanted to try jet skiing. Daniel was patient, thorough with the safety briefing, and made sure they had an amazing time. Very professional family business."</p>
-                            <div class="author">
-                                <div class="author-avatar">LM</div>
-                                <div class="author-info">
-                                    <span class="name">Laura Martinez</span>
-                                    <span class="source"><i class="fab fa-tripadvisor"></i> TripAdvisor Review</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
-        </div>
-    </section>
+
 
     <!-- ========== LESSONS SECTION ========== -->
     <section class="lessons-section" id="lessons">
         <div class="lessons-container">
             <div class="lessons-header" data-aos="fade-up">
-                <span class="section-label">Racing Lessons with Daniel</span>
+                <span class="section-label">Racing Lessons</span>
                 <h2>Jet Ski <span class="gradient-text">Racing Lessons</span></h2>
-                <p>Learn from a professional racing pilot. Daniel offers private lessons for all levels — from first-timers to experienced riders who want to master competition techniques.</p>
+                <p>Learn from a professional racing pilot. Private lessons for all levels — from first-timers to experienced riders who want to master competition techniques.</p>
             </div>
             
             <div class="lessons-grid">
                 <!-- Basic Racing Lesson -->
                 <div class="lesson-card beginner" data-aos="fade-up" data-aos-delay="0">
                     <div class="card-image">
-                        <img src="https://marbellajetski.com/wp-content/uploads/2023/05/IMG_1247-scaled.webp" alt="Basic racing lesson Marbella">
+                        <img src="assets/media/racing/racing-seadoo-1.jpg" alt="Basic racing lesson Marbella">
                         <span class="level-tag beginner">Basic</span>
                     </div>
                     <div class="card-body">
@@ -2981,7 +2842,7 @@
                         <p class="desc">Introduction to racing techniques. Learn throttle control, body positioning, cornering basics, and circuit navigation with a professional pilot.</p>
                         <ul class="features">
                             <li><i class="fas fa-check"></i> 30 minute session</li>
-                            <li><i class="fas fa-check"></i> Personal coaching by Daniel</li>
+                            <li><i class="fas fa-check"></i> Personal coaching by a Pilot</li>
                             <li><i class="fas fa-check"></i> Safety briefing & all gear</li>
                             <li><i class="fas fa-check"></i> Circuit technique basics</li>
                             <li><i class="fas fa-check"></i> All levels welcome</li>
@@ -2998,17 +2859,17 @@
                 <!-- Intermediate Racing Lesson -->
                 <div class="lesson-card intermediate" data-aos="fade-up" data-aos-delay="100">
                     <div class="card-image">
-                        <img src="https://marbellajetski.com/wp-content/uploads/2023/05/DSC_0245-scaled.webp" alt="Racing lesson Marbella">
+                        <img src="assets/media/racing/racing-seadoo-2.jpg" alt="Racing lesson Marbella">
                         <span class="level-tag intermediate">Intermediate</span>
                         <span class="popular-badge"><i class="fas fa-fire"></i> Most Popular</span>
                     </div>
                     <div class="card-body">
                         <h3>Racing Experience</h3>
-                        <p class="desc">Full racing session with Daniel. Learn advanced cornering, buoy technique, wave reading, and speed management on the competition circuit.</p>
+                        <p class="desc">Full racing session with a professional pilot. Learn advanced cornering, buoy technique, wave reading, and speed management on the competition circuit.</p>
                         <ul class="features">
                             <li><i class="fas fa-check"></i> 1 hour intensive session</li>
                             <li><i class="fas fa-check"></i> Circuit & open water technique</li>
-                            <li><i class="fas fa-check"></i> Personal coaching by Daniel</li>
+                            <li><i class="fas fa-check"></i> Personal coaching by a Pilot</li>
                             <li><i class="fas fa-check"></i> Competition-level jet ski</li>
                             <li><i class="fas fa-check"></i> GoPro recording available</li>
                         </ul>
@@ -3024,15 +2885,15 @@
                 <!-- Advanced Racing Masterclass -->
                 <div class="lesson-card advanced" data-aos="fade-up" data-aos-delay="200">
                     <div class="card-image">
-                        <img src="https://marbellajetski.com/wp-content/uploads/2023/05/DSC_0111-scaled.webp" alt="Racing masterclass with Daniel Stiers">
+                        <img src="assets/media/racing/racing-seadoo-3.jpg" alt="Racing Masterclass — Jet Ski Marbella">
                         <span class="level-tag advanced">Masterclass</span>
                     </div>
                     <div class="card-body">
                         <h3>Racing Masterclass</h3>
-                        <p class="desc">The ultimate 2-hour intensive with Daniel. Master race starts, offshore racing lines, slalom technique, and competitive riding at professional level.</p>
+                        <p class="desc">The ultimate 2-hour intensive with a professional pilot. Master race starts, offshore racing lines, slalom technique, and competitive riding at professional level.</p>
                         <ul class="features">
                             <li><i class="fas fa-check"></i> 2 hour intensive session</li>
-                            <li><i class="fas fa-check"></i> Personal coaching by Daniel</li>
+                            <li><i class="fas fa-check"></i> Personal coaching by a Pilot</li>
                             <li><i class="fas fa-check"></i> Circuit, offshore & slalom</li>
                             <li><i class="fas fa-check"></i> GoPro recording included</li>
                             <li><i class="fas fa-check"></i> For experienced riders</li>
@@ -3183,24 +3044,6 @@
         </div>
     </section>
 
-    <!-- ========== CTA SECTION ========== -->
-    <section class="cta-section">
-        <div class="cta-card" data-aos="zoom-in">
-            <div class="cta-content">
-                <h2>Book Your Water Experience</h2>
-                <p>Get in touch to book jet ski rides, racing lessons, coastal excursions, yacht charters, or water sports. Marbella JetSki — family business since 1998.</p>
-                <div class="cta-buttons">
-                    <a href="https://api.whatsapp.com/send?phone=34655442232&text=Hi!%20I%27d%20like%20to%20book%20an%20experience%20with%20Marbella%20JetSki." class="cta-btn whatsapp" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-                    </a>
-                    <a href="tel:+34655442232" class="cta-btn primary">
-                        <i class="fas fa-phone-alt"></i> +34 655 442 232
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- ========== TRUST LOGOS SECTION ========== -->
     <section class="trust-section">
         <div class="trust-container" data-aos="fade-up">
@@ -3302,7 +3145,7 @@
                 <div class="footer-grid">
                     <div class="footer-brand">
                         <a href="index.html" class="footer-logo">
-                            <img src="https://marbellajetski.com/wp-content/uploads/2021/05/MJS_16_500x500-removebg-preview.png" alt="Marbella JetSki Logo" style="height: 60px; margin-bottom: 15px;">
+                            <img src="assets/media/photos/logo-circular.png" alt="Marbella JetSki Logo" style="height: 60px; margin-bottom: 15px;">
                             <span class="logo-text">MARBELLA<span class="logo-highlight">JETSKI</span></span>
                         </a>
                         <p>Costa del Sol's premier water sports destination. Family-owned since 1998, led by 4x Spanish National Champion Daniel Stiers.</p>

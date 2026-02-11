@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Typography Comparison — Marbella Jet Ski</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: #0c0c0c;
+            color: #fff;
+            min-height: 100vh;
+        }
+        .header {
+            text-align: center;
+            padding: 50px 20px 10px;
+        }
+        .header h1 {
+            font-size: 24px;
+            font-weight: 300;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            color: #c9a44a;
+        }
+        .header p {
+            margin-top: 10px;
+            color: #666;
+            font-size: 13px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .divider {
+            text-align: center;
+            padding: 35px 20px 15px;
+            font-size: 11px;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            color: #555;
+            border-top: 1px solid #1a1a1a;
+            margin-top: 30px;
+        }
+
+        /* === Grid: Original + 5 variations === */
+        .logo-grid {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 30px;
+            padding: 25px 20px 10px;
+            flex-wrap: wrap;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+        .logo-card {
+            text-align: center;
+            width: 180px;
+        }
+        .logo-card img {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+        .logo-card img:hover {
+            transform: scale(1.12);
+        }
+        .logo-card .num {
+            margin-top: 12px;
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+        .logo-card .label {
+            margin-top: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .logo-card .sublabel {
+            margin-top: 3px;
+            font-size: 10px;
+            color: #666;
+        }
+
+        .logo-card.orig .num { color: #888; }
+        .logo-card.orig .label { color: #888; }
+        .logo-card.v1 .num { color: #c9a44a; }
+        .logo-card.v1 .label { color: #c9a44a; }
+        .logo-card.v2 .num { color: #e04040; }
+        .logo-card.v2 .label { color: #e04040; }
+        .logo-card.v3 .num { color: #4ac9a4; }
+        .logo-card.v3 .label { color: #4ac9a4; }
+        .logo-card.v4 .num { color: #4a9ac9; }
+        .logo-card.v4 .label { color: #4a9ac9; }
+        .logo-card.v5 .num { color: #c94adf; }
+        .logo-card.v5 .label { color: #c94adf; }
+
+        /* === Large side-by-side pairs === */
+        .pair-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+            padding: 30px 20px;
+            flex-wrap: wrap;
+        }
+        .pair-card {
+            text-align: center;
+        }
+        .pair-card img {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+        }
+        .pair-card .ptitle {
+            margin-top: 10px;
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #888;
+        }
+
+        /* === Background strip === */
+        .bg-strip {
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            margin: 5px auto;
+            max-width: 700px;
+        }
+        .bg-cell {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 8px;
+        }
+        .bg-cell img { width: 100px; height: 100px; }
+        .bg-navy { background: #0e1c3f; }
+        .bg-white { background: #ffffff; }
+        .bg-checker {
+            background-image:
+                linear-gradient(45deg, #ccc 25%, transparent 25%),
+                linear-gradient(-45deg, #ccc 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, #ccc 75%),
+                linear-gradient(-45deg, transparent 75%, #ccc 75%);
+            background-size: 16px 16px;
+            background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+        }
+        .bg-gold { background: linear-gradient(135deg, #c9a44a, #f0d080, #c9a44a); }
+
+        /* === Downloads === */
+        .downloads {
+            text-align: center;
+            padding: 20px 20px 60px;
+        }
+        .dl-grid {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .dl-btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background: #151d2e;
+            color: #c9a44a;
+            text-decoration: none;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border: 1px solid #253350;
+            border-radius: 3px;
+            transition: all 0.2s;
+        }
+        .dl-btn:hover { background: #c9a44a; color: #0a1628; }
+
+        @media (max-width: 768px) {
+            .logo-grid { gap: 20px; }
+            .logo-card { width: 140px; }
+            .logo-card img { width: 130px; height: 130px; }
+            .pair-card img { width: 200px; height: 200px; }
+            .bg-cell img { width: 70px; height: 70px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Typography Comparison</h1>
+        <p>Same logo, same layout, same icon, same waves, same colors.<br>Only the <strong>font style</strong> of MARBELLA / JET SKI / WATERSPORTS has changed.</p>
+    </div>
+
+    <!-- ======== ALL 6 SIDE BY SIDE ======== -->
+    <div class="divider">Original + 5 Variations</div>
+    <div class="logo-grid">
+        <div class="logo-card orig">
+            <img src="assets/media/photos/logo-circular.png" alt="Original">
+            <div class="num">O</div>
+            <div class="label">Original</div>
+            <div class="sublabel">Current font</div>
+        </div>
+        <div class="logo-card v1">
+            <img src="assets/media/logos/logo-v1.png" alt="Version 1">
+            <div class="num">1</div>
+            <div class="label">Montserrat Black</div>
+            <div class="sublabel">Modern geometric sans-serif</div>
+        </div>
+        <div class="logo-card v2">
+            <img src="assets/media/logos/logo-v2.png" alt="Version 2">
+            <div class="num">2</div>
+            <div class="label">Barlow Condensed</div>
+            <div class="sublabel">Tall condensed racing</div>
+        </div>
+        <div class="logo-card v3">
+            <img src="assets/media/logos/logo-v3.png" alt="Version 3">
+            <div class="num">3</div>
+            <div class="label">Oswald Bold</div>
+            <div class="sublabel">Strong industrial sans</div>
+        </div>
+        <div class="logo-card v4">
+            <img src="assets/media/logos/logo-v4.png" alt="Version 4">
+            <div class="num">4</div>
+            <div class="label">Cormorant Bold</div>
+            <div class="sublabel">Elegant serif / nautical</div>
+        </div>
+        <div class="logo-card v5">
+            <img src="assets/media/logos/logo-v5.png" alt="Version 5">
+            <div class="num">5</div>
+            <div class="label">Roboto Condensed</div>
+            <div class="sublabel">Clean condensed modern</div>
+        </div>
+    </div>
+
+    <!-- ======== LARGE COMPARISONS: each vs original ======== -->
+    <div class="divider">Detailed — Each vs Original</div>
+
+    <div class="pair-row">
+        <div class="pair-card"><img src="assets/media/photos/logo-circular.png" alt="Original"><div class="ptitle">Original</div></div>
+        <div class="pair-card"><img src="assets/media/logos/logo-v1.png" alt="V1"><div class="ptitle" style="color:#c9a44a">V1 — Montserrat Black</div></div>
+    </div>
+    <div class="pair-row">
+        <div class="pair-card"><img src="assets/media/photos/logo-circular.png" alt="Original"><div class="ptitle">Original</div></div>
+        <div class="pair-card"><img src="assets/media/logos/logo-v2.png" alt="V2"><div class="ptitle" style="color:#e04040">V2 — Barlow Condensed</div></div>
+    </div>
+    <div class="pair-row">
+        <div class="pair-card"><img src="assets/media/photos/logo-circular.png" alt="Original"><div class="ptitle">Original</div></div>
+        <div class="pair-card"><img src="assets/media/logos/logo-v3.png" alt="V3"><div class="ptitle" style="color:#4ac9a4">V3 — Oswald Bold</div></div>
+    </div>
+    <div class="pair-row">
+        <div class="pair-card"><img src="assets/media/photos/logo-circular.png" alt="Original"><div class="ptitle">Original</div></div>
+        <div class="pair-card"><img src="assets/media/logos/logo-v4.png" alt="V4"><div class="ptitle" style="color:#4a9ac9">V4 — Cormorant Bold</div></div>
+    </div>
+    <div class="pair-row">
+        <div class="pair-card"><img src="assets/media/photos/logo-circular.png" alt="Original"><div class="ptitle">Original</div></div>
+        <div class="pair-card"><img src="assets/media/logos/logo-v5.png" alt="V5"><div class="ptitle" style="color:#c94adf">V5 — Roboto Condensed</div></div>
+    </div>
+
+    <!-- ======== BACKGROUND TEST ======== -->
+    <div class="divider">Background Tests</div>
+
+    <div style="text-align:center;color:#555;font-size:10px;letter-spacing:3px;text-transform:uppercase;margin-bottom:5px">Version 1 — Montserrat</div>
+    <div class="bg-strip">
+        <div class="bg-cell bg-navy"><img src="assets/media/logos/logo-v1.png"></div>
+        <div class="bg-cell bg-white"><img src="assets/media/logos/logo-v1.png"></div>
+        <div class="bg-cell bg-checker"><img src="assets/media/logos/logo-v1.png"></div>
+        <div class="bg-cell bg-gold"><img src="assets/media/logos/logo-v1.png"></div>
+    </div>
+
+    <div style="text-align:center;color:#555;font-size:10px;letter-spacing:3px;text-transform:uppercase;margin:15px 0 5px">Version 2 — Barlow</div>
+    <div class="bg-strip">
+        <div class="bg-cell bg-navy"><img src="assets/media/logos/logo-v2.png"></div>
+        <div class="bg-cell bg-white"><img src="assets/media/logos/logo-v2.png"></div>
+        <div class="bg-cell bg-checker"><img src="assets/media/logos/logo-v2.png"></div>
+        <div class="bg-cell bg-gold"><img src="assets/media/logos/logo-v2.png"></div>
+    </div>
+
+    <div style="text-align:center;color:#555;font-size:10px;letter-spacing:3px;text-transform:uppercase;margin:15px 0 5px">Version 3 — Oswald</div>
+    <div class="bg-strip">
+        <div class="bg-cell bg-navy"><img src="assets/media/logos/logo-v3.png"></div>
+        <div class="bg-cell bg-white"><img src="assets/media/logos/logo-v3.png"></div>
+        <div class="bg-cell bg-checker"><img src="assets/media/logos/logo-v3.png"></div>
+        <div class="bg-cell bg-gold"><img src="assets/media/logos/logo-v3.png"></div>
+    </div>
+
+    <div style="text-align:center;color:#555;font-size:10px;letter-spacing:3px;text-transform:uppercase;margin:15px 0 5px">Version 4 — Cormorant</div>
+    <div class="bg-strip">
+        <div class="bg-cell bg-navy"><img src="assets/media/logos/logo-v4.png"></div>
+        <div class="bg-cell bg-white"><img src="assets/media/logos/logo-v4.png"></div>
+        <div class="bg-cell bg-checker"><img src="assets/media/logos/logo-v4.png"></div>
+        <div class="bg-cell bg-gold"><img src="assets/media/logos/logo-v4.png"></div>
+    </div>
+
+    <div style="text-align:center;color:#555;font-size:10px;letter-spacing:3px;text-transform:uppercase;margin:15px 0 5px">Version 5 — Roboto Condensed</div>
+    <div class="bg-strip">
+        <div class="bg-cell bg-navy"><img src="assets/media/logos/logo-v5.png"></div>
+        <div class="bg-cell bg-white"><img src="assets/media/logos/logo-v5.png"></div>
+        <div class="bg-cell bg-checker"><img src="assets/media/logos/logo-v5.png"></div>
+        <div class="bg-cell bg-gold"><img src="assets/media/logos/logo-v5.png"></div>
+    </div>
+
+    <!-- ======== DOWNLOADS ======== -->
+    <div class="divider">Download</div>
+    <div class="downloads">
+        <div class="dl-grid">
+            <a class="dl-btn" href="assets/media/logos/logo-v1.png" download>V1 Montserrat</a>
+            <a class="dl-btn" href="assets/media/logos/logo-v2.png" download>V2 Barlow</a>
+            <a class="dl-btn" href="assets/media/logos/logo-v3.png" download>V3 Oswald</a>
+            <a class="dl-btn" href="assets/media/logos/logo-v4.png" download>V4 Cormorant</a>
+            <a class="dl-btn" href="assets/media/logos/logo-v5.png" download>V5 Roboto</a>
+        </div>
+    </div>
+
+</body>
+</html>

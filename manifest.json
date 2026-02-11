@@ -17,7 +17,7 @@
             "purpose": "any"
         },
         {
-            "src": "https://marbellajetski.com/wp-content/uploads/2021/05/MJS_16_500x500.png",
+            "src": "assets/media/photos/logo-circle-192.png",
             "sizes": "500x500",
             "type": "image/png",
             "purpose": "maskable"

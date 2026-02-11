@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reserva Tu Aventura | Marbella JetSki</title>
     <meta name="description" content="Reserva motos de agua, alquiler de yates y deportes acuáticos en Marbella. Confirmación inmediata, pago seguro, cancelación gratuita. Abierto todos los días de 11h a 20h.">
-    <link rel="icon" type="image/png" href="https://marbellajetski.com/wp-content/uploads/2021/05/MJS_16_500x500-removebg-preview.png">
+    <link rel="icon" type="image/png" href="../assets/media/photos/logo-circular.png">
     <link rel="manifest" href="../manifest.json">
     <meta property="og:title" content="Reserva Tu Aventura | Marbella JetSki">
     <meta property="og:description" content="Reserva motos de agua, alquiler de yates y deportes acuáticos en Marbella. Pago seguro, cancelación gratuita 24h.">
@@ -133,6 +133,34 @@
             .deposit-toggle { flex-direction: column; }
             .policies-grid { grid-template-columns: 1fr; }
         }
+        /* ========== Inline Calendar ========== */
+        .calendar-container { background: white; border: 2px solid var(--gray-200); border-radius: 12px; padding: 20px; }
+        .calendar-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+        .calendar-header h5 { font-size: 1rem; font-weight: 700; color: var(--dark); margin: 0; }
+        .calendar-nav { background: none; border: 2px solid var(--gray-200); border-radius: 8px; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s; font-size: 0.9rem; color: var(--gray-600); }
+        .calendar-nav:hover { border-color: var(--primary); color: var(--primary); background: rgba(0,180,216,0.05); }
+        .calendar-nav:disabled { opacity: 0.3; cursor: not-allowed; pointer-events: none; }
+        .calendar-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 3px; }
+        .calendar-day-header { text-align: center; font-size: 0.72rem; font-weight: 700; color: var(--gray-400); padding: 8px 0; text-transform: uppercase; letter-spacing: 0.5px; }
+        .calendar-day { text-align: center; padding: 10px 2px; border-radius: 8px; font-size: 0.88rem; font-weight: 500; cursor: pointer; transition: all 0.15s; color: var(--dark); border: 2px solid transparent; line-height: 1; }
+        .calendar-day:hover:not(.disabled):not(.empty) { background: rgba(0,180,216,0.08); border-color: rgba(0,180,216,0.3); }
+        .calendar-day.today { border-color: var(--primary); font-weight: 700; }
+        .calendar-day.selected { background: var(--primary) !important; color: white !important; border-color: var(--primary) !important; font-weight: 700; box-shadow: 0 2px 8px rgba(0,180,216,0.3); }
+        .calendar-day.disabled { color: var(--gray-300); cursor: not-allowed; text-decoration: line-through; opacity: 0.5; }
+        .calendar-day.empty { cursor: default; }
+        .calendar-selected-bar { display: flex; align-items: center; gap: 10px; padding: 12px 16px; background: rgba(16,185,129,0.08); border: 2px solid #10b981; border-radius: 10px; margin-top: 14px; font-weight: 600; font-size: 0.9rem; color: #065f46; }
+        .calendar-selected-bar i { color: #10b981; font-size: 1.1rem; }
+        .calendar-selected-bar.hidden { display: none; }
+        /* ========== Boat Deposit Box ========== */
+        .boat-deposit-box { border: 2px solid var(--primary); border-radius: 12px; padding: 24px; background: rgba(0,180,216,0.03); }
+        .boat-deposit-amount { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 10px; }
+        .boat-deposit-label { font-weight: 700; font-size: 1rem; color: var(--dark); }
+        .boat-deposit-value { font-size: 1.6rem; font-weight: 800; color: var(--primary-dark); }
+        .boat-deposit-info { display: flex; gap: 10px; padding: 14px; background: rgba(0,180,216,0.06); border-radius: 10px; }
+        .boat-deposit-info i { color: var(--primary); margin-top: 2px; flex-shrink: 0; }
+        .boat-deposit-info p { font-size: 0.85rem; color: var(--gray-600); margin: 0; line-height: 1.5; }
+        .boat-balance-note { display: flex; align-items: center; gap: 8px; margin-top: 12px; font-size: 0.82rem; color: var(--gray-500); flex-wrap: wrap; }
+        .boat-balance-note strong { color: var(--dark); }
     </style>
 </head>
 <body>
@@ -141,7 +169,7 @@
     <nav class="navbar scrolled" id="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">
-                <img src="https://marbellajetski.com/wp-content/uploads/2021/05/MJS_16_500x500-removebg-preview.png" alt="Marbella JetSki Logo" class="logo-image" style="height: 45px;">
+                <img src="../assets/media/photos/logo-circular.png" alt="Marbella JetSki Logo" class="logo-image" style="height: 45px;">
                 <span class="logo-text">MARBELLA<span class="logo-highlight">JETSKI</span></span>
             </a>
             <div class="nav-menu" id="navMenu">
@@ -208,7 +236,7 @@
                             <button class="cat-tab" data-cat="jetski">Motos de Agua</button>
                             <button class="cat-tab" data-cat="watersports">Deportes Acuáticos</button>
                             <button class="cat-tab" data-cat="yacht">Alquiler de Yates</button>
-                            <button class="cat-tab" data-cat="training" style="border-color:var(--accent-gold);color:var(--accent-gold);"><i class="fas fa-trophy"></i> Con Daniel</button>
+                            <button class="cat-tab" data-cat="training" style="border-color:var(--accent-gold);color:var(--accent-gold);"><i class="fas fa-trophy"></i> Con Piloto Profesional</button>
                         </div>
 
                         <div class="activity-options" id="activityList">
@@ -338,7 +366,7 @@
                                     <div class="name">Hidropedal con Tobogán</div>
                                     <div class="duration">1 hora · ¡Para toda la familia!</div>
                                 </div>
-                                <span class="capacity"><i class="fas fa-users"></i> Hasta 6</span>
+                                <span class="capacity"><i class="fas fa-users"></i> Hasta 5</span>
                                 <span class="price">€30</span>
                             </label>
 
@@ -398,21 +426,18 @@
                                 <span class="price">€1.800</span>
                             </label>
 
-                            <!-- Entrenamiento con Daniel (solo bajo petición) -->
-                            <div style="padding:16px 0 8px;border-top:2px solid var(--gray-200);margin-top:12px;">
-                                <span style="font-weight:700;font-size:0.85rem;color:var(--primary);text-transform:uppercase;letter-spacing:1px;"><i class="fas fa-trophy"></i> Entrena con el Campeón</span>
-                            </div>
+                            <!-- Entrenamiento con Piloto Profesional (solo bajo petición) -->
                             <label class="activity-option" data-cat="training" style="border-left:3px solid var(--accent-gold);">
-                                <input type="radio" name="activity" value="training-daniel" data-price="0" data-name="Entrenamiento con Daniel" data-name-en="Training with Daniel" data-duration="Sujeto a confirmación" data-type="request-only">
+                                <input type="radio" name="activity" value="training-daniel" data-price="0" data-name="Entrenamiento con Piloto Profesional" data-name-en="Training with a Professional Pilot" data-duration="Sujeto a confirmación" data-type="request-only">
                                 <div>
-                                    <div class="name">Entrenamiento con Daniel <span style="background:var(--accent-gold);color:#000;font-size:0.7rem;padding:2px 8px;border-radius:10px;font-weight:700;">BAJO PETICIÓN</span></div>
-                                    <div class="duration">Solo mañanas (10:00–14:00) · Coaching personal con 4x Campeón Nacional</div>
+                                    <div class="name">Entrenamiento con Piloto Profesional <span style="background:var(--accent-gold);color:#000;font-size:0.7rem;padding:2px 8px;border-radius:10px;font-weight:700;">BAJO PETICIÓN</span></div>
+                                    <div class="duration">Solo mañanas (10:00–14:00) · Coaching personal con piloto profesional de competición</div>
                                 </div>
                                 <span class="capacity"><i class="fas fa-user"></i> 1-2</span>
                                 <span class="price" style="color:var(--accent-gold);">Contáctanos</span>
                             </label>
                             <label class="activity-option" data-cat="training" style="border-left:3px solid var(--accent-gold);">
-                                <input type="radio" name="activity" value="racing-daniel" data-price="0" data-name="Experiencia Racing con Daniel" data-name-en="Racing Experience with Daniel" data-duration="Sujeto a confirmación" data-type="request-only">
+                                <input type="radio" name="activity" value="racing-daniel" data-price="0" data-name="Experiencia Racing con Piloto Profesional" data-name-en="Racing Experience with a Professional Pilot" data-duration="Sujeto a confirmación" data-type="request-only">
                                 <div>
                                     <div class="name">Experiencia Racing <span style="background:var(--accent-gold);color:#000;font-size:0.7rem;padding:2px 8px;border-radius:10px;font-weight:700;">BAJO PETICIÓN</span></div>
                                     <div class="duration">Solo mañanas (10:00–14:00) · Circuito armado por Daniel para poner a prueba tu destreza</div>
@@ -425,7 +450,7 @@
                         <!-- Aviso solo petición para Entrenamiento/Racing -->
                         <div id="trainingNotice" style="display:none;background:linear-gradient(135deg,#fef3c7,#fde68a);border:2px solid var(--accent-gold);border-radius:12px;padding:20px;margin-top:16px;">
                             <h4 style="color:#92400e;margin-bottom:8px;"><i class="fas fa-info-circle"></i> Solo Solicitud de Disponibilidad</h4>
-                            <p style="color:#78350f;font-size:0.9rem;margin-bottom:12px;">Las sesiones de entrenamiento con Daniel no se pueden reservar directamente online. Contacta con nosotros para consultar disponibilidad. Solo disponible por las mañanas (10:00–14:00).</p>
+                            <p style="color:#78350f;font-size:0.9rem;margin-bottom:12px;">Las sesiones de entrenamiento con nuestro piloto profesional no se pueden reservar directamente online. Contacta con nosotros para consultar disponibilidad. Solo disponible por las mañanas (10:00–14:00).</p>
                             <div style="display:flex;gap:12px;flex-wrap:wrap;">
                                 <a href="https://api.whatsapp.com/send?phone=34655442232&text=¡Hola%20Daniel!%20Me%20interesa%20una%20sesión%20de%20entrenamiento%2Fracing.%20¿Podrías%20decirme%20tu%20disponibilidad%3F" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;background:#25D366;color:white;padding:12px 20px;border-radius:50px;font-weight:600;text-decoration:none;font-size:0.9rem;"><i class="fab fa-whatsapp"></i> WhatsApp Daniel</a>
                                 <a href="tel:+34655442232" style="display:inline-flex;align-items:center;gap:8px;background:var(--primary);color:white;padding:12px 20px;border-radius:50px;font-weight:600;text-decoration:none;font-size:0.9rem;"><i class="fas fa-phone-alt"></i> +34 655 442 232</a>
@@ -462,26 +487,29 @@
                             <span>Las actividades de arrastre (banana, sofa, donut…) requieren un mínimo de 2 participantes.</span>
                         </div>
 
-                        <div class="datetime-grid">
-                            <div class="field">
-                                <label for="bookDate">Fecha Preferida *</label>
-                                <input type="date" id="bookDate" required min="">
+                        <div class="field" style="margin-bottom:20px;">
+                            <label><i class="fas fa-calendar-alt" style="color:var(--primary);margin-right:6px;"></i> Fecha Preferida *</label>
+                            <input type="hidden" id="bookDate" required>
+                            <div id="calendarWidget" class="calendar-container"></div>
+                            <div id="calendarSelectedBar" class="calendar-selected-bar hidden">
+                                <i class="fas fa-calendar-check"></i>
+                                <span id="calendarSelectedText"></span>
                             </div>
-                            <div class="field">
-                                <label for="bookTime">Hora Preferida *</label>
-                                <select id="bookTime" required>
-                                    <option value="">Selecciona hora...</option>
-                                    <option value="10:00">10:00</option>
-                                    <option value="10:30">10:30</option>
-                                    <option value="11:00">11:00</option>
-                                    <option value="11:30">11:30</option>
-                                    <option value="12:00">12:00</option>
-                                    <option value="12:30">12:30</option>
-                                    <option value="13:00">13:00</option>
-                                    <option value="13:30">13:30</option>
-                                    <option value="14:00">14:00</option>
-                                </select>
-                            </div>
+                        </div>
+                        <div class="field" style="margin-bottom:20px;max-width:300px;">
+                            <label for="bookTime"><i class="fas fa-clock" style="color:var(--primary);margin-right:6px;"></i> Hora Preferida *</label>
+                            <select id="bookTime" required>
+                                <option value="">Selecciona hora...</option>
+                                <option value="10:00">10:00</option>
+                                <option value="10:30">10:30</option>
+                                <option value="11:00">11:00</option>
+                                <option value="11:30">11:30</option>
+                                <option value="12:00">12:00</option>
+                                <option value="12:30">12:30</option>
+                                <option value="13:00">13:00</option>
+                                <option value="13:30">13:30</option>
+                                <option value="14:00">14:00</option>
+                            </select>
                         </div>
 
                         <div class="guests-grid">
@@ -551,50 +579,50 @@
                     <div class="step-panel" id="step4">
                         <h3><i class="fas fa-lock"></i> Pago Seguro</h3>
 
-                        <h4 style="font-size:0.95rem;margin-bottom:15px;color:var(--gray-700);">Importe del Pago</h4>
-                        <div class="deposit-toggle">
-                            <div class="deposit-option selected" onclick="selectDeposit('deposit', event)">
-                                <div class="amount" id="depositAmount">€0</div>
-                                <div class="label">30% Señal — Resto a la llegada</div>
+                        <div id="depositSection">
+                            <div id="standardDeposit">
+                                <h4 style="font-size:0.95rem;margin-bottom:15px;color:var(--gray-700);">Importe del Pago</h4>
+                                <div class="deposit-toggle">
+                                    <div class="deposit-option selected" onclick="selectDeposit('deposit', event)">
+                                        <div class="amount" id="depositAmount">€0</div>
+                                        <div class="label">30% Señal — Resto a la llegada</div>
+                                    </div>
+                                    <div class="deposit-option" onclick="selectDeposit('full', event)">
+                                        <div class="amount" id="fullAmount">€0</div>
+                                        <div class="label">Pago Total — Sin saldo pendiente</div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="deposit-option" onclick="selectDeposit('full', event)">
-                                <div class="amount" id="fullAmount">€0</div>
-                                <div class="label">Pago Total — Sin saldo pendiente</div>
+                            <div id="boatDeposit" style="display:none;">
+                                <h4 style="font-size:0.95rem;margin-bottom:15px;color:var(--gray-700);">Señal de Reserva</h4>
+                                <div class="boat-deposit-box">
+                                    <div class="boat-deposit-amount">
+                                        <span class="boat-deposit-label"><i class="fas fa-anchor" style="margin-right:8px;color:var(--primary);"></i>20% de Señal para Asegurar tu Reserva</span>
+                                        <span class="boat-deposit-value" id="boatDepositAmount">€0</span>
+                                    </div>
+                                    <div class="boat-deposit-info">
+                                        <i class="fas fa-info-circle"></i>
+                                        <p>Una <strong>señal del 20%</strong> asegura tu reserva de yate. El saldo restante se paga directamente al propietario del barco el día del chárter.</p>
+                                    </div>
+                                    <div class="boat-balance-note">
+                                        <i class="fas fa-wallet"></i>
+                                        <span>Saldo restante: <strong id="boatBalanceAmount">€0</strong> — se paga al propietario del barco el día del chárter</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
                         <h4 style="font-size:0.95rem;margin-bottom:15px;color:var(--gray-700);">Método de Pago</h4>
                         <div class="payment-methods">
-                            <label class="payment-method selected" onclick="selectPayment('card', event)">
+                            <label class="payment-method selected">
                                 <input type="radio" name="payment" value="card" checked>
                                 <div class="method-info">
                                     <h5>Tarjeta de Crédito/Débito</h5>
-                                    <p>Visa, Mastercard, Amex</p>
+                                    <p>Visa, Mastercard</p>
                                 </div>
                                 <div class="payment-icons">
                                     <i class="fab fa-cc-visa"></i>
                                     <i class="fab fa-cc-mastercard"></i>
-                                    <i class="fab fa-cc-amex"></i>
-                                </div>
-                            </label>
-                            <label class="payment-method" onclick="selectPayment('paypal', event)">
-                                <input type="radio" name="payment" value="paypal">
-                                <div class="method-info">
-                                    <h5>PayPal</h5>
-                                    <p>Pago seguro con PayPal</p>
-                                </div>
-                                <div class="payment-icons">
-                                    <i class="fab fa-paypal"></i>
-                                </div>
-                            </label>
-                            <label class="payment-method" onclick="selectPayment('onsite', event)">
-                                <input type="radio" name="payment" value="onsite">
-                                <div class="method-info">
-                                    <h5>Pagar a la Llegada</h5>
-                                    <p>Efectivo o tarjeta en la playa</p>
-                                </div>
-                                <div class="payment-icons">
-                                    <i class="fas fa-money-bill-wave"></i>
                                 </div>
                             </label>
                         </div>
@@ -696,12 +724,20 @@
                         <span>Total</span>
                         <span class="total-price" id="sumTotal">€0</span>
                     </div>
+                    <div class="summary-row" id="sumDepositRow" style="display:none;">
+                        <span class="label" id="sumDepositLabel">Señal a Pagar Ahora</span>
+                        <span class="value" id="sumDeposit" style="color:var(--primary);font-weight:700;">—</span>
+                    </div>
+                    <div class="summary-row" id="sumBalanceRow" style="display:none;">
+                        <span class="label">Saldo (al propietario del barco)</span>
+                        <span class="value" id="sumBalance">—</span>
+                    </div>
+                    <p style="text-align:center;font-size:0.78rem;color:var(--text-secondary);margin-top:6px;"><i class="fas fa-receipt" style="margin-right:4px;color:var(--primary);opacity:0.7;"></i>Todos los precios incluyen IVA</p>
 
                     <div class="summary-badges">
                         <div class="summary-badge"><i class="fas fa-check-circle"></i> Cancelación gratuita (24h de antelación)</div>
                         <div class="summary-badge"><i class="fas fa-check-circle"></i> Reembolso total por climatología</div>
                         <div class="summary-badge"><i class="fas fa-check-circle"></i> Equipo de seguridad incluido</div>
-                        <div class="summary-badge"><i class="fas fa-check-circle"></i> Fotos y vídeos incluidos</div>
                         <div class="summary-badge"><i class="fas fa-check-circle"></i> Seguro de responsabilidad civil</div>
                     </div>
 
@@ -754,7 +790,7 @@
                 <div class="footer-grid">
                     <div class="footer-brand">
                         <a href="index.html" class="footer-logo">
-                            <img src="https://marbellajetski.com/wp-content/uploads/2021/05/MJS_16_500x500-removebg-preview.png" alt="Marbella JetSki Logo" style="height: 60px; margin-bottom: 15px;">
+                            <img src="../assets/media/photos/logo-circular.png" alt="Marbella JetSki Logo" style="height: 60px; margin-bottom: 15px;">
                             <span class="logo-text">MARBELLA<span class="logo-highlight">JETSKI</span></span>
                         </a>
                         <p>El destino premium de deportes acuáticos en la Costa del Sol. Empresa familiar desde 1998, dirigida por el 4 veces campeón de España Daniel Stiers.</p>
@@ -812,14 +848,95 @@
     const MAX_CIRCUIT_JETSKIS = 4;
     const MIN_TOUR_JETSKIS = 2;
     const MIN_TOWABLE_GUESTS = 2;
-    const SAME_DAY_CUTOFF_HOUR = 14; // No online bookings for same day after 14:00
+    const SAME_DAY_CUTOFF_HOUR = 14;
+    const BOAT_DEPOSIT_RATE = 0.20;
+    const STANDARD_DEPOSIT_RATE = 0.30;
+
+    let calendarMonth = new Date().getMonth();
+    let calendarYear = new Date().getFullYear();
+    let calendarSelectedDate = null;
+
+    function isBoatBooking() {
+        const radio = document.querySelector('input[name="activity"]:checked');
+        return radio && radio.value.startsWith('yacht');
+    }
+
+    /* ========== Calendario ========== */
+    function renderCalendar() {
+        const widget = document.getElementById('calendarWidget');
+        if (!widget) return;
+        const today = new Date(); today.setHours(0,0,0,0);
+        const todayStr = fmtISO(today);
+        const first = new Date(calendarYear, calendarMonth, 1);
+        const last = new Date(calendarYear, calendarMonth + 1, 0);
+        const startWd = (first.getDay() + 6) % 7;
+        const mNames = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+        const dNames = ['Lun','Mar','Mi\u00e9','Jue','Vie','S\u00e1b','Dom'];
+        const canPrev = calendarYear > today.getFullYear() || (calendarYear === today.getFullYear() && calendarMonth > today.getMonth());
+        let h = '<div class="calendar-header">' +
+            '<button type="button" class="calendar-nav" onclick="calNav(-1)"' + (canPrev ? '' : ' disabled') + '><i class="fas fa-chevron-left"></i></button>' +
+            '<h5>' + mNames[calendarMonth] + ' ' + calendarYear + '</h5>' +
+            '<button type="button" class="calendar-nav" onclick="calNav(1)"><i class="fas fa-chevron-right"></i></button></div>';
+        h += '<div class="calendar-grid">';
+        dNames.forEach(d => { h += '<div class="calendar-day-header">' + d + '</div>'; });
+        for (let i = 0; i < startWd; i++) h += '<div class="calendar-day empty"></div>';
+        for (let day = 1; day <= last.getDate(); day++) {
+            const dt = new Date(calendarYear, calendarMonth, day);
+            const ds = fmtISO(dt);
+            const past = dt < today;
+            let cl = 'calendar-day';
+            if (past) cl += ' disabled';
+            if (ds === todayStr) cl += ' today';
+            if (calendarSelectedDate === ds) cl += ' selected';
+            h += '<div class="' + cl + '"' + (past ? '' : ' onclick="calSelect(\'' + ds + '\')"') + '>' + day + '</div>';
+        }
+        h += '</div>';
+        widget.innerHTML = h;
+    }
+    function fmtISO(d) { return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0'); }
+    function calNav(delta) {
+        calendarMonth += delta;
+        if (calendarMonth > 11) { calendarMonth = 0; calendarYear++; }
+        if (calendarMonth < 0) { calendarMonth = 11; calendarYear--; }
+        renderCalendar();
+    }
+    function calSelect(ds) {
+        calendarSelectedDate = ds;
+        document.getElementById('bookDate').value = ds;
+        const bar = document.getElementById('calendarSelectedBar');
+        const txt = document.getElementById('calendarSelectedText');
+        if (bar && txt) {
+            const d = new Date(ds + 'T12:00');
+            txt.textContent = d.toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+            bar.classList.remove('hidden');
+        }
+        renderCalendar();
+        checkSameDayCutoff();
+        updateSummary();
+    }
+
+    /* ========== Reglas de Pago para Barcos ========== */
+    function applyBoatPaymentRules() {
+        const isBoat = isBoatBooking();
+        const std = document.getElementById('standardDeposit');
+        const boat = document.getElementById('boatDeposit');
+        if (std && boat) {
+            if (isBoat) {
+                std.style.display = 'none';
+                boat.style.display = 'block';
+                depositType = 'boat-deposit';
+            } else {
+                std.style.display = 'block';
+                boat.style.display = 'none';
+                if (depositType === 'boat-deposit') depositType = 'deposit';
+            }
+        }
+        updateSummary();
+    }
 
     document.addEventListener('DOMContentLoaded', function() {
-        const today = new Date().toISOString().split('T')[0];
-        const dateInput = document.getElementById('bookDate');
-        if (dateInput) dateInput.min = today;
+        renderCalendar();
 
-        // Category tab filtering
         document.querySelectorAll('.cat-tab').forEach(tab => {
             tab.addEventListener('click', function() {
                 document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
@@ -831,13 +948,10 @@
             });
         });
 
-        // Activity selection
         document.querySelectorAll('input[name="activity"]').forEach(radio => {
             radio.addEventListener('change', function() {
                 document.querySelectorAll('.activity-option').forEach(o => o.classList.remove('selected'));
                 this.closest('.activity-option').classList.add('selected');
-
-                // Show/hide training notice for request-only activities
                 const notice = document.getElementById('trainingNotice');
                 const stepNav = this.closest('.step-content, .step-panel').querySelector('.step-nav');
                 if (this.dataset.type === 'request-only') {
@@ -847,31 +961,19 @@
                     if (notice) notice.style.display = 'none';
                     if (stepNav) stepNav.style.display = '';
                 }
-
                 applyActivityConstraints();
                 updateSummary();
             });
         });
 
-        // Guest & jetski count change
         ['bookGuests', 'bookJetskis'].forEach(id => {
             const el = document.getElementById(id);
             if (el) el.addEventListener('change', function() { validateConstraints(); updateSummary(); });
         });
 
-        // Date change — same-day cutoff check
-        if (dateInput) {
-            dateInput.addEventListener('change', function() {
-                checkSameDayCutoff();
-                updateSummary();
-            });
-        }
-
-        // Time change
         const timeEl = document.getElementById('bookTime');
         if (timeEl) timeEl.addEventListener('change', updateSummary);
 
-        // Mobile nav toggle
         const navToggle = document.getElementById('navToggle');
         const navMenu = document.getElementById('navMenu');
         if (navToggle && navMenu) {
@@ -895,44 +997,11 @@
         const jsField = document.getElementById('jetskiCountField');
         const jsInput = document.getElementById('bookJetskis');
         const guestsInput = document.getElementById('bookGuests');
-
-        // Show/hide jetski count
-        if (jsField) {
-            jsField.style.display = radio.value.startsWith('jetski') ? '' : 'none';
-        }
-
-        // Circuit: max 4 jetskis
-        if (type === 'circuit' && jsInput) {
-            jsInput.max = MAX_CIRCUIT_JETSKIS;
-            if (parseInt(jsInput.value) > MAX_CIRCUIT_JETSKIS) jsInput.value = MAX_CIRCUIT_JETSKIS;
-        }
-
-        // Tour: min 2 jetskis
-        if (type === 'tour' && jsInput) {
-            jsInput.min = MIN_TOUR_JETSKIS;
-            if (parseInt(jsInput.value) < MIN_TOUR_JETSKIS) jsInput.value = MIN_TOUR_JETSKIS;
-        } else if (jsInput) {
-            jsInput.min = 1;
-        }
-
-        // SUP: individual — lock guests to boards
-        if (type === 'sup' && guestsInput) {
-            guestsInput.value = 1;
-            guestsInput.max = 1;
-            guestsInput.disabled = true;
-        } else if (guestsInput) {
-            guestsInput.max = 12;
-            guestsInput.disabled = false;
-        }
-
-        // Towable: min 2 guests
-        if (type === 'towable' && guestsInput) {
-            guestsInput.min = MIN_TOWABLE_GUESTS;
-            if (parseInt(guestsInput.value) < MIN_TOWABLE_GUESTS) guestsInput.value = MIN_TOWABLE_GUESTS;
-        } else if (guestsInput && type !== 'sup') {
-            guestsInput.min = 1;
-        }
-
+        if (jsField) jsField.style.display = radio.value.startsWith('jetski') ? '' : 'none';
+        if (type === 'circuit' && jsInput) { jsInput.max = MAX_CIRCUIT_JETSKIS; if (parseInt(jsInput.value) > MAX_CIRCUIT_JETSKIS) jsInput.value = MAX_CIRCUIT_JETSKIS; }
+        if (type === 'tour' && jsInput) { jsInput.min = MIN_TOUR_JETSKIS; if (parseInt(jsInput.value) < MIN_TOUR_JETSKIS) jsInput.value = MIN_TOUR_JETSKIS; } else if (jsInput) { jsInput.min = 1; }
+        if (type === 'sup' && guestsInput) { guestsInput.value = 1; guestsInput.max = 1; guestsInput.disabled = true; } else if (guestsInput) { guestsInput.max = 12; guestsInput.disabled = false; }
+        if (type === 'towable' && guestsInput) { guestsInput.min = MIN_TOWABLE_GUESTS; if (parseInt(guestsInput.value) < MIN_TOWABLE_GUESTS) guestsInput.value = MIN_TOWABLE_GUESTS; } else if (guestsInput && type !== 'sup') { guestsInput.min = 1; }
         hideAllValidationMsgs();
     }
 
@@ -943,22 +1012,10 @@
         const jsInput = document.getElementById('bookJetskis');
         const guestsInput = document.getElementById('bookGuests');
         let valid = true;
-
         hideAllValidationMsgs();
-
-        if (type === 'circuit' && jsInput && parseInt(jsInput.value) > MAX_CIRCUIT_JETSKIS) {
-            showMsg('maxJetskiMsg');
-            jsInput.value = MAX_CIRCUIT_JETSKIS;
-            valid = false;
-        }
-        if (type === 'tour' && jsInput && parseInt(jsInput.value) < MIN_TOUR_JETSKIS) {
-            showMsg('minTourMsg');
-            valid = false;
-        }
-        if (type === 'towable' && guestsInput && parseInt(guestsInput.value) < MIN_TOWABLE_GUESTS) {
-            showMsg('minTowableMsg');
-            valid = false;
-        }
+        if (type === 'circuit' && jsInput && parseInt(jsInput.value) > MAX_CIRCUIT_JETSKIS) { showMsg('maxJetskiMsg'); jsInput.value = MAX_CIRCUIT_JETSKIS; valid = false; }
+        if (type === 'tour' && jsInput && parseInt(jsInput.value) < MIN_TOUR_JETSKIS) { showMsg('minTourMsg'); valid = false; }
+        if (type === 'towable' && guestsInput && parseInt(guestsInput.value) < MIN_TOWABLE_GUESTS) { showMsg('minTowableMsg'); valid = false; }
         return valid;
     }
 
@@ -967,75 +1024,43 @@
         const msg = document.getElementById('sameDayMsg');
         const timeSelect = document.getElementById('bookTime');
         if (!dateInput || !msg) return true;
-
         const today = new Date().toISOString().split('T')[0];
         const now = new Date();
-        const currentHour = now.getHours();
-
-        if (dateInput.value === today && currentHour >= SAME_DAY_CUTOFF_HOUR) {
+        if (dateInput.value === today && now.getHours() >= SAME_DAY_CUTOFF_HOUR) {
             showMsg('sameDayMsg');
-            // Disable all time slots for today
-            if (timeSelect) {
-                Array.from(timeSelect.options).forEach(opt => {
-                    if (opt.value) opt.disabled = true;
-                });
-                timeSelect.value = '';
-            }
+            if (timeSelect) { Array.from(timeSelect.options).forEach(opt => { if (opt.value) opt.disabled = true; }); timeSelect.value = ''; }
             return false;
         } else {
             hideMsg('sameDayMsg');
-            if (timeSelect) {
-                Array.from(timeSelect.options).forEach(opt => opt.disabled = false);
-            }
+            if (timeSelect) Array.from(timeSelect.options).forEach(opt => opt.disabled = false);
             return true;
         }
     }
 
     function showMsg(id) { const el = document.getElementById(id); if (el) el.classList.add('visible'); }
     function hideMsg(id) { const el = document.getElementById(id); if (el) el.classList.remove('visible'); }
-    function hideAllValidationMsgs() {
-        ['sameDayMsg', 'maxJetskiMsg', 'minTourMsg', 'minTowableMsg'].forEach(id => hideMsg(id));
-    }
+    function hideAllValidationMsgs() { ['sameDayMsg', 'maxJetskiMsg', 'minTourMsg', 'minTowableMsg'].forEach(id => hideMsg(id)); }
 
     function goToStep(step) {
         if (step > currentStep) {
-            if (currentStep === 1) {
-                const selected = document.querySelector('input[name="activity"]:checked');
-                if (!selected) { alert('Por favor, selecciona una actividad para continuar.'); return; }
-            }
+            if (currentStep === 1) { if (!document.querySelector('input[name="activity"]:checked')) { alert('Por favor, selecciona una actividad para continuar.'); return; } }
             if (currentStep === 2) {
-                const date = document.getElementById('bookDate').value;
-                const time = document.getElementById('bookTime').value;
-                if (!date || !time) { alert('Por favor, selecciona una fecha y hora.'); return; }
+                if (!document.getElementById('bookDate').value || !document.getElementById('bookTime').value) { alert('Por favor, selecciona una fecha y hora.'); return; }
                 if (!checkSameDayCutoff()) return;
                 if (!validateConstraints()) return;
             }
             if (currentStep === 3) {
-                const fname = document.getElementById('bookFirstName').value;
-                const lname = document.getElementById('bookLastName').value;
-                const email = document.getElementById('bookEmail').value;
-                const phone = document.getElementById('bookPhone').value;
-                const id = document.getElementById('bookID').value;
-                const dob = document.getElementById('bookDOB').value;
-                if (!fname || !lname || !email || !phone || !id || !dob) {
-                    alert('Por favor, rellena todos los campos obligatorios.');
-                    return;
-                }
+                const f = ['bookFirstName','bookLastName','bookEmail','bookPhone','bookID','bookDOB'];
+                if (f.some(id => !document.getElementById(id).value)) { alert('Por favor, rellena todos los campos obligatorios.'); return; }
             }
         }
-
         currentStep = step;
-        document.querySelectorAll('.step').forEach((s, i) => {
-            s.classList.remove('active', 'completed');
-            if (i + 1 === step) s.classList.add('active');
-            if (i + 1 < step) s.classList.add('completed');
-        });
-
+        document.querySelectorAll('.step').forEach((s, i) => { s.classList.remove('active', 'completed'); if (i+1 === step) s.classList.add('active'); if (i+1 < step) s.classList.add('completed'); });
         document.querySelectorAll('.step-panel').forEach(p => p.classList.remove('active'));
         const panel = document.getElementById('step' + step);
         if (panel) panel.classList.add('active');
-
         if (step === 2) applyActivityConstraints();
+        if (step === 4) applyBoatPaymentRules();
         updateSummary();
         window.scrollTo({ top: 200, behavior: 'smooth' });
     }
@@ -1043,63 +1068,72 @@
     function updateSummary() {
         const radio = document.querySelector('input[name="activity"]:checked');
         if (!radio) return;
-
-        const name = radio.dataset.name;
-        const duration = radio.dataset.duration;
-        const price = parseFloat(radio.dataset.price);
+        const name = radio.dataset.name, duration = radio.dataset.duration, price = parseFloat(radio.dataset.price);
         const perPerson = radio.dataset.per === 'person';
         const guests = parseInt(document.getElementById('bookGuests').value) || 1;
         const jetskis = parseInt(document.getElementById('bookJetskis')?.value) || 1;
         const date = document.getElementById('bookDate').value;
         const time = document.getElementById('bookTime').value;
-
         let qty = 1;
-        if (perPerson) { qty = guests; }
-        else if (radio.value.startsWith('jetski')) { qty = jetskis; }
+        if (perPerson) qty = guests; else if (radio.value.startsWith('jetski')) qty = jetskis;
         totalPrice = price * qty;
 
         document.getElementById('sumActivity').textContent = name;
         document.getElementById('sumDuration').textContent = duration;
-        document.getElementById('sumDate').textContent = date ? new Date(date + 'T12:00').toLocaleDateString('es-ES', { day: 'numeric', month: 'short', year: 'numeric' }) : '—';
-        document.getElementById('sumTime').textContent = time || '—';
+        document.getElementById('sumDate').textContent = date ? new Date(date + 'T12:00').toLocaleDateString('es-ES', { day: 'numeric', month: 'short', year: 'numeric' }) : '\u2014';
+        document.getElementById('sumTime').textContent = time || '\u2014';
         document.getElementById('sumGuests').textContent = guests;
-        document.getElementById('sumUnitPrice').textContent = '€' + price;
-        
-        if (qty > 1) {
-            document.getElementById('sumQtyRow').style.display = '';
-            document.getElementById('sumQty').textContent = qty + (perPerson ? ' personas' : ' motos');
+        document.getElementById('sumUnitPrice').textContent = '\u20ac' + price;
+        if (qty > 1) { document.getElementById('sumQtyRow').style.display = ''; document.getElementById('sumQty').textContent = qty + (perPerson ? ' personas' : ' motos'); }
+        else { document.getElementById('sumQtyRow').style.display = 'none'; }
+        document.getElementById('sumTotal').textContent = '\u20ac' + totalPrice.toLocaleString('es-ES');
+
+        const isBoat = isBoatBooking();
+        const rate = isBoat ? BOAT_DEPOSIT_RATE : STANDARD_DEPOSIT_RATE;
+        const dep = Math.ceil(totalPrice * rate);
+        const bal = totalPrice - dep;
+
+        const depEl = document.getElementById('depositAmount'); if (depEl) depEl.textContent = '\u20ac' + Math.ceil(totalPrice * STANDARD_DEPOSIT_RATE);
+        const fullEl = document.getElementById('fullAmount'); if (fullEl) fullEl.textContent = '\u20ac' + totalPrice.toLocaleString('es-ES');
+        const boatDepEl = document.getElementById('boatDepositAmount'); if (boatDepEl) boatDepEl.textContent = '\u20ac' + dep;
+        const boatBalEl = document.getElementById('boatBalanceAmount'); if (boatBalEl) boatBalEl.textContent = '\u20ac' + bal.toLocaleString('es-ES');
+
+        const sumDepRow = document.getElementById('sumDepositRow');
+        const sumBalRow = document.getElementById('sumBalanceRow');
+        const sumDepEl = document.getElementById('sumDeposit');
+        const sumBalEl = document.getElementById('sumBalance');
+        const sumDepLabel = document.getElementById('sumDepositLabel');
+        if (isBoat && totalPrice > 0) {
+            if (sumDepRow) { sumDepRow.style.display = ''; sumDepLabel.textContent = 'Se\u00f1al a Pagar Ahora (20%)'; }
+            if (sumDepEl) sumDepEl.textContent = '\u20ac' + dep;
+            if (sumBalRow) sumBalRow.style.display = '';
+            if (sumBalEl) sumBalEl.textContent = '\u20ac' + bal.toLocaleString('es-ES');
+        } else if (totalPrice > 0 && depositType === 'deposit') {
+            if (sumDepRow) { sumDepRow.style.display = ''; sumDepLabel.textContent = 'Se\u00f1al a Pagar Ahora (30%)'; }
+            if (sumDepEl) sumDepEl.textContent = '\u20ac' + Math.ceil(totalPrice * STANDARD_DEPOSIT_RATE);
+            if (sumBalRow) sumBalRow.style.display = 'none';
         } else {
-            document.getElementById('sumQtyRow').style.display = 'none';
+            if (sumDepRow) sumDepRow.style.display = 'none';
+            if (sumBalRow) sumBalRow.style.display = 'none';
         }
 
-        document.getElementById('sumTotal').textContent = '€' + totalPrice.toLocaleString('es-ES');
-
-        const deposit = Math.ceil(totalPrice * 0.3);
-        document.getElementById('depositAmount').textContent = '€' + deposit;
-        document.getElementById('fullAmount').textContent = '€' + totalPrice.toLocaleString('es-ES');
-        
-        const payAmount = depositType === 'deposit' ? deposit : totalPrice;
+        let payAmt;
+        if (isBoat) payAmt = dep;
+        else payAmt = depositType === 'full' ? totalPrice : Math.ceil(totalPrice * STANDARD_DEPOSIT_RATE);
         const payBtn = document.getElementById('payButtonAmount');
-        if (payBtn) payBtn.textContent = ' €' + payAmount;
+        if (payBtn) payBtn.textContent = ' \u20ac' + payAmt;
     }
 
     function selectDeposit(type, ev) {
+        if (isBoatBooking()) { depositType = 'boat-deposit'; return; }
         depositType = type;
         document.querySelectorAll('.deposit-option').forEach(o => o.classList.remove('selected'));
         if (ev) ev.currentTarget.classList.add('selected');
         updateSummary();
     }
 
-    function selectPayment(type, ev) {
-        document.querySelectorAll('.payment-method').forEach(m => m.classList.remove('selected'));
-        if (ev) ev.currentTarget.closest('.payment-method').classList.add('selected');
-        const cardFields = document.getElementById('cardFields');
-        cardFields.classList.toggle('visible', type === 'card');
-    }
-
     function submitBooking() {
-        const terms = document.getElementById('termsAccept');
-        if (!terms.checked) { alert('Por favor, acepta los Términos y Condiciones para continuar.'); return; }
+        if (!document.getElementById('termsAccept').checked) { alert('Por favor, acepta los T\u00e9rminos y Condiciones para continuar.'); return; }
         if (!validateConstraints()) return;
 
         const ref = 'MJS-' + new Date().getFullYear() + '-' + Math.random().toString(36).substr(2, 5).toUpperCase();
@@ -1116,35 +1150,31 @@
         const lastName = document.getElementById('bookLastName').value;
         const email = document.getElementById('bookEmail').value;
         const phone = document.getElementById('bookPhone').value;
-        const payMethod = document.querySelector('input[name="payment"]:checked');
-        const payMethodName = payMethod ? payMethod.value : 'no seleccionado';
-        const payAmount = depositType === 'deposit' ? Math.ceil(totalPrice * 0.3) : totalPrice;
 
-        const msg = `🏍️ NUEVA RESERVA (ES)\n` +
-            `Ref: ${ref}\n\n` +
-            `Actividad: ${activityNameES} (${activityDuration})\n` +
-            `Fecha: ${date}\n` +
-            `Hora: ${time}\n` +
-            `Participantes: ${guests}\n\n` +
-            `Nombre: ${firstName} ${lastName}\n` +
-            `Email: ${email}\n` +
-            `Teléfono: ${phone}\n\n` +
-            `Pago: ${payMethodName} (${depositType})\n` +
-            `Importe: €${payAmount} de €${totalPrice} total\n` +
-            `Idioma: Español\n\n` +
-            `Enviado desde marbellajetski.com (versión ES)`;
+        const isBoat = isBoatBooking();
+        const rate = isBoat ? BOAT_DEPOSIT_RATE : STANDARD_DEPOSIT_RATE;
+        const payAmount = (isBoat || depositType !== 'full') ? Math.ceil(totalPrice * rate) : totalPrice;
+        const payType = isBoat ? 'Tarjeta (20% se\u00f1al barco)' : 'Tarjeta (' + depositType + ')';
+
+        const msg = '\ud83c\udfcd\ufe0f NUEVA RESERVA (ES)\n' +
+            'Ref: ' + ref + '\n\n' +
+            'Actividad: ' + activityNameES + ' (' + activityDuration + ')\n' +
+            'Fecha: ' + date + '\nHora: ' + time + '\nParticipantes: ' + guests + '\n\n' +
+            'Nombre: ' + firstName + ' ' + lastName + '\n' +
+            'Email: ' + email + '\nTel\u00e9fono: ' + phone + '\n\n' +
+            'Pago: ' + payType + '\n' +
+            'Importe: \u20ac' + payAmount + ' de \u20ac' + totalPrice + ' total' +
+            (isBoat ? '\nSaldo: \u20ac' + (totalPrice - payAmount) + ' (al propietario del barco)' : '') +
+            '\nIdioma: Espa\u00f1ol\n\n' +
+            'Enviado desde marbellajetski.com (versi\u00f3n ES)';
 
         currentStep = 5;
         document.querySelectorAll('.step').forEach(s => s.classList.add('completed'));
         document.querySelectorAll('.step-panel').forEach(p => p.classList.remove('active'));
         document.getElementById('step5').classList.add('active');
         document.getElementById('orderSummary').style.display = 'none';
-        
         window.scrollTo({ top: 200, behavior: 'smooth' });
-
-        setTimeout(() => {
-            window.open(`https://api.whatsapp.com/send?phone=34655442232&text=${encodeURIComponent(msg)}`, '_blank');
-        }, 1500);
+        setTimeout(() => { window.open('https://api.whatsapp.com/send?phone=34655442232&text=' + encodeURIComponent(msg), '_blank'); }, 1500);
     }
     </script>
 </body>

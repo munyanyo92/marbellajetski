@@ -227,13 +227,17 @@ const galleryImages = [
     'assets/media/racing/racing-circuit-benidorm.png',
     'assets/media/racing/promo-racing.jpg',
     'assets/media/racing/dani-stiers-race-start.jpg',
-    'assets/media/racing/racing-jetskis-trailers.jpg',
     'assets/media/photos/blue-jetski.jpg',
     'assets/media/photos/high-res-jetski.jpg',
     'assets/media/photos/waterski-action.jpg',
+    'assets/media/photos/yacht-action-1.jpg',
+    'assets/media/photos/yacht-action-2.jpg',
+    'assets/media/photos/waterski-action-2.jpg',
+    'assets/media/photos/kayak-double.jpg',
+    'assets/media/photos/paddle-surf.jpg',
     'assets/media/photos/catamaran-bali.jpg',
     'assets/media/photos/rinker-296-alt.jpg',
-    'assets/media/photos/waterski-action-2.jpg'
+    'assets/media/photos/hidropedal-newbeetle.jpg'
 ];
 
 let currentImageIndex = 0;
@@ -296,6 +300,313 @@ function changeLightboxImage(direction) {
 window.openLightbox = openLightbox;
 window.closeLightbox = closeLightbox;
 window.changeLightboxImage = changeLightboxImage;
+
+// Make functions globally available
+window.openLightbox = openLightbox;
+window.closeLightbox = closeLightbox;
+window.changeLightboxImage = changeLightboxImage;
+
+/* ========== Boat Detail Modal ========== */
+const boatData = {
+    rinker: {
+        name: 'Rinker 296 Captiva',
+        badge: 'Value Pick',
+        badgeClass: '',
+        description: 'Spacious American cruiser with a comfortable cabin below deck. The Rinker 296 Captiva is perfect for small groups looking for a stylish day on the water around Puerto Banús and the Costa del Sol coastline.',
+        specs: [
+            { icon: 'fa-ruler', label: 'Length', value: '9.4 m' },
+            { icon: 'fa-users', label: 'Capacity', value: '8 guests' },
+            { icon: 'fa-bed', label: 'Cabins', value: '1 cabin' },
+            { icon: 'fa-anchor', label: 'Dock', value: 'Puerto Banús Dock 5' }
+        ],
+        included: ['Professional Captain', 'Fuel', 'Welcome Drink', 'Sound System', 'Full Insurance', 'VAT Included'],
+        pricing: [
+            { duration: '1 hour', price: '€250' },
+            { duration: '2 hours', price: '€400' },
+            { duration: '3 hours', price: '€600' },
+            { duration: '4 hours', price: '€800' },
+            { duration: '6 hours', price: '€1,100' },
+            { duration: '8 hours', price: '€1,400' }
+        ],
+        images: [
+            'assets/media/photos/rinker-296-alt.jpg',
+            'assets/media/photos/boats/rinker_captiva_296_img2.jpeg',
+            'assets/media/photos/boats/rinker_captiva_296_img4.jpeg',
+            'assets/media/photos/boats/rinker_captiva_296_img5.jpeg',
+            'assets/media/photos/boats/rinker_captiva_296_img6.jpeg',
+            'assets/media/photos/boats/rinker_captiva_296_img7.jpeg',
+            'assets/media/photos/boats/rinker_captiva_296_img8.jpeg',
+            'assets/media/photos/boats/rinker_captiva_296_img9.jpeg'
+        ],
+        whatsapp: 'https://api.whatsapp.com/send?phone=34655442232&text=Hi!%20I%27d%20like%20to%20book%20the%20Rinker%20296'
+    },
+    cranchi: {
+        name: 'Cranchi 39',
+        badge: 'Premium',
+        badgeClass: 'premium',
+        description: 'Elegant Italian open-concept design with a lower cabin. The Cranchi 39 offers a sophisticated experience ideal for celebrations, VIP occasions, and unforgettable days along the Marbella coast.',
+        specs: [
+            { icon: 'fa-ruler', label: 'Length', value: '12.3 m' },
+            { icon: 'fa-users', label: 'Capacity', value: '9 guests' },
+            { icon: 'fa-bed', label: 'Cabins', value: '1 lower cabin' },
+            { icon: 'fa-flag', label: 'Origin', value: 'Italian Design' }
+        ],
+        included: ['Professional Captain', 'Fuel', 'Drinks & Wine', 'Paddleboard', 'Full Insurance', 'VAT Included'],
+        pricing: [
+            { duration: '1 hour', price: '€380' },
+            { duration: '2 hours', price: '€550' },
+            { duration: '3 hours', price: '€680' },
+            { duration: '4 hours', price: '€850' },
+            { duration: '6 hours', price: '€1,150' },
+            { duration: '8 hours', price: '€1,550' }
+        ],
+        images: [
+            'assets/media/photos/cranchi-39.jpg',
+            'assets/media/photos/boats/cranchi_39_img1.jpeg',
+            'assets/media/photos/boats/cranchi_39_img2.jpeg',
+            'assets/media/photos/boats/cranchi_39_img3.jpeg',
+            'assets/media/photos/boats/cranchi_39_img4.jpeg',
+            'assets/media/photos/boats/cranchi_39_img5.jpeg',
+            'assets/media/photos/boats/cranchi_39_img6.jpeg',
+            'assets/media/photos/boats/cranchi_39_img7.jpeg',
+            'assets/media/photos/boats/cranchi_39_img8.jpeg'
+        ],
+        whatsapp: 'https://api.whatsapp.com/send?phone=34655442232&text=Hi!%20I%27d%20like%20to%20book%20the%20Cranchi%2039'
+    },
+    azimut: {
+        name: 'Azimut 39 Fly',
+        badge: 'Flybridge Luxury',
+        badgeClass: 'luxury',
+        description: 'The ultimate luxury flybridge yacht. The Azimut 39 Fly features an expansive flybridge for sunbathing, an elegant salon, two cabins with WC, and comes fully equipped with champagne, wine, paddle surf, and a premium sound system.',
+        specs: [
+            { icon: 'fa-ruler', label: 'Length', value: '12.3 m' },
+            { icon: 'fa-users', label: 'Capacity', value: '12 guests' },
+            { icon: 'fa-layer-group', label: 'Decks', value: 'Flybridge + Salon' },
+            { icon: 'fa-bed', label: 'Cabins', value: '2 cabins / 1 WC' }
+        ],
+        included: ['Professional Captain', 'Fuel', '2 Champagne Bottles', 'Wine', 'Paddle Surf', 'Full Insurance', 'Sound System', 'VAT Included'],
+        pricing: [
+            { duration: '1 hour', price: '€400' },
+            { duration: '2 hours', price: '€600' },
+            { duration: '3 hours', price: '€800' },
+            { duration: '4 hours', price: '€1,000' },
+            { duration: '6 hours', price: '€1,500' },
+            { duration: '8 hours', price: '€1,800' }
+        ],
+        images: [
+            'assets/media/photos/azimut-39.jpg',
+            'assets/media/photos/boats/azimut_39_fly_img1.jpeg',
+            'assets/media/photos/boats/azimut_39_fly_img2.jpeg',
+            'assets/media/photos/boats/azimut_39_fly_img3.jpeg',
+            'assets/media/photos/boats/azimut_39_fly_img4.jpeg',
+            'assets/media/photos/boats/azimut_39_fly_img5.jpeg',
+            'assets/media/photos/boats/azimut_39_fly_img6.jpeg',
+            'assets/media/photos/boats/azimut_39_fly_img7.jpeg',
+            'assets/media/photos/boats/azimut_39_fly_img8.jpeg'
+        ],
+        whatsapp: 'https://api.whatsapp.com/send?phone=34655442232&text=Hi!%20I%27d%20like%20to%20book%20the%20Azimut%2039%20Fly'
+    },
+    catamaran: {
+        name: 'Catamaran Bali 4.0',
+        badge: 'Catamaran',
+        badgeClass: 'luxury',
+        description: 'Spacious 2020 catamaran with an impressive 7-metre beam and twin Volvo engines. The Bali 4.0 offers 4 cabins, 4 bathrooms, and huge open-plan living — perfect for large groups and special celebrations on the Mediterranean.',
+        specs: [
+            { icon: 'fa-ruler', label: 'Length', value: '12.5 m' },
+            { icon: 'fa-arrows-left-right', label: 'Beam', value: '7 m' },
+            { icon: 'fa-users', label: 'Capacity', value: '12 + crew' },
+            { icon: 'fa-bed', label: 'Cabins', value: '4 cabins / 4 WC' },
+            { icon: 'fa-calendar', label: 'Year', value: '2020' }
+        ],
+        included: ['Professional Captain', 'Fuel', 'Towels', 'Paddle Surf', 'Snorkel', 'Rosé, Beer & Cava', 'Soft Drinks', 'Full Insurance'],
+        pricing: [
+            { duration: '2 hours', price: '€750' },
+            { duration: '3 hours', price: '€1,000' },
+            { duration: '4 hours', price: '€1,150' },
+            { duration: '6 hours', price: '€1,750' },
+            { duration: '8 hours', price: '€2,250' }
+        ],
+        images: [
+            'assets/media/photos/catamaran-bali.jpg',
+            'assets/media/photos/boats/catamaran_bali_40_2020_3_img1.jpeg',
+            'assets/media/photos/boats/catamaran_bali_40_2020_3_img2.jpeg',
+            'assets/media/photos/boats/catamaran_bali_40_2020_3_img3.jpeg',
+            'assets/media/photos/boats/catamaran_bali_40_2020_3_img4.jpeg',
+            'assets/media/photos/boats/catamaran_bali_40_2020_3_img5.jpeg',
+            'assets/media/photos/boats/catamaran_bali_40_2020_3_img6.jpeg',
+            'assets/media/photos/boats/catamaran_bali_40_2020_3_img7.jpeg',
+            'assets/media/photos/boats/catamaran_bali_40_2020_3_img8.jpeg'
+        ],
+        whatsapp: 'https://api.whatsapp.com/send?phone=34655442232&text=Hi!%20I%27d%20like%20to%20book%20the%20Catamaran%20Bali%204.0'
+    }
+};
+
+let currentBoatKey = null;
+let currentBoatImageIndex = 0;
+
+function openBoatModal(key) {
+    const boat = boatData[key];
+    if (!boat) return;
+    
+    currentBoatKey = key;
+    currentBoatImageIndex = 0;
+    
+    // Populate badge
+    const badge = document.getElementById('boatModalBadge');
+    badge.textContent = boat.badge;
+    badge.className = 'boat-modal-badge' + (boat.badgeClass ? ' ' + boat.badgeClass : '');
+    
+    // Title & description
+    document.getElementById('boatModalTitle').textContent = boat.name;
+    document.getElementById('boatModalDesc').textContent = boat.description;
+    
+    // Specs
+    const specsEl = document.getElementById('boatModalSpecs');
+    specsEl.innerHTML = boat.specs.map(s =>
+        `<div class="boat-spec-item">
+            <i class="fas ${s.icon}"></i>
+            <div><span class="spec-label">${s.label}</span><br><span class="spec-value">${s.value}</span></div>
+        </div>`
+    ).join('');
+    
+    // Included
+    const inclEl = document.getElementById('boatModalIncluded');
+    inclEl.innerHTML = boat.included.map(item => `<li>${item}</li>`).join('');
+    
+    // Pricing
+    const pricingEl = document.getElementById('boatModalPricing');
+    pricingEl.innerHTML = boat.pricing.map(p =>
+        `<div class="boat-price-row">
+            <span class="price-duration">${p.duration}</span>
+            <span class="price-amount">${p.price}</span>
+        </div>`
+    ).join('');
+    
+    // Book button
+    document.getElementById('boatModalBookBtn').href = boat.whatsapp;
+    
+    // Gallery - main image
+    const mainImg = document.getElementById('boatModalMainImg');
+    mainImg.src = boat.images[0];
+    mainImg.alt = boat.name;
+    
+    // Gallery - thumbnails
+    const thumbsEl = document.getElementById('boatModalThumbs');
+    thumbsEl.innerHTML = boat.images.map((img, i) =>
+        `<div class="boat-thumb ${i === 0 ? 'active' : ''}" onclick="selectBoatImage(${i})">
+            <img src="${img}" alt="${boat.name} photo ${i + 1}" loading="lazy">
+        </div>`
+    ).join('');
+    
+    // Counter
+    updateBoatCounter();
+    
+    // Show modal
+    const overlay = document.getElementById('boatModal');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeBoatModal() {
+    const overlay = document.getElementById('boatModal');
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+    currentBoatKey = null;
+}
+
+function selectBoatImage(index) {
+    if (!currentBoatKey) return;
+    currentBoatImageIndex = index;
+    
+    const boat = boatData[currentBoatKey];
+    const mainImg = document.getElementById('boatModalMainImg');
+    mainImg.style.opacity = '0';
+    
+    setTimeout(() => {
+        mainImg.src = boat.images[index];
+        mainImg.style.opacity = '1';
+    }, 150);
+    
+    // Update active thumb
+    const thumbs = document.querySelectorAll('.boat-thumb');
+    thumbs.forEach((t, i) => t.classList.toggle('active', i === index));
+    
+    // Scroll active thumb into view  
+    if (thumbs[index]) {
+        thumbs[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    }
+    
+    updateBoatCounter();
+}
+
+function changeBoatImage(direction) {
+    if (!currentBoatKey) return;
+    const boat = boatData[currentBoatKey];
+    let newIndex = currentBoatImageIndex + direction;
+    
+    if (newIndex >= boat.images.length) newIndex = 0;
+    else if (newIndex < 0) newIndex = boat.images.length - 1;
+    
+    selectBoatImage(newIndex);
+}
+
+function updateBoatCounter() {
+    if (!currentBoatKey) return;
+    const boat = boatData[currentBoatKey];
+    document.getElementById('boatImgCounter').textContent =
+        `${currentBoatImageIndex + 1} / ${boat.images.length}`;
+}
+
+// Keyboard: ESC to close boat modal
+document.addEventListener('keydown', (e) => {
+    const boatModal = document.getElementById('boatModal');
+    if (!boatModal || !boatModal.classList.contains('active')) return;
+    
+    if (e.key === 'Escape') closeBoatModal();
+    if (e.key === 'ArrowLeft') changeBoatImage(-1);
+    if (e.key === 'ArrowRight') changeBoatImage(1);
+});
+
+// Make functions globally available
+window.openBoatModal = openBoatModal;
+window.closeBoatModal = closeBoatModal;
+window.selectBoatImage = selectBoatImage;
+window.changeBoatImage = changeBoatImage;
+
+/* ========== Load More Videos ========== */
+function toggleMoreVideos() {
+    const grid = document.getElementById('videoGrid');
+    const btn = document.getElementById('loadMoreVideos');
+    
+    if (grid.classList.contains('show-all')) {
+        grid.classList.remove('show-all');
+        btn.innerHTML = '<i class="fas fa-play-circle"></i> Load More Videos <span class="load-more-count">(3 more)</span>';
+    } else {
+        grid.classList.add('show-all');
+        btn.innerHTML = '<i class="fas fa-chevron-up"></i> Show Less';
+        // Refresh AOS for newly visible elements
+        if (typeof AOS !== 'undefined') AOS.refresh();
+    }
+}
+
+window.toggleMoreVideos = toggleMoreVideos;
+
+/* ========== Load More Gallery ========== */
+function toggleMoreGallery() {
+    const grid = document.querySelector('.gallery-grid');
+    const btn = document.getElementById('loadMoreGallery');
+    
+    if (grid.classList.contains('show-all')) {
+        grid.classList.remove('show-all');
+        btn.innerHTML = '<i class="fas fa-images"></i> Load More Photos <span class="load-more-count">(11 more)</span>';
+    } else {
+        grid.classList.add('show-all');
+        btn.innerHTML = '<i class="fas fa-chevron-up"></i> Show Less';
+        if (typeof AOS !== 'undefined') AOS.refresh();
+    }
+}
+
+window.toggleMoreGallery = toggleMoreGallery;
 
 /* ========== FAQ Accordion ========== */
 function initFAQ() {

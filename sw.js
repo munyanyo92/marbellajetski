@@ -26,8 +26,8 @@ const ASSETS_TO_CACHE = [
     'https://unpkg.com/aos@2.3.1/dist/aos.css',
     'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css',
     // Original site logo
-    'https://marbellajetski.com/wp-content/uploads/2021/05/MJS_16_500x500-removebg-preview.png',
-    'https://marbellajetski.com/wp-content/uploads/2021/05/MJS_16_500x500.png',
+    'assets/media/photos/logo-circular.png',
+    'assets/media/photos/logo-circular.png',
     // Original Yamaha jet ski images (all sizes)
     'https://marbellajetski.com/wp-content/uploads/2021/05/2021-Yamaha-VXCRUISERHO-EU-Yellow-Action-001-03-1.jpg',
     'https://marbellajetski.com/wp-content/uploads/2021/05/2021-Yamaha-VXCRUISERHO-EU-Yellow-Action-001-03-1-1536x864.jpg',
@@ -145,8 +145,8 @@ self.addEventListener('sync', event => {
 self.addEventListener('push', event => {
     const options = {
         body: event.data ? event.data.text() : 'New update from Marbella Jet Ski!',
-        icon: 'https://marbellajetski.com/wp-content/uploads/2021/05/MJS_16_500x500.png',
-        badge: 'https://marbellajetski.com/wp-content/uploads/2021/05/MJS_16_500x500-removebg-preview.png',
+        icon: 'assets/media/photos/logo-circular.png',
+        badge: 'assets/media/photos/logo-circular.png',
         vibrate: [100, 50, 100],
         data: {
             dateOfArrival: Date.now(),
