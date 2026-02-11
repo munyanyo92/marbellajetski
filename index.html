@@ -102,7 +102,7 @@
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     
-    <link rel="stylesheet" href="styles.css?v=2026021101">
+    <link rel="stylesheet" href="styles.css?v=2026021114">
     
 
 </head>
@@ -150,8 +150,9 @@
                 <a href="#jetski" class="nav-link">Jet Ski</a>
                 <a href="#watersports" class="nav-link">Water Sports</a>
                 <a href="#boats" class="nav-link">Yachts</a>
-                <a href="about-daniel.html#racing-videos" class="nav-link">Racing</a>
-                <a href="about-daniel.html" class="nav-link">About &amp; Lessons</a>
+                <a href="#racing-lessons" class="nav-link">Racing</a>
+                <a href="lessons.html" class="nav-link">Lessons</a>
+                <a href="about-daniel.html" class="nav-link">About Us</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
             
@@ -174,21 +175,22 @@
         </div>
     </nav>
 
+    <!-- Promo Banner (fixed, outside hero for proper positioning) -->
+    <div class="hero-promo-overlay">
+        <span class="hero-promo-icon">☀️</span>
+        <div class="hero-promo-text">
+            <strong>Book Before Summer &amp; Save 10%!</strong>
+            <span>Early bird discount on all jet ski &amp; yacht bookings for June–September 2026</span>
+        </div>
+        <a href="booking.html" class="hero-promo-btn">
+            <i class="fas fa-calendar-check"></i>
+            Book Now
+        </a>
+    </div>
+
     <main id="main-content">
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <!-- Promo Overlay -->
-        <div class="hero-promo-overlay">
-            <span class="hero-promo-icon">☀️</span>
-            <div class="hero-promo-text">
-                <strong>Book Before Summer &amp; Save 10%!</strong>
-                <span>Early bird discount on all jet ski &amp; yacht bookings for June–September 2026</span>
-            </div>
-            <a href="booking.html" class="hero-promo-btn">
-                <i class="fas fa-calendar-check"></i>
-                Book Now
-            </a>
-        </div>
         <!-- Video Background — Jet Ski Drone Tracking (Pexels #4115690, free to use) -->
         <div class="hero-video-container">
             <video autoplay muted loop playsinline poster="https://marbellajetski.com/wp-content/uploads/2021/09/18328-mar-scaled.jpg">
@@ -404,7 +406,7 @@
                             <span class="price">€299</span>
                             <span class="duration">/ session</span>
                         </div>
-                        <a href="about-daniel.html" class="service-link link-underline">
+                        <a href="#racing-lessons" class="service-link link-underline">
                             <span>Explore Racing</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
@@ -834,7 +836,7 @@
                     </div>
                 </div>
             </div>
-            <p class="vat-note" style="text-align:center;margin-top:24px;"><i class="fas fa-receipt"></i> All prices include VAT (IVA)</p>
+            <p class="vat-note" style="text-align:center;margin-top:24px;color:var(--text-secondary);"><i class="fas fa-receipt"></i> All prices include VAT (IVA)</p>
         </div>
     </section>
 
@@ -1008,6 +1010,96 @@
             <div class="yacht-note" data-aos="fade-up" data-aos-delay="400" style="text-align:center;margin-top:40px;padding:20px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;">
                 <p style="color:rgba(255,255,255,0.7);font-size:0.9rem;margin:0;"><i class="fas fa-info-circle" style="margin-right:8px;color:var(--primary);"></i>All boats operated by <strong>Marbella Ocean Boats</strong> from Puerto Banús. Every charter includes professional captain, fuel, insurance, and refreshments. All prices include VAT (IVA). <a href="https://api.whatsapp.com/send?phone=34655442232&text=Hi!%20I%27d%20like%20information%20about%20yacht%20charters" target="_blank" rel="noopener noreferrer" style="color:var(--primary);">Contact us for custom packages.</a></p>
             </div>
+        </div>
+    </section>
+
+    <!-- ========== RACING LESSONS SECTION ========== -->
+    <section class="lessons-section" id="racing-lessons">
+        <div class="lessons-container">
+            <div class="lessons-header" data-aos="fade-up">
+                <span class="section-tag">Racing Lessons</span>
+                <h2>Jet Ski <span class="gradient-text">Racing Lessons</span></h2>
+                <p>Learn from a professional racing pilot. Private lessons for all levels — from first-timers to experienced riders who want to master competition techniques.</p>
+            </div>
+            
+            <div class="lessons-grid">
+                <!-- Basic Racing Lesson -->
+                <div class="lesson-card beginner" data-aos="fade-up" data-aos-delay="0">
+                    <div class="card-image">
+                        <img src="assets/media/racing/racing-seadoo-1.jpg" alt="Basic racing lesson Marbella">
+                        <span class="level-tag beginner">Basic</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Basic Racing Lesson</h3>
+                        <p class="desc">Introduction to racing techniques. Learn throttle control, body positioning, cornering basics, and circuit navigation with a professional pilot.</p>
+                        <ul class="features">
+                            <li><i class="fas fa-check"></i> 30 minute session</li>
+                            <li><i class="fas fa-check"></i> Personal coaching by a Pilot</li>
+                            <li><i class="fas fa-check"></i> Safety briefing & all gear</li>
+                            <li><i class="fas fa-check"></i> Circuit technique basics</li>
+                            <li><i class="fas fa-check"></i> All levels welcome</li>
+                        </ul>
+                        <div class="card-footer">
+                            <div class="price"><strong>&euro;299</strong></div>
+                            <a href="https://api.whatsapp.com/send?phone=34655442232&text=Hi!%20I%27d%20like%20to%20book%20a%20basic%20racing%20lesson%20(30min)." class="book-btn" target="_blank" rel="noopener noreferrer">
+                                Book <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Intermediate Racing Lesson -->
+                <div class="lesson-card intermediate" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-image">
+                        <img src="assets/media/racing/racing-seadoo-2.jpg" alt="Racing lesson Marbella">
+                        <span class="level-tag intermediate">Intermediate</span>
+                        <span class="popular-badge"><i class="fas fa-fire"></i> Most Popular</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Racing Experience</h3>
+                        <p class="desc">Full racing session with a professional pilot. Learn advanced cornering, buoy technique, wave reading, and speed management on the competition circuit.</p>
+                        <ul class="features">
+                            <li><i class="fas fa-check"></i> 1 hour intensive session</li>
+                            <li><i class="fas fa-check"></i> Circuit & open water technique</li>
+                            <li><i class="fas fa-check"></i> Personal coaching by a Pilot</li>
+                            <li><i class="fas fa-check"></i> Competition-level jet ski</li>
+                            <li><i class="fas fa-check"></i> GoPro recording available</li>
+                        </ul>
+                        <div class="card-footer">
+                            <div class="price"><strong>&euro;499</strong></div>
+                            <a href="https://api.whatsapp.com/send?phone=34655442232&text=Hi!%20I%27d%20like%20to%20book%20a%201h%20racing%20experience." class="book-btn" target="_blank" rel="noopener noreferrer">
+                                Book <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Advanced Racing Masterclass -->
+                <div class="lesson-card advanced" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-image">
+                        <img src="assets/media/racing/racing-seadoo-3.jpg" alt="Racing Masterclass — Jet Ski Marbella">
+                        <span class="level-tag advanced">Masterclass</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Racing Masterclass</h3>
+                        <p class="desc">The ultimate 2-hour intensive with a professional pilot. Master race starts, offshore racing lines, slalom technique, and competitive riding at professional level.</p>
+                        <ul class="features">
+                            <li><i class="fas fa-check"></i> 2 hour intensive session</li>
+                            <li><i class="fas fa-check"></i> Personal coaching by a Pilot</li>
+                            <li><i class="fas fa-check"></i> Circuit, offshore & slalom</li>
+                            <li><i class="fas fa-check"></i> GoPro recording included</li>
+                            <li><i class="fas fa-check"></i> For experienced riders</li>
+                        </ul>
+                        <div class="card-footer">
+                            <div class="price"><strong>&euro;699</strong></div>
+                            <a href="https://api.whatsapp.com/send?phone=34655442232&text=Hi!%20I%27m%20interested%20in%20the%20Racing%20Masterclass%20(2h)." class="book-btn" target="_blank" rel="noopener noreferrer">
+                                Book <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p style="text-align:center;font-size:0.82rem;color:var(--text-secondary);margin-top:18px;"><i class="fas fa-receipt" style="margin-right:5px;color:var(--primary);opacity:0.7;"></i>All prices include VAT (IVA)</p>
         </div>
     </section>
 
@@ -1781,7 +1873,7 @@
                             <li><a href="#watersports">Water Sports</a></li>
                             <li><a href="#boats">Yacht Charters</a></li>
                             <li><a href="#about">About Us</a></li>
-                            <li><a href="about-daniel.html">Lessons & Training</a></li>
+                            <li><a href="#racing-lessons">Racing Lessons</a></li>
                             <li><a href="booking.html">Book Now</a></li>
                         </ul>
                     </div>
@@ -1894,6 +1986,6 @@
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="script.js?v=2026020924"></script>
+    <script src="script.js?v=2026021113"></script>
 </body>
 </html>

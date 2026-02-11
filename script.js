@@ -59,12 +59,53 @@ function initNavigation() {
     const navMenu = document.getElementById('navMenu');
     const navLinks = document.querySelectorAll('.nav-link');
     
-    // Scroll effect for navbar
+    // Scroll effect for navbar + promo banner
+    const promoBanner = document.querySelector('.hero-promo-overlay');
+
+    // Initial entrance: show banner after 1.2s
+    if (promoBanner) {
+        setTimeout(() => {
+            promoBanner.classList.add('promo-visible');
+        }, 1200);
+    }
+
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
+        const scrollY = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight;
+        const winHeight = window.innerHeight;
+        const atBottom = (scrollY + winHeight) >= (docHeight - 100);
+
+        // Navbar: smooth morph via CSS transitions
+        if (scrollY > 50) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
+        }
+
+        // Promo banner: position based on scroll distance
+        if (promoBanner) {
+            if (atBottom) {
+                // At bottom of page: fade out, move to top (tight under header), then fade in
+                promoBanner.classList.add('promo-hide');
+                setTimeout(() => {
+                    promoBanner.classList.remove('promo-bottom');
+                    promoBanner.classList.add('promo-scrolled-top');
+                    setTimeout(() => {
+                        promoBanner.classList.remove('promo-hide');
+                    }, 50);
+                }, 400);
+            } else if (scrollY <= 50) {
+                // At top: show in original top position
+                promoBanner.classList.remove('promo-bottom', 'promo-hide', 'promo-scrolled-top');
+            } else if (scrollY > 400) {
+                // Scrolled far enough: show at bottom of viewport
+                promoBanner.classList.add('promo-bottom');
+                promoBanner.classList.remove('promo-hide', 'promo-scrolled-top');
+            } else {
+                // In between (50-400px): hidden during transition
+                promoBanner.classList.add('promo-hide');
+                promoBanner.classList.remove('promo-bottom', 'promo-scrolled-top');
+            }
         }
     });
     

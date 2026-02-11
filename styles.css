@@ -139,20 +139,46 @@ ul, ol {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    right: 0;
     z-index: 1000;
     padding: 20px 0;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     background: #0a1628;
     border-bottom: none;
     box-shadow: none;
+    border-radius: 0;
+    max-width: 100%;
+    margin: 0 auto;
+    transform: translateY(0);
+    will-change: transform, max-width;
+    transition:
+        transform 0.5s ease,
+        max-width 0.5s ease,
+        padding 0.5s ease,
+        border-radius 0.5s ease,
+        background 0.5s ease,
+        box-shadow 0.5s ease;
 }
 .navbar.scrolled {
-    top: 0;
-    background: #0a1628;
-    padding: 10px 0;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(10px);
+    max-width: min(92%, 1300px);
+    background: rgba(10, 22, 40, 0.92);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    padding: 8px 0;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255,255,255,0.06);
     border-bottom: none;
+    border-radius: 50px;
+}
+.navbar.scrolled .logo-image {
+    height: 50px !important;
+    transition: height 0.35s ease;
+}
+.navbar.scrolled .nav-link {
+    font-size: 13px;
+}
+.navbar.scrolled .nav-cta {
+    padding: 8px 16px;
+    font-size: 12px;
 }
 
 .nav-container {
@@ -3955,11 +3981,11 @@ img {
     100% { opacity: 1; transform: translateX(-50%) translateY(0); }
 }
 .hero-promo-overlay {
-    position: absolute;
-    top: 100px;
+    position: fixed;
+    top: 120px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 5;
+    z-index: 999;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3973,8 +3999,23 @@ img {
     white-space: nowrap;
     max-width: 90vw;
     box-shadow: 0 4px 30px rgba(0, 180, 216, 0.15), 0 0 60px rgba(255, 195, 0, 0.06);
-    animation: promoFadeSlide 0.8s ease-out both;
-    animation-delay: 1.2s;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease, top 0.4s ease;
+}
+.hero-promo-overlay.promo-visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+.hero-promo-overlay.promo-bottom {
+    top: calc(100vh - 80px);
+}
+.hero-promo-overlay.promo-scrolled-top {
+    top: 80px;
+}
+.hero-promo-overlay.promo-hide {
+    opacity: 0 !important;
+    pointer-events: none !important;
 }
 .hero-promo-icon {
     font-size: 1.4rem;
@@ -4027,7 +4068,7 @@ img {
 }
 @media (max-width: 600px) {
     .hero-promo-overlay {
-        top: 90px;
+        top: 110px;
         gap: 10px;
         padding: 12px 20px;
         border-radius: 40px;
@@ -4243,4 +4284,226 @@ img {
     .nav-lang-btn .fa-chevron-down {
         display: none;
     }
+}
+
+/* ============================================================
+   RACING LESSONS SECTION (Home Page)
+============================================================ */
+.lessons-section {
+    padding: 120px 20px;
+    background: linear-gradient(180deg, #f0f9ff 0%, #e0f4ff 50%, #f0f9ff 100%);
+    position: relative;
+}
+
+.lessons-container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.lessons-header {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.lessons-header h2 {
+    font-size: clamp(32px, 4.5vw, 50px);
+    font-weight: 800;
+    color: var(--dark);
+    margin-bottom: 15px;
+}
+
+.lessons-header p {
+    font-size: 18px;
+    color: var(--gray-600);
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.lessons-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+.lesson-card {
+    background: white;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+    transition: all 0.5s ease;
+    position: relative;
+}
+
+.lesson-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    z-index: 10;
+}
+
+.lesson-card.beginner::before { background: linear-gradient(90deg, #10b981, #34d399); }
+.lesson-card.intermediate::before { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
+.lesson-card.advanced::before { background: linear-gradient(90deg, #ef4444, #f97316); }
+
+.lesson-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.12);
+}
+
+.lesson-card .card-image {
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+}
+
+.lesson-card .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 18%;
+    transition: transform 0.6s ease;
+}
+
+.lesson-card:hover .card-image img {
+    transform: scale(1.1);
+}
+
+.lesson-card.advanced .card-image img {
+    object-position: center 35%;
+    object-fit: cover;
+}
+
+.lesson-card .level-tag {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.level-tag.beginner { background: #10b981; color: white; }
+.level-tag.intermediate { background: #f59e0b; color: white; }
+.level-tag.advanced { background: #ef4444; color: white; }
+
+.lesson-card .popular-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 16px;
+    background: var(--gold);
+    color: #78350f;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.lesson-card .card-body {
+    padding: 35px;
+}
+
+.lesson-card h3 {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--dark);
+    margin-bottom: 12px;
+}
+
+.lesson-card .desc {
+    font-size: 15px;
+    color: var(--gray-600);
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.lesson-card .features {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.lesson-card .features li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--gray-700);
+    padding: 10px 0;
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.lesson-card .features li:last-child {
+    border-bottom: none;
+}
+
+.lesson-card .features li i {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 180, 216, 0.1);
+    color: var(--primary);
+    border-radius: 50%;
+    font-size: 11px;
+}
+
+.lesson-card .card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 25px;
+    border-top: 2px solid var(--gray-100);
+}
+
+.lesson-card .price {
+    font-size: 14px;
+    color: var(--gray-500);
+}
+
+.lesson-card .price strong {
+    display: block;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--dark);
+    line-height: 1;
+}
+
+.lesson-card .book-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 30px;
+    background: var(--gradient-primary);
+    color: white;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+
+.lesson-card .book-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 180, 216, 0.3);
+}
+
+@media (max-width: 1200px) {
+    .lessons-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .lessons-grid { grid-template-columns: 1fr; }
+    .lessons-section { padding: 80px 20px; }
 }
