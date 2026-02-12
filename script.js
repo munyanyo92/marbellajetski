@@ -877,9 +877,9 @@ function initWeather() {
             var descEl = document.getElementById('wx-desc');
             if (descEl) descEl.textContent = wmoDesc(c.weather_code);
 
-            // Wind speed
+            // Wind speed (label is in the HTML)
             var windEl = document.getElementById('wx-wind');
-            if (windEl) windEl.textContent = Math.round(c.wind_speed_10m) + ' km/h';
+            if (windEl) windEl.textContent = Math.round(c.wind_speed_10m);
 
             // Humidity
             var humEl = document.getElementById('wx-hum');
@@ -899,16 +899,51 @@ function initWeather() {
 }
 
 function wmoDesc(code) {
-    var map = {
-        0: 'Clear sky', 1: 'Mostly clear', 2: 'Partly cloudy', 3: 'Overcast',
-        45: 'Foggy', 48: 'Rime fog',
-        51: 'Light drizzle', 53: 'Drizzle', 55: 'Heavy drizzle',
-        61: 'Light rain', 63: 'Rain', 65: 'Heavy rain',
-        71: 'Light snow', 73: 'Snow', 75: 'Heavy snow',
-        80: 'Light showers', 81: 'Showers', 82: 'Heavy showers',
-        95: 'Thunderstorm', 96: 'Thunderstorm + hail', 99: 'Thunderstorm + hail'
+    var lang = (document.documentElement.lang || 'en').slice(0, 2);
+    var maps = {
+        en: {
+            0: 'Clear sky', 1: 'Mostly clear', 2: 'Partly cloudy', 3: 'Overcast',
+            45: 'Foggy', 48: 'Rime fog',
+            51: 'Light drizzle', 53: 'Drizzle', 55: 'Heavy drizzle',
+            61: 'Light rain', 63: 'Rain', 65: 'Heavy rain',
+            71: 'Light snow', 73: 'Snow', 75: 'Heavy snow',
+            80: 'Light showers', 81: 'Showers', 82: 'Heavy showers',
+            95: 'Thunderstorm', 96: 'Thunderstorm + hail', 99: 'Thunderstorm + hail',
+            _default: 'Fair'
+        },
+        es: {
+            0: 'Cielo despejado', 1: 'Mayormente despejado', 2: 'Parcialmente nublado', 3: 'Nublado',
+            45: 'Niebla', 48: 'Niebla helada',
+            51: 'Llovizna ligera', 53: 'Llovizna', 55: 'Llovizna fuerte',
+            61: 'Lluvia ligera', 63: 'Lluvia', 65: 'Lluvia fuerte',
+            71: 'Nieve ligera', 73: 'Nieve', 75: 'Nieve fuerte',
+            80: 'Chubascos ligeros', 81: 'Chubascos', 82: 'Chubascos fuertes',
+            95: 'Tormenta', 96: 'Tormenta con granizo', 99: 'Tormenta con granizo',
+            _default: 'Buen tiempo'
+        },
+        fr: {
+            0: 'Ciel dégagé', 1: 'Plutôt dégagé', 2: 'Partiellement nuageux', 3: 'Couvert',
+            45: 'Brouillard', 48: 'Brouillard givrant',
+            51: 'Bruine légère', 53: 'Bruine', 55: 'Forte bruine',
+            61: 'Pluie légère', 63: 'Pluie', 65: 'Forte pluie',
+            71: 'Neige légère', 73: 'Neige', 75: 'Forte neige',
+            80: 'Averses légères', 81: 'Averses', 82: 'Fortes averses',
+            95: 'Orage', 96: 'Orage avec grêle', 99: 'Orage avec grêle',
+            _default: 'Beau temps'
+        },
+        nl: {
+            0: 'Onbewolkt', 1: 'Overwegend helder', 2: 'Gedeeltelijk bewolkt', 3: 'Bewolkt',
+            45: 'Mistig', 48: 'Rijpmist',
+            51: 'Lichte motregen', 53: 'Motregen', 55: 'Zware motregen',
+            61: 'Lichte regen', 63: 'Regen', 65: 'Zware regen',
+            71: 'Lichte sneeuw', 73: 'Sneeuw', 75: 'Zware sneeuw',
+            80: 'Lichte buien', 81: 'Buien', 82: 'Zware buien',
+            95: 'Onweer', 96: 'Onweer met hagel', 99: 'Onweer met hagel',
+            _default: 'Mooi weer'
+        }
     };
-    return map[code] || 'Fair';
+    var m = maps[lang] || maps.en;
+    return m[code] || m._default;
 }
 
 /* F: Make service-card / jetski-option cards fully clickable */
