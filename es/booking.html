@@ -946,6 +946,31 @@
     document.addEventListener('DOMContentLoaded', function() {
         renderCalendar();
 
+        // Auto-select activity from URL param
+        const urlParams = new URLSearchParams(window.location.search);
+        const activityParam = urlParams.get('activity');
+        if (activityParam) {
+            setTimeout(() => {
+                const radio = document.querySelector('input[name="activity"][value="' + activityParam + '"]');
+                if (radio) {
+                    const label = radio.closest('.activity-option');
+                    if (label) {
+                        const cat = label.getAttribute('data-cat');
+                        if (cat) {
+                            const tab = document.querySelector('.cat-tab[data-cat="' + cat + '"]');
+                            if (tab) tab.click();
+                        }
+                    }
+                    setTimeout(() => {
+                        radio.checked = true;
+                        radio.dispatchEvent(new Event('change', { bubbles: true }));
+                        const bookingForm = document.querySelector('.booking-form, .step-content, #activityList');
+                        if (bookingForm) bookingForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }, 150);
+                }
+            }, 100);
+        }
+
         document.querySelectorAll('.cat-tab').forEach(tab => {
             tab.addEventListener('click', function() {
                 document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));

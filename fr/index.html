@@ -520,17 +520,17 @@
                         <p>Parfait pour les débutants ou ceux qui veulent une balade amusante dans un environnement sûr et contrôlé. Circuit avec 4 bouées dans un périmètre surveillé. Encadré par des moniteurs avec bateaux de soutien. Max. 4 jet skis simultanément. Tous les jet skis sont suivis par GPS pour la sécurité opérationnelle (système OtoTrak).</p>
                         <p class="info-note" style="background:rgba(0,180,216,0.08);border-left:3px solid var(--primary);padding:10px 14px;border-radius:6px;font-size:0.9em;margin-top:8px;"><i class="fas fa-info-circle" style="color:var(--primary);margin-right:6px;"></i>Chaque jet ski peut accueillir 2 personnes et vous pouvez échanger le pilote pendant la session — même prix.</p>
                         
-                        <div class="pricing-table">
-                            <div class="price-row">
+                        <div class="pricing-table" data-booking-type="circuit">
+                            <div class="price-row" data-activity="jetski-circuit-20" onclick="selectDuration(this)">
                                 <span class="duration"><i class="fas fa-clock"></i> 20 minutes</span>
                                 <span class="price">€70</span>
                             </div>
-                            <div class="price-row popular">
+                            <div class="price-row popular" data-activity="jetski-circuit-30" onclick="selectDuration(this)">
                                 <span class="popular-badge">Le Plus Populaire</span>
                                 <span class="duration"><i class="fas fa-clock"></i> 30 minutes</span>
                                 <span class="price">€90</span>
                             </div>
-                            <div class="price-row">
+                            <div class="price-row" data-activity="jetski-circuit-60" onclick="selectDuration(this)">
                                 <span class="duration"><i class="fas fa-clock"></i> 1 heure</span>
                                 <span class="price">€170</span>
                             </div>
@@ -545,7 +545,7 @@
                             <div class="feature"><i class="fas fa-camera"></i> Service photo professionnel en option (€25)</div>
                         </div>
                         
-                        <a href="../booking.html" class="btn btn-primary">
+                        <a href="../booking.html?activity=jetski-circuit-30" class="btn btn-primary jetski-book-btn" data-default="jetski-circuit-30">
                             <span>Réserver un Circuit</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
@@ -600,13 +600,13 @@
                             </div>
                         </div>
                         
-                        <div class="pricing-table">
-                            <div class="price-row popular">
+                        <div class="pricing-table" data-booking-type="excursion">
+                            <div class="price-row popular" data-activity="jetski-excursion-60" onclick="selectDuration(this)">
                                 <span class="popular-badge">Le Plus Populaire</span>
                                 <span class="duration"><i class="fas fa-clock"></i> Excursion 1 heure</span>
                                 <span class="price">€170</span>
                             </div>
-                            <div class="price-row">
+                            <div class="price-row" data-activity="jetski-excursion-120" onclick="selectDuration(this)">
                                 <span class="duration"><i class="fas fa-clock"></i> Excursion 2 heures</span>
                                 <span class="price">€330</span>
                             </div>
@@ -621,7 +621,7 @@
                             <div class="feature"><i class="fas fa-check-circle"></i> Suivi GPS (OtoTrak)</div>
                         </div>
                         
-                        <a href="../booking.html" class="btn btn-primary">
+                        <a href="../booking.html?activity=jetski-excursion-60" class="btn btn-primary jetski-book-btn" data-default="jetski-excursion-60">
                             <span>Réserver une Excursion</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>

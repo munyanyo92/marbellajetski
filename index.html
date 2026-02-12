@@ -520,17 +520,17 @@
                         <p>Perfect for beginners or those wanting a fun ride in a safe, controlled environment. Circuit with 4 buoys within a controlled perimeter. Supervised by instructors with support boats. Max. 4 jet skis simultaneously. All jet skis are GPS-tracked for operational safety (OtoTrak system).</p>
                         <p class="info-note" style="background:rgba(0,180,216,0.08);border-left:3px solid var(--primary);padding:10px 14px;border-radius:6px;font-size:0.9em;margin-top:8px;"><i class="fas fa-info-circle" style="color:var(--primary);margin-right:6px;"></i>Each jet ski can carry 2 people and you can swap driver during the session — same price.</p>
                         
-                        <div class="pricing-table">
-                            <div class="price-row">
+                        <div class="pricing-table" data-booking-type="circuit">
+                            <div class="price-row" data-activity="jetski-circuit-20" onclick="selectDuration(this)">
                                 <span class="duration"><i class="fas fa-clock"></i> 20 minutes</span>
                                 <span class="price">€70</span>
                             </div>
-                            <div class="price-row popular">
+                            <div class="price-row popular" data-activity="jetski-circuit-30" onclick="selectDuration(this)">
                                 <span class="popular-badge">Most Popular</span>
                                 <span class="duration"><i class="fas fa-clock"></i> 30 minutes</span>
                                 <span class="price">€90</span>
                             </div>
-                            <div class="price-row">
+                            <div class="price-row" data-activity="jetski-circuit-60" onclick="selectDuration(this)">
                                 <span class="duration"><i class="fas fa-clock"></i> 1 hour</span>
                                 <span class="price">€170</span>
                             </div>
@@ -545,7 +545,7 @@
                             <div class="feature"><i class="fas fa-camera"></i> Optional professional photography service (€25)</div>
                         </div>
                         
-                        <a href="booking.html" class="btn btn-primary">
+                        <a href="booking.html?activity=jetski-circuit-30" class="btn btn-primary jetski-book-btn" data-default="jetski-circuit-30">
                             <span>Book Circuit Ride</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
@@ -600,13 +600,13 @@
                             </div>
                         </div>
                         
-                        <div class="pricing-table">
-                            <div class="price-row popular">
+                        <div class="pricing-table" data-booking-type="excursion">
+                            <div class="price-row popular" data-activity="jetski-excursion-60" onclick="selectDuration(this)">
                                 <span class="popular-badge">Most Popular</span>
                                 <span class="duration"><i class="fas fa-clock"></i> 1 hour excursion</span>
                                 <span class="price">€170</span>
                             </div>
-                            <div class="price-row">
+                            <div class="price-row" data-activity="jetski-excursion-120" onclick="selectDuration(this)">
                                 <span class="duration"><i class="fas fa-clock"></i> 2 hour excursion</span>
                                 <span class="price">€330</span>
                             </div>
@@ -621,7 +621,7 @@
                             <div class="feature"><i class="fas fa-check-circle"></i> GPS tracked (OtoTrak)</div>
                         </div>
                         
-                        <a href="booking.html" class="btn btn-primary">
+                        <a href="booking.html?activity=jetski-excursion-60" class="btn btn-primary jetski-book-btn" data-default="jetski-excursion-60">
                             <span>Book Excursion</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>

@@ -321,6 +321,10 @@ ul, ol {
     transition: var(--transition-normal);
 }
 
+.nav-toggle.active span {
+    background: var(--dark) !important;
+}
+
 /* ========== Hero Section - Summer Paradise ========== */
 .hero {
     position: relative;
@@ -1120,17 +1124,31 @@ section {
     align-items: center;
     padding: 12px 16px;
     border-radius: 10px;
-    transition: background 0.2s ease;
+    transition: all 0.25s ease;
     position: relative;
+    cursor: pointer;
+    user-select: none;
 }
 
 .price-row:hover {
-    background: rgba(255,255,255,0.05);
+    background: rgba(255,255,255,0.1);
+}
+
+.price-row.selected {
+    background: rgba(0, 180, 216, 0.25);
+    border: 2px solid var(--primary);
+    box-shadow: 0 0 12px rgba(0,180,216,0.2);
 }
 
 .price-row.popular {
     background: rgba(0, 180, 216, 0.12);
     border: 1px solid rgba(0, 180, 216, 0.3);
+}
+
+.price-row.popular.selected {
+    background: rgba(0, 180, 216, 0.3);
+    border: 2px solid var(--primary);
+    box-shadow: 0 0 12px rgba(0,180,216,0.3);
 }
 
 .popular-badge {
@@ -2858,7 +2876,7 @@ section {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(10, 22, 40, 0.98);
+        background: rgba(255, 255, 255, 0.98);
         backdrop-filter: blur(20px);
         flex-direction: column;
         padding: 100px 40px 40px;
@@ -2873,10 +2891,10 @@ section {
     .nav-link {
         padding: 18px 0;
         width: 100%;
-        border-bottom: 1px solid rgba(255,255,255,0.08);
+        border-bottom: 1px solid rgba(0,0,0,0.08);
         font-size: 22px;
         font-weight: 600;
-        color: var(--white) !important;
+        color: #111 !important;
     }
     
     .nav-link:hover {
@@ -4982,5 +5000,17 @@ img {
     a {
         color: #000;
         text-decoration: underline;
+    }
+}
+
+/* ===== NUCLEAR: Weather box hidden on all mobile/tablet ===== */
+@media (max-width: 1100px) {
+    .weather-box {
+        display: none !important;
+        visibility: hidden !important;
+        width: 0 !important;
+        height: 0 !important;
+        overflow: hidden !important;
+        pointer-events: none !important;
     }
 }

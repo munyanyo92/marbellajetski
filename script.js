@@ -952,6 +952,32 @@ function wmoDesc(code) {
     return m[code] || m._default;
 }
 
+/* ========== Duration Selection on Homepage Pricing ========== */
+function selectDuration(el) {
+    // Remove selected from all rows in the same pricing table
+    var table = el.closest('.pricing-table');
+    if (!table) return;
+    table.querySelectorAll('.price-row').forEach(function(row) {
+        row.classList.remove('selected');
+    });
+    // Add selected to clicked row
+    el.classList.add('selected');
+    
+    // Update the corresponding book button's href with the selected activity
+    var activity = el.getAttribute('data-activity');
+    if (!activity) return;
+    
+    // Find the book button in the same option-content container
+    var optionContent = table.closest('.option-content');
+    if (!optionContent) return;
+    var bookBtn = optionContent.querySelector('.jetski-book-btn');
+    if (!bookBtn) return;
+    
+    // Update the href - preserve the base path but change the activity param
+    var basePath = bookBtn.getAttribute('href').split('?')[0];
+    bookBtn.setAttribute('href', basePath + '?activity=' + activity);
+}
+
 /* F: Make service-card / jetski-option cards fully clickable */
 document.querySelectorAll('.service-card, .jetski-option').forEach(function(card) {
     card.addEventListener('click', function(e) {
