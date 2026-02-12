@@ -205,19 +205,29 @@
     </style>
 </head>
 <body>
-    <!-- Navigation (reuse from main site) -->
+    <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">
-                <img src="assets/media/photos/logo-circular.png" alt="Marbella JetSki Logo">
+                <img src="assets/media/photos/logo-circular.png" alt="Marbella JetSki Logo" class="logo-image" style="height: 75px;">
                 <span class="logo-text">MARBELLA<span class="logo-highlight">JETSKI</span></span>
             </a>
-            <div class="nav-links" id="navLinks">
-                <a href="index.html">Home</a>
-                <a href="index.html#services">Services</a>
-                <a href="index.html#jetski">Jet Skis</a>
-                <a href="booking.html">Book Now</a>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#services" class="nav-link">Services</a>
+                <a href="index.html#jetski" class="nav-link">Jet Skis</a>
+                <a href="booking.html" class="nav-link">Book Now</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
             </div>
+            <div class="nav-actions">
+                <a href="booking.html" class="nav-cta">
+                    <span>Book Now</span>
+                    <i class="fas fa-calendar-check"></i>
+                </a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </nav>
 

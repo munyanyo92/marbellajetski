@@ -208,15 +208,25 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">
-                <img src="../assets/media/photos/logo-circular.png" alt="Marbella JetSki Logo">
+                <img src="../assets/media/photos/logo-circular.png" alt="Marbella JetSki Logo" class="logo-image" style="height: 75px;">
                 <span class="logo-text">MARBELLA<span class="logo-highlight">JETSKI</span></span>
             </a>
-            <div class="nav-links" id="navLinks">
-                <a href="index.html">Inicio</a>
-                <a href="index.html#services">Servicios</a>
-                <a href="index.html#jetski">Motos de Agua</a>
-                <a href="booking.html">Reservar</a>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="index.html#services" class="nav-link">Servicios</a>
+                <a href="index.html#jetski" class="nav-link">Motos de Agua</a>
+                <a href="booking.html" class="nav-link">Reservar</a>
+                <a href="index.html#contact" class="nav-link">Contacto</a>
             </div>
+            <div class="nav-actions">
+                <a href="booking.html" class="nav-cta">
+                    <span>Reservar</span>
+                    <i class="fas fa-calendar-check"></i>
+                </a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </nav>
 

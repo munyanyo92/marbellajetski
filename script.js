@@ -316,7 +316,7 @@ function openLightbox(index) {
 function closeLightbox() {
     const lightbox = document.getElementById('lightbox');
     lightbox.classList.remove('active');
-    document.body.style.overflow = 'visible';
+    document.body.style.overflow = '';
 }
 
 function changeLightboxImage(direction) {
@@ -336,11 +336,6 @@ function changeLightboxImage(direction) {
         lightboxImage.style.opacity = '1';
     }, 200);
 }
-
-// Make functions globally available
-window.openLightbox = openLightbox;
-window.closeLightbox = closeLightbox;
-window.changeLightboxImage = changeLightboxImage;
 
 // Make functions globally available
 window.openLightbox = openLightbox;
@@ -523,8 +518,8 @@ function openBoatModal(key) {
         </div>`
     ).join('');
     
-    // Book button
-    document.getElementById('boatModalBookBtn').href = boat.whatsapp;
+    // Book button — link to booking page with yacht filter
+    document.getElementById('boatModalBookBtn').href = 'booking.html?yacht=' + key;
     
     // Gallery - main image
     const mainImg = document.getElementById('boatModalMainImg');
@@ -758,6 +753,17 @@ function initCookieConsent() {
     
     document.body.appendChild(banner);
 }
+
+function showNotification(message, type) {
+    var n = document.createElement('div');
+    n.className = 'notification notification-' + (type || 'info');
+    n.style.cssText = 'position:fixed;top:20px;right:20px;z-index:10001;background:' + (type === 'success' ? '#10b981' : '#0ea5e9') + ';color:#fff;padding:14px 24px;border-radius:10px;font-weight:600;font-size:14px;box-shadow:0 4px 20px rgba(0,0,0,0.2);transform:translateY(-20px);opacity:0;transition:all 0.3s ease;';
+    n.textContent = message;
+    document.body.appendChild(n);
+    requestAnimationFrame(function() { n.style.transform = 'translateY(0)'; n.style.opacity = '1'; });
+    setTimeout(function() { n.style.transform = 'translateY(-20px)'; n.style.opacity = '0'; setTimeout(function() { n.remove(); }, 300); }, 3000);
+}
+window.showNotification = showNotification;
 
 window.acceptCookies = function() {
     localStorage.setItem('cookieConsent', 'accepted');

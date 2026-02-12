@@ -169,7 +169,7 @@
     <nav class="navbar scrolled" id="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">
-                <img src="../assets/media/photos/logo-circular.png" alt="Marbella JetSki Logo" class="logo-image" style="height: 45px;">
+                <img src="../assets/media/photos/logo-circular.png" alt="Marbella JetSki Logo" class="logo-image" style="height: 75px;">
                 <span class="logo-text">MARBELLA<span class="logo-highlight">JETSKI</span></span>
             </a>
             <div class="nav-menu" id="navMenu">
@@ -178,7 +178,7 @@
                 <a href="index.html#jetski" class="nav-link">Motos de Agua</a>
                 <a href="index.html#watersports" class="nav-link">Deportes</a>
                 <a href="index.html#boats" class="nav-link">Yates</a>
-                <a href="../about-daniel.html" class="nav-link">Sobre Nosotros</a>
+                <a href="../about-us.html" class="nav-link">Sobre Nosotros</a>
                 <a href="index.html#contact" class="nav-link">Contacto</a>
             </div>
             <div class="nav-actions">
@@ -189,8 +189,8 @@
                         <i class="fas fa-chevron-down" style="font-size:10px;margin-left:2px"></i>
                     </button>
                     <div class="nav-lang-menu">
-                        <a href="../index.html"><img src="https://flagcdn.com/w40/gb.png" alt="English" width="20" height="14"> English</a>
-                        <a href="../es/index.html" class="active"><img src="https://flagcdn.com/w40/es.png" alt="Español" width="20" height="14"> Español</a>
+                        <a href="../booking.html"><img src="https://flagcdn.com/w40/gb.png" alt="English" width="20" height="14"> English</a>
+                        <a href="booking.html" class="active"><img src="https://flagcdn.com/w40/es.png" alt="Español" width="20" height="14"> Español</a>
                         <a href="../fr/index.html"><img src="https://flagcdn.com/w40/fr.png" alt="Français" width="20" height="14"> Français</a>
                         <a href="../nl/index.html"><img src="https://flagcdn.com/w40/nl.png" alt="Nederlands" width="20" height="14"> Nederlands</a>
                     </div>
@@ -381,15 +381,6 @@
 
                             <!-- Alquiler de Yates -->
                             <label class="activity-option" data-cat="yacht">
-                                <input type="radio" name="activity" value="yacht-1h" data-price="400" data-name="Alquiler de Yate" data-name-en="Yacht Charter" data-duration="1 hora">
-                                <div>
-                                    <div class="name">Alquiler de Yate — 1 Hora</div>
-                                    <div class="duration">Patrón, combustible, bebidas y paddle surf incluidos</div>
-                                </div>
-                                <span class="capacity"><i class="fas fa-users"></i> Hasta 12</span>
-                                <span class="price">€400</span>
-                            </label>
-                            <label class="activity-option" data-cat="yacht">
                                 <input type="radio" name="activity" value="yacht-2h" data-price="600" data-name="Alquiler de Yate" data-name-en="Yacht Charter" data-duration="2 horas">
                                 <div>
                                     <div class="name">Alquiler de Yate — 2 Horas</div>
@@ -509,8 +500,6 @@
                             <label for="bookTime"><i class="fas fa-clock" style="color:var(--primary);margin-right:6px;"></i> Hora Preferida *</label>
                             <select id="bookTime" required>
                                 <option value="">Selecciona hora...</option>
-                                <option value="10:00">10:00</option>
-                                <option value="10:30">10:30</option>
                                 <option value="11:00">11:00</option>
                                 <option value="11:30">11:30</option>
                                 <option value="12:00">12:00</option>
@@ -518,6 +507,16 @@
                                 <option value="13:00">13:00</option>
                                 <option value="13:30">13:30</option>
                                 <option value="14:00">14:00</option>
+                                <option value="14:30">14:30</option>
+                                <option value="15:00">15:00</option>
+                                <option value="15:30">15:30</option>
+                                <option value="16:00">16:00</option>
+                                <option value="16:30">16:30</option>
+                                <option value="17:00">17:00</option>
+                                <option value="17:30">17:30</option>
+                                <option value="18:00">18:00</option>
+                                <option value="18:30">18:30</option>
+                                <option value="19:00">19:00</option>
                             </select>
                         </div>
 
@@ -867,7 +866,8 @@
 
     function isBoatBooking() {
         const radio = document.querySelector('input[name="activity"]:checked');
-        return radio && radio.value.startsWith('yacht');
+        if (!radio) return false;
+        return radio.value.startsWith('azimut') || radio.value.startsWith('cranchi') || radio.value.startsWith('rinker') || radio.value.startsWith('catamaran');
     }
 
     /* ========== Calendario ========== */
@@ -954,6 +954,13 @@
                 document.querySelectorAll('.activity-option').forEach(opt => {
                     opt.style.display = (cat === 'all' || opt.dataset.cat === cat) ? '' : 'none';
                 });
+                // Reset selection and hide training notice when switching tabs
+                document.querySelectorAll('.activity-option').forEach(o => o.classList.remove('selected'));
+                document.querySelectorAll('input[name="activity"]').forEach(r => r.checked = false);
+                const notice = document.getElementById('trainingNotice');
+                if (notice) notice.style.display = 'none';
+                const stepNav = document.querySelector('.step-nav');
+                if (stepNav) stepNav.style.display = '';
             });
         });
 
@@ -1165,7 +1172,7 @@
         const payAmount = (isBoat || depositType !== 'full') ? Math.ceil(totalPrice * rate) : totalPrice;
         const payType = isBoat ? 'Tarjeta (20% se\u00f1al barco)' : 'Tarjeta (' + depositType + ')';
 
-        const msg = '\ud83c\udfcd\ufe0f NUEVA RESERVA (ES)\n' +
+        const msg = '🚤 NUEVA RESERVA (ES)\n' +
             'Ref: ' + ref + '\n\n' +
             'Actividad: ' + activityNameES + ' (' + activityDuration + ')\n' +
             'Fecha: ' + date + '\nHora: ' + time + '\nParticipantes: ' + guests + '\n\n' +

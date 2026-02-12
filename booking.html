@@ -188,6 +188,126 @@
             white-space: nowrap;
         }
 
+        /* ========== Yacht Accordion ========== */
+        .yacht-accordion {
+            border: 2px solid var(--gray-200);
+            border-radius: 14px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .yacht-accordion:hover {
+            border-color: var(--primary-light);
+        }
+        .yacht-accordion.open {
+            border-color: var(--primary);
+            box-shadow: 0 4px 20px rgba(0, 180, 216, 0.1);
+        }
+        .yacht-acc-header {
+            display: grid;
+            grid-template-columns: 60px 1fr auto auto auto;
+            align-items: center;
+            gap: 14px;
+            padding: 14px 18px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .yacht-acc-header:hover {
+            background: rgba(0, 180, 216, 0.02);
+        }
+        .yacht-acc-thumb {
+            width: 60px;
+            height: 42px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .yacht-acc-info .name {
+            font-weight: 700;
+            color: var(--dark);
+            font-size: 0.95rem;
+        }
+        .yacht-acc-info .duration {
+            font-size: 0.78rem;
+            color: var(--gray-500);
+            margin-top: 2px;
+        }
+        .yacht-acc-badge {
+            display: inline-block;
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 10px;
+            background: var(--gray-200);
+            color: var(--gray-600);
+            vertical-align: middle;
+            margin-left: 6px;
+        }
+        .yacht-acc-badge.premium {
+            background: linear-gradient(135deg, #0ea5e9, #0284c7);
+            color: white;
+        }
+        .yacht-acc-badge.luxury {
+            background: linear-gradient(135deg, #c9a84c, #a68a3a);
+            color: white;
+        }
+        .yacht-acc-header .capacity {
+            font-size: 0.8rem;
+            color: var(--gray-400);
+            background: var(--gray-100);
+            padding: 4px 10px;
+            border-radius: 20px;
+            white-space: nowrap;
+        }
+        .yacht-acc-header .price {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            white-space: nowrap;
+        }
+        .yacht-acc-arrow {
+            font-size: 0.75rem;
+            color: var(--gray-400);
+            transition: transform 0.3s ease;
+        }
+        .yacht-accordion.open .yacht-acc-arrow {
+            transform: rotate(180deg);
+            color: var(--primary);
+        }
+        .yacht-acc-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            background: var(--gray-50, #f8fbfe);
+            border-top: 0 solid var(--gray-200);
+        }
+        .yacht-accordion.open .yacht-acc-body {
+            max-height: 500px;
+            border-top-width: 1px;
+            padding: 8px 12px 12px;
+        }
+        .yacht-acc-body .activity-option {
+            border-width: 1px;
+            padding: 12px 14px;
+            border-radius: 10px;
+            margin-bottom: 6px;
+        }
+        .yacht-acc-body .activity-option:last-child {
+            margin-bottom: 0;
+        }
+        @media (max-width: 768px) {
+            .yacht-acc-header {
+                grid-template-columns: 50px 1fr auto;
+                gap: 10px;
+            }
+            .yacht-acc-header .capacity,
+            .yacht-acc-header .yacht-acc-arrow {
+                display: none;
+            }
+            .yacht-acc-thumb {
+                width: 50px;
+                height: 36px;
+            }
+        }
+
         /* ========== Form Fields ========== */
         .form-grid {
             display: grid;
@@ -591,7 +711,7 @@
     <nav class="navbar scrolled" id="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">
-                <img src="assets/media/photos/logo-circular.png" alt="Marbella JetSki Logo" class="logo-image" style="height: 45px;">
+                <img src="assets/media/photos/logo-circular.png" alt="Marbella JetSki Logo" class="logo-image" style="height: 75px;">
                 <span class="logo-text">MARBELLA<span class="logo-highlight">JETSKI</span></span>
             </a>
             <div class="nav-menu" id="navMenu">
@@ -602,7 +722,7 @@
                 <a href="index.html#boats" class="nav-link">Yachts</a>
                 <a href="index.html#racing-lessons" class="nav-link">Racing</a>
                 <a href="lessons.html" class="nav-link">Lessons</a>
-                <a href="about-daniel.html" class="nav-link">About Us</a>
+                <a href="about-us.html" class="nav-link">About Us</a>
                 <a href="index.html#contact" class="nav-link">Contact</a>
             </div>
             <div class="nav-actions">
@@ -613,8 +733,8 @@
                         <i class="fas fa-chevron-down" style="font-size:10px;margin-left:2px"></i>
                     </button>
                     <div class="nav-lang-menu">
-                        <a href="index.html" class="active"><img src="https://flagcdn.com/w40/gb.png" alt="English" width="20" height="14"> English</a>
-                        <a href="es/index.html"><img src="https://flagcdn.com/w40/es.png" alt="Español" width="20" height="14"> Español</a>
+                        <a href="booking.html" class="active"><img src="https://flagcdn.com/w40/gb.png" alt="English" width="20" height="14"> English</a>
+                        <a href="es/booking.html"><img src="https://flagcdn.com/w40/es.png" alt="Español" width="20" height="14"> Español</a>
                         <a href="fr/index.html"><img src="https://flagcdn.com/w40/fr.png" alt="Français" width="20" height="14"> Français</a>
                         <a href="nl/index.html"><img src="https://flagcdn.com/w40/nl.png" alt="Nederlands" width="20" height="14"> Nederlands</a>
                     </div>
@@ -803,61 +923,166 @@
                                 <span class="price">€30</span>
                             </label>
 
-                            <!-- Yacht Charters -->
-                            <label class="activity-option" data-cat="yacht">
-                                <input type="radio" name="activity" value="yacht-1h" data-price="400" data-name="Yacht Charter" data-duration="1 hour">
-                                <div>
-                                    <div class="name">Yacht Charter — 1 Hour</div>
-                                    <div class="duration">Captain, fuel, drinks, paddleboard included</div>
+                            <!-- Yacht Charters — Per Yacht Accordion -->
+                            <div class="yacht-accordion" data-cat="yacht">
+                                <div class="yacht-acc-header" onclick="this.parentElement.classList.toggle('open')">
+                                    <img src="assets/media/photos/azimut-39.jpg" alt="Azimut 39 Fly" class="yacht-acc-thumb">
+                                    <div class="yacht-acc-info">
+                                        <div class="name">Azimut 39 Fly <span class="yacht-acc-badge luxury">Flybridge Luxury</span></div>
+                                        <div class="duration">12.3m · Captain, fuel, champagne, wine, paddle surf, sound system</div>
+                                    </div>
+                                    <span class="capacity"><i class="fas fa-users"></i> Up to 12</span>
+                                    <span class="price">From €600</span>
+                                    <i class="fas fa-chevron-down yacht-acc-arrow"></i>
                                 </div>
-                                <span class="capacity"><i class="fas fa-users"></i> Up to 12</span>
-                                <span class="price">€400</span>
-                            </label>
-                            <label class="activity-option" data-cat="yacht">
-                                <input type="radio" name="activity" value="yacht-2h" data-price="600" data-name="Yacht Charter" data-duration="2 hours">
-                                <div>
-                                    <div class="name">Yacht Charter — 2 Hours</div>
-                                    <div class="duration">Captain, fuel, drinks, paddleboard included</div>
+                                <div class="yacht-acc-body">
+                                    <label class="activity-option">
+                                        <input type="radio" name="activity" value="azimut-2h" data-price="600" data-name="Azimut 39 Fly" data-duration="2 hours">
+                                        <div><div class="name">2 Hours</div></div>
+                                        <span class="price">€600</span>
+                                    </label>
+                                    <label class="activity-option">
+                                        <input type="radio" name="activity" value="azimut-3h" data-price="800" data-name="Azimut 39 Fly" data-duration="3 hours">
+                                        <div><div class="name">3 Hours</div></div>
+                                        <span class="price">€800</span>
+                                    </label>
+                                    <label class="activity-option">
+                                        <input type="radio" name="activity" value="azimut-4h" data-price="1000" data-name="Azimut 39 Fly" data-duration="4 hours">
+                                        <div><div class="name">4 Hours <span style="color:var(--secondary);font-size:0.75rem;font-weight:700;">BEST VALUE</span></div></div>
+                                        <span class="price">€1,000</span>
+                                    </label>
+                                    <label class="activity-option">
+                                        <input type="radio" name="activity" value="azimut-6h" data-price="1500" data-name="Azimut 39 Fly" data-duration="6 hours">
+                                        <div><div class="name">6 Hours</div></div>
+                                        <span class="price">€1,500</span>
+                                    </label>
+                                    <label class="activity-option">
+                                        <input type="radio" name="activity" value="azimut-8h" data-price="1800" data-name="Azimut 39 Fly" data-duration="Full day (8h)">
+                                        <div><div class="name">Full Day (8h)</div></div>
+                                        <span class="price">€1,800</span>
+                                    </label>
                                 </div>
-                                <span class="capacity"><i class="fas fa-users"></i> Up to 12</span>
-                                <span class="price">€600</span>
-                            </label>
-                            <label class="activity-option" data-cat="yacht">
-                                <input type="radio" name="activity" value="yacht-3h" data-price="800" data-name="Yacht Charter" data-duration="3 hours">
-                                <div>
-                                    <div class="name">Yacht Charter — 3 Hours</div>
-                                    <div class="duration">Captain, fuel, drinks, paddleboard included</div>
+                            </div>
+
+                            <div class="yacht-accordion" data-cat="yacht">
+                                <div class="yacht-acc-header" onclick="this.parentElement.classList.toggle('open')">
+                                    <img src="assets/media/photos/cranchi-39.jpg" alt="Cranchi 39" class="yacht-acc-thumb">
+                                    <div class="yacht-acc-info">
+                                        <div class="name">Cranchi 39 <span class="yacht-acc-badge premium">Premium</span></div>
+                                        <div class="duration">12.3m · Captain, fuel, drinks & wine, paddleboard</div>
+                                    </div>
+                                    <span class="capacity"><i class="fas fa-users"></i> Up to 9</span>
+                                    <span class="price">From €550</span>
+                                    <i class="fas fa-chevron-down yacht-acc-arrow"></i>
                                 </div>
-                                <span class="capacity"><i class="fas fa-users"></i> Up to 12</span>
-                                <span class="price">€800</span>
-                            </label>
-                            <label class="activity-option" data-cat="yacht">
-                                <input type="radio" name="activity" value="yacht-4h" data-price="1000" data-name="Yacht Charter" data-duration="4 hours">
-                                <div>
-                                    <div class="name">Yacht Charter — 4 Hours <span style="color:var(--secondary);font-size:0.75rem;font-weight:700;">BEST VALUE</span></div>
-                                    <div class="duration">Captain, fuel, drinks, paddleboard included</div>
+                                <div class="yacht-acc-body">
+                                    <label class="activity-option">
+                                        <input type="radio" name="activity" value="cranchi-2h" data-price="550" data-name="Cranchi 39" data-duration="2 hours">
+                                        <div><div class="name">2 Hours</div></div>
+                                        <span class="price">€550</span>
+                                    </label>
+                                    <label class="activity-option">
+                                        <input type="radio" name="activity" value="cranchi-3h" data-price="680" data-name="Cranchi 39" data-duration="3 hours">
+                                        <div><div class="name">3 Hours</div></div>
+                                        <span class="price">€680</span>
+                                    </label>
+                                    <label class="activity-option">
+                                        <input type="radio" name="activity" value="cranchi-4h" data-price="850" data-name="Cranchi 39" data-duration="4 hours">
+                                        <div><div class="name">4 Hours <span style="color:var(--secondary);font-size:0.75rem;font-weight:700;">BEST VALUE</span></div></div>
+                                        <span class="price">€850</span>
+                                    </label>
+                                    <label class="activity-option">
+                                        <input type="radio" name="activity" value="cranchi-6h" data-price="1150" data-name="Cranchi 39" data-duration="6 hours">
+                                        <div><div class="name">6 Hours</div></div>
+                                        <span class="price">€1,150</span>
+                                    </label>
+                                    <label class="activity-option">
+                                        <input type="radio" name="activity" value="cranchi-8h" data-price="1550" data-name="Cranchi 39" data-duration="Full day (8h)">
+                                        <div><div class="name">Full Day (8h)</div></div>
+                                        <span class="price">€1,550</span>
+                                    </label>
                                 </div>
-                                <span class="capacity"><i class="fas fa-users"></i> Up to 12</span>
-                                <span class="price">€1,000</span>
-                            </label>
-                            <label class="activity-option" data-cat="yacht">
-                                <input type="radio" name="activity" value="yacht-6h" data-price="1500" data-name="Yacht Charter" data-duration="6 hours">
-                                <div>
-                                    <div class="name">Yacht Charter — 6 Hours</div>
-                                    <div class="duration">Captain, fuel, drinks, paddleboard included</div>
+                            </div>
+
+                            <div class="yacht-accordion" data-cat="yacht">
+                                <div class="yacht-acc-header" onclick="this.parentElement.classList.toggle('open')">
+                                    <img src="assets/media/photos/rinker-296-alt.jpg" alt="Rinker 296 Captiva" class="yacht-acc-thumb">
+                                    <div class="yacht-acc-info">
+                                        <div class="name">Rinker 296 Captiva <span class="yacht-acc-badge">Value Pick</span></div>
+                                        <div class="duration">9.4m · Captain, fuel, welcome drink, sound system</div>
+                                    </div>
+                                    <span class="capacity"><i class="fas fa-users"></i> Up to 8</span>
+                                    <span class="price">From €400</span>
+                                    <i class="fas fa-chevron-down yacht-acc-arrow"></i>
                                 </div>
-                                <span class="capacity"><i class="fas fa-users"></i> Up to 12</span>
-                                <span class="price">€1,500</span>
-                            </label>
-                            <label class="activity-option" data-cat="yacht">
-                                <input type="radio" name="activity" value="yacht-8h" data-price="1800" data-name="Yacht Charter" data-duration="Full day">
-                                <div>
-                                    <div class="name">Yacht Charter — Full Day (8h)</div>
-                                    <div class="duration">Captain, fuel, drinks, paddleboard included</div>
+                                <div class="yacht-acc-body">
+                                    <label class="activity-option">
+                                        <input type="radio" name="activity" value="rinker-2h" data-price="400" data-name="Rinker 296 Captiva" data-duration="2 hours">
+                                        <div><div class="name">2 Hours</div></div>
+                                        <span class="price">€400</span>
+                                    </label>
+                                    <label class="activity-option">
+                                        <input type="radio" name="activity" value="rinker-3h" data-price="600" data-name="Rinker 296 Captiva" data-duration="3 hours">
+                                        <div><div class="name">3 Hours</div></div>
+                                        <span class="price">€600</span>
+                                    </label>
+                                    <label class="activity-option">
+                                        <input type="radio" name="activity" value="rinker-4h" data-price="800" data-name="Rinker 296 Captiva" data-duration="4 hours">
+                                        <div><div class="name">4 Hours <span style="color:var(--secondary);font-size:0.75rem;font-weight:700;">BEST VALUE</span></div></div>
+                                        <span class="price">€800</span>
+                                    </label>
+                                    <label class="activity-option">
+                                        <input type="radio" name="activity" value="rinker-6h" data-price="1100" data-name="Rinker 296 Captiva" data-duration="6 hours">
+                                        <div><div class="name">6 Hours</div></div>
+                                        <span class="price">€1,100</span>
+                                    </label>
+                                    <label class="activity-option">
+                                        <input type="radio" name="activity" value="rinker-8h" data-price="1400" data-name="Rinker 296 Captiva" data-duration="Full day (8h)">
+                                        <div><div class="name">Full Day (8h)</div></div>
+                                        <span class="price">€1,400</span>
+                                    </label>
                                 </div>
-                                <span class="capacity"><i class="fas fa-users"></i> Up to 12</span>
-                                <span class="price">€1,800</span>
-                            </label>
+                            </div>
+
+                            <div class="yacht-accordion" data-cat="yacht">
+                                <div class="yacht-acc-header" onclick="this.parentElement.classList.toggle('open')">
+                                    <img src="assets/media/photos/catamaran-bali.jpg" alt="Catamaran Bali 4.0" class="yacht-acc-thumb">
+                                    <div class="yacht-acc-info">
+                                        <div class="name">Catamaran Bali 4.0 <span class="yacht-acc-badge luxury">Catamaran</span></div>
+                                        <div class="duration">12.5m · Captain, fuel, rosé, beer, cava, paddle surf, snorkel, towels</div>
+                                    </div>
+                                    <span class="capacity"><i class="fas fa-users"></i> 12 + crew</span>
+                                    <span class="price">From €750</span>
+                                    <i class="fas fa-chevron-down yacht-acc-arrow"></i>
+                                </div>
+                                <div class="yacht-acc-body">
+                                    <label class="activity-option">
+                                        <input type="radio" name="activity" value="catamaran-2h" data-price="750" data-name="Catamaran Bali 4.0" data-duration="2 hours">
+                                        <div><div class="name">2 Hours</div></div>
+                                        <span class="price">€750</span>
+                                    </label>
+                                    <label class="activity-option">
+                                        <input type="radio" name="activity" value="catamaran-3h" data-price="1000" data-name="Catamaran Bali 4.0" data-duration="3 hours">
+                                        <div><div class="name">3 Hours</div></div>
+                                        <span class="price">€1,000</span>
+                                    </label>
+                                    <label class="activity-option">
+                                        <input type="radio" name="activity" value="catamaran-4h" data-price="1150" data-name="Catamaran Bali 4.0" data-duration="4 hours">
+                                        <div><div class="name">4 Hours <span style="color:var(--secondary);font-size:0.75rem;font-weight:700;">BEST VALUE</span></div></div>
+                                        <span class="price">€1,150</span>
+                                    </label>
+                                    <label class="activity-option">
+                                        <input type="radio" name="activity" value="catamaran-6h" data-price="1750" data-name="Catamaran Bali 4.0" data-duration="6 hours">
+                                        <div><div class="name">6 Hours</div></div>
+                                        <span class="price">€1,750</span>
+                                    </label>
+                                    <label class="activity-option">
+                                        <input type="radio" name="activity" value="catamaran-8h" data-price="2250" data-name="Catamaran Bali 4.0" data-duration="Full day (8h)">
+                                        <div><div class="name">Full Day (8h)</div></div>
+                                        <span class="price">€2,250</span>
+                                    </label>
+                                </div>
+                            </div>
 
                             <!-- Professional Pilot Training (request-only) -->
                             <label class="activity-option" data-cat="training" style="border-left:3px solid var(--accent-gold);">
@@ -934,8 +1159,6 @@
                             <label for="bookTime"><i class="fas fa-clock" style="color:var(--primary);margin-right:6px;"></i> Preferred Time *</label>
                             <select id="bookTime" required>
                                 <option value="">Select time...</option>
-                                <option value="10:00">10:00</option>
-                                <option value="10:30">10:30</option>
                                 <option value="11:00">11:00</option>
                                 <option value="11:30">11:30</option>
                                 <option value="12:00">12:00</option>
@@ -943,6 +1166,16 @@
                                 <option value="13:00">13:00</option>
                                 <option value="13:30">13:30</option>
                                 <option value="14:00">14:00</option>
+                                <option value="14:30">14:30</option>
+                                <option value="15:00">15:00</option>
+                                <option value="15:30">15:30</option>
+                                <option value="16:00">16:00</option>
+                                <option value="16:30">16:30</option>
+                                <option value="17:00">17:00</option>
+                                <option value="17:30">17:30</option>
+                                <option value="18:00">18:00</option>
+                                <option value="18:30">18:30</option>
+                                <option value="19:00">19:00</option>
                             </select>
                         </div>
 
@@ -1238,7 +1471,7 @@
                             <li><a href="index.html#watersports">Water Sports</a></li>
                             <li><a href="index.html#boats">Yacht Charters</a></li>
                             <li><a href="index.html#racing-lessons">Racing Lessons</a></li>
-                            <li><a href="about-daniel.html">About Us</a></li>
+                            <li><a href="about-us.html">About Us</a></li>
                         </ul>
                     </div>
                     <div class="footer-links">
@@ -1295,7 +1528,8 @@
 
     function isBoatBooking() {
         const radio = document.querySelector('input[name="activity"]:checked');
-        return radio && radio.value.startsWith('yacht');
+        if (!radio) return false;
+        return radio.value.startsWith('azimut') || radio.value.startsWith('cranchi') || radio.value.startsWith('rinker') || radio.value.startsWith('catamaran');
     }
 
     /* ========== Calendar Widget ========== */
@@ -1380,11 +1614,42 @@
                 document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
                 this.classList.add('active');
                 const cat = this.dataset.cat;
-                document.querySelectorAll('.activity-option').forEach(opt => {
+                document.querySelectorAll('.activity-option[data-cat]').forEach(opt => {
                     opt.style.display = (cat === 'all' || opt.dataset.cat === cat) ? '' : 'none';
                 });
+                document.querySelectorAll('.yacht-accordion[data-cat]').forEach(acc => {
+                    acc.style.display = (cat === 'all' || acc.dataset.cat === cat) ? '' : 'none';
+                    if (cat !== 'all' && acc.dataset.cat !== cat) acc.classList.remove('open');
+                });
+                // Reset selection and hide training notice when switching tabs
+                document.querySelectorAll('.activity-option').forEach(o => o.classList.remove('selected'));
+                document.querySelectorAll('input[name="activity"]').forEach(r => r.checked = false);
+                const notice = document.getElementById('trainingNotice');
+                if (notice) notice.style.display = 'none';
+                const stepNav = document.querySelector('.step-nav');
+                if (stepNav) stepNav.style.display = '';
             });
         });
+
+        // Auto-filter to yacht and open specific accordion if ?yacht= param present
+        const urlParams = new URLSearchParams(window.location.search);
+        const yachtParam = urlParams.get('yacht');
+        if (yachtParam) {
+            // Click the Yacht Charters tab
+            const yachtTab = document.querySelector('.cat-tab[data-cat="yacht"]');
+            if (yachtTab) yachtTab.click();
+            // Open the matching accordion
+            setTimeout(() => {
+                const allAccordions = document.querySelectorAll('.yacht-accordion[data-cat="yacht"]');
+                allAccordions.forEach(acc => {
+                    const firstInput = acc.querySelector('input[name="activity"]');
+                    if (firstInput && firstInput.value.startsWith(yachtParam + '-')) {
+                        acc.classList.add('open');
+                        acc.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                });
+            }, 100);
+        }
 
         document.querySelectorAll('input[name="activity"]').forEach(radio => {
             radio.addEventListener('change', function() {
@@ -1592,7 +1857,7 @@
         const payAmount = (isBoat || depositType !== 'full') ? Math.ceil(totalPrice * rate) : totalPrice;
         const payType = isBoat ? 'Card (20% boat deposit)' : 'Card (' + depositType + ')';
 
-        const msg = '🏍️ NEW BOOKING REQUEST\n' +
+        const msg = '🚤 NEW BOOKING REQUEST\n' +
             'Ref: ' + ref + '\n\n' +
             'Activity: ' + activityName + ' (' + activityDuration + ')\n' +
             'Date: ' + date + '\nTime: ' + time + '\nGuests: ' + guests + '\n\n' +

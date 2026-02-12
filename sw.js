@@ -7,26 +7,31 @@ const CACHE_NAME = 'marbellajetski-v36-weather-fix';
 const OFFLINE_URL = '/offline.html';
 
 // Local files that should always be fetched from network first
-const LOCAL_FILES = ['index.html', 'booking.html', 'about-daniel.html', 'terms.html', 'styles.css', 'script.js', '404.html', '/es/'];
+const LOCAL_FILES = ['index.html', 'booking.html', 'about-us.html', 'lessons.html', 'terms.html', 'weather-policy.html', 'styles.css', 'script.js', '404.html', '/es/', '/fr/', '/nl/'];
 
 const ASSETS_TO_CACHE = [
     '/',
     '/index.html',
     '/booking.html',
-    '/about-daniel.html',
+    '/about-us.html',
+    '/lessons.html',
     '/terms.html',
+    '/weather-policy.html',
     '/404.html',
     '/styles.css',
     '/script.js',
     '/manifest.json',
     '/offline.html',
     '/es/index.html',
+    '/es/booking.html',
+    '/es/weather-policy.html',
+    '/fr/index.html',
+    '/nl/index.html',
     'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap',
     'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css',
     'https://unpkg.com/aos@2.3.1/dist/aos.css',
     'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css',
     // Original site logo
-    'assets/media/photos/logo-circular.png',
     'assets/media/photos/logo-circular.png',
     // Original Yamaha jet ski images (all sizes)
     'https://marbellajetski.com/wp-content/uploads/2021/05/2021-Yamaha-VXCRUISERHO-EU-Yellow-Action-001-03-1.jpg',
@@ -136,7 +141,9 @@ self.addEventListener('fetch', event => {
 self.addEventListener('sync', event => {
     if (event.tag === 'booking-sync') {
         event.waitUntil(
-            console.log('Syncing offline bookings...')
+            Promise.resolve().then(function() {
+                console.log('Syncing offline bookings...');
+            })
         );
     }
 });

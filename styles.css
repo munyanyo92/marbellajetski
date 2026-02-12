@@ -307,8 +307,11 @@ ul, ol {
     display: none;
     flex-direction: column;
     gap: 6px;
-    width: 30px;
-    padding: 5px;
+    width: 44px;
+    min-height: 44px;
+    padding: 10px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .nav-toggle span {
@@ -4135,7 +4138,7 @@ img {
     gap: 12px;
     padding: 5px 0;
     border-top: 1px solid rgba(255,255,255,0.08);
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 .weather-row:first-of-type {
     border-top: none;
@@ -4144,8 +4147,17 @@ img {
     display: inline-flex;
     align-items: center;
     gap: 5px;
-    white-space: normal;
-    flex-shrink: 0;
+    white-space: nowrap;
+    min-width: 0;
+}
+.weather-item:last-child {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+}
+.weather-item:last-child .weather-val {
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .weather-item i {
     color: var(--accent-gold);
@@ -4506,4 +4518,392 @@ img {
 @media (max-width: 768px) {
     .lessons-grid { grid-template-columns: 1fr; }
     .lessons-section { padding: 80px 20px; }
+}
+
+/* =============================================
+   COMPREHENSIVE MOBILE & TABLET OPTIMIZATION
+   ============================================= */
+
+/* --- Canvas touch fix --- */
+.jsk-canvas {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* --- Tablet (769px – 1024px) --- */
+@media (max-width: 1024px) {
+    .yacht-fleet {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .yacht-card.featured {
+        grid-column: span 1;
+    }
+    .about-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .about-visual {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .option-header h3 {
+        font-size: 26px;
+    }
+    .section-title {
+        font-size: 32px;
+    }
+    .hero-title {
+        font-size: 36px;
+    }
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+/* --- Enhanced Mobile (max-width: 768px) --- */
+@media (max-width: 768px) {
+    /* Nav toggle - proper touch target size (44px minimum) */
+    .nav-toggle {
+        width: 44px;
+        height: 44px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Fix fixed image heights for mobile */
+    .option-visual img {
+        height: 250px;
+    }
+    .jetski-carousel,
+    .jetski-carousel .swiper-slide img {
+        height: 250px;
+    }
+    .about-image.main img {
+        height: 300px;
+    }
+
+    /* Better font scaling */
+    .section-title {
+        font-size: 26px;
+        line-height: 1.2;
+    }
+    .section-subtitle {
+        font-size: 14px;
+    }
+    .hero-title {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+    .hero-subtitle {
+        font-size: 15px;
+    }
+
+    /* Card touch optimization */
+    .service-card,
+    .activity-card,
+    .yacht-card {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Gallery smaller on mobile */
+    .gallery-grid {
+        gap: 8px;
+    }
+
+    /* About section positioning fix */
+    .about-image.secondary,
+    .about-image.tertiary {
+        display: none;
+    }
+
+    /* Better spacing */
+    :root {
+        --section-padding: 60px;
+    }
+
+    /* Booking form mobile */
+    .booking-steps {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .step {
+        font-size: 13px;
+    }
+
+    /* Lightbox mobile optimization */
+    .lightbox-content img {
+        max-width: 95vw;
+        max-height: 80vh;
+    }
+    .lightbox-close {
+        top: 10px;
+        right: 10px;
+        width: 44px;
+        height: 44px;
+        font-size: 24px;
+    }
+    .lightbox-nav {
+        width: 44px;
+        height: 44px;
+        font-size: 20px;
+    }
+    .lightbox-prev { left: 5px; }
+    .lightbox-next { right: 5px; }
+
+    /* Footer mobile */
+    .footer-social a {
+        width: 44px;
+        height: 44px;
+    }
+
+    /* Weather widget spacing */
+    .weather-widget {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    /* Yacht cards full width */
+    .yacht-fleet {
+        grid-template-columns: 1fr;
+    }
+    .yacht-price-details {
+        font-size: 14px;
+    }
+
+    /* Promo banner mobile */
+    .promo-banner {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    /* Video grid mobile */
+    .video-card video {
+        height: 200px;
+    }
+
+    /* Contact form mobile */
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    /* Activities grid */
+    .activities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Category filter tabs scroll */
+    .category-filter {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 8px;
+        padding-bottom: 8px;
+    }
+    .category-filter::-webkit-scrollbar {
+        display: none;
+    }
+    .cat-btn,
+    .cat-tab {
+        white-space: nowrap;
+        flex-shrink: 0;
+        font-size: 13px;
+        padding: 8px 16px;
+        min-height: 44px;
+    }
+
+    /* Better table scrolling */
+    .booking-trust-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Option content mobile */
+    .option-header {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .option-header h3 {
+        font-size: 22px;
+    }
+}
+
+/* --- Small phones (max-width: 480px) --- */
+@media (max-width: 480px) {
+    /* Even smaller images */
+    .option-visual img {
+        height: 200px;
+    }
+    .jetski-carousel,
+    .jetski-carousel .swiper-slide img {
+        height: 200px;
+    }
+    .about-image.main img {
+        height: 220px;
+    }
+
+    /* Gallery single column on very small screens */
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+    }
+
+    /* Yacht card adjustments */
+    .yacht-info h3 {
+        font-size: 18px;
+    }
+    .yacht-specs {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+    .yacht-specs span {
+        font-size: 12px;
+    }
+    .yacht-pricing-inline {
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+    }
+
+    /* Service cards */
+    .service-icon {
+        height: 180px;
+    }
+    .service-content h3 {
+        font-size: 18px;
+    }
+
+    /* Hero minimal padding */
+    .hero {
+        padding: 100px 0 60px;
+    }
+
+    /* Section titles even smaller */
+    .section-title {
+        font-size: 22px;
+    }
+    .option-header h3 {
+        font-size: 20px;
+    }
+
+    /* Buttons full width */
+    .btn-primary,
+    .btn-outline-light,
+    .yacht-toggle-btn {
+        font-size: 14px;
+    }
+
+    /* Footer */
+    .footer-brand p {
+        font-size: 13px;
+    }
+}
+
+/* --- Touch-friendly: ensure all interactive elements are at least 44px --- */
+@media (hover: none) and (pointer: coarse) {
+    .nav-link {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+    .cat-btn,
+    .cat-tab,
+    .btn,
+    .nav-cta,
+    .nav-lang-btn,
+    button,
+    select,
+    input[type="number"] {
+        min-height: 44px;
+    }
+    .yacht-toggle-btn {
+        min-height: 44px;
+        padding: 10px 16px;
+    }
+    .gallery-item {
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+    }
+    /* Remove hover effects on touch devices */
+    .service-card:hover,
+    .activity-card:hover {
+        transform: none;
+    }
+    .yacht-card:hover {
+        transform: none;
+    }
+    /* Smooth scrolling on iOS */
+    .nav-menu {
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* --- Safe area insets for notched devices --- */
+@supports (padding: max(0px)) {
+    .navbar {
+        padding-left: max(var(--container-padding), env(safe-area-inset-left));
+        padding-right: max(var(--container-padding), env(safe-area-inset-right));
+    }
+    .whatsapp-float {
+        right: max(30px, env(safe-area-inset-right));
+        bottom: max(100px, env(safe-area-inset-bottom));
+    }
+    .footer {
+        padding-bottom: max(40px, env(safe-area-inset-bottom));
+    }
+}
+
+/* --- Landscape phone fixes --- */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding: 80px 0 40px;
+    }
+    .hero-title {
+        font-size: 24px;
+    }
+    .lightbox-content img {
+        max-height: 70vh;
+    }
+}
+
+/* --- Reduced motion for accessibility --- */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    .hero-video {
+        animation: none;
+    }
+}
+
+/* --- Print optimization --- */
+@media print {
+    .navbar, .whatsapp-float, .back-to-top, .cookie-banner,
+    .promo-banner, .nav-toggle, .lightbox {
+        display: none !important;
+    }
+    .hero {
+        min-height: auto;
+        padding: 20px 0;
+    }
+    body {
+        color: #000;
+        background: #fff;
+    }
+    a {
+        color: #000;
+        text-decoration: underline;
+    }
 }

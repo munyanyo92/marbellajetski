@@ -489,7 +489,6 @@
             border-bottom-right-radius: 20px;
             pointer-events: none;
         }
-        }
 
         .video-info h4 {
             color: white;
@@ -662,12 +661,125 @@
         .lightbox-next { right: 20px; }
 
         /* ============================================================
+           CAREER TIMELINE SECTION
+        ============================================================ */
+        .timeline-section {
+            padding: 120px 0;
+            background: linear-gradient(180deg, var(--dark) 0%, #1a1a2e 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .timeline-section::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .timeline-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 30px;
+            position: relative;
+            z-index: 1;
+        }
+        .timeline-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+        .timeline-header h2 {
+            font-family: var(--font-display);
+            font-size: 48px;
+            color: white;
+            margin-bottom: 20px;
+        }
+        .timeline-header h2 span {
+            background: linear-gradient(135deg, #ffc300, #e6ac00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .timeline-header p {
+            font-size: 18px;
+            color: rgba(255,255,255,0.7);
+        }
+        .timeline-wrapper { position: relative; }
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, #ffc300, var(--primary), var(--secondary));
+            border-radius: 4px;
+        }
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        .timeline-item:last-child { margin-bottom: 0; }
+        .timeline-item:nth-child(odd) { flex-direction: row-reverse; }
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #ffc300, #e6ac00);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            color: var(--dark);
+            font-size: 12px;
+            box-shadow: 0 0 30px rgba(255,195,0,0.5);
+            z-index: 2;
+        }
+        .timeline-content {
+            width: calc(50% - 60px);
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 35px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+        }
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.08);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+        }
+        .timeline-content h3 {
+            font-family: var(--font-display);
+            font-size: 24px;
+            color: white;
+            margin-bottom: 12px;
+        }
+        .timeline-content p {
+            color: rgba(255,255,255,0.7);
+            font-size: 15px;
+            line-height: 1.7;
+        }
+        .timeline-content .highlight {
+            color: #ffc300;
+            font-weight: 600;
+        }
+
+        /* ============================================================
            RESPONSIVE — HERO
         ============================================================ */
         @media (max-width: 768px) {
             .lessons-hero-content h1 { font-size: 36px; }
             .lessons-hero .hero-cta-group { flex-direction: column; align-items: center; }
             .lessons-hero .hero-btn { width: 100%; max-width: 300px; justify-content: center; }
+            .timeline-line { left: 15px; }
+            .timeline-item { padding-left: 50px; }
+            .timeline-item:nth-child(odd) { flex-direction: row; }
+            .timeline-dot { left: 0; width: 30px; height: 30px; font-size: 9px; }
+            .timeline-content { width: 100%; }
+            .timeline-header h2 { font-size: 32px; }
         }
     </style>
 </head>
@@ -678,7 +790,7 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="index.html#home" class="nav-logo">
-                <img src="assets/media/photos/logo-circular.png" alt="Marbella JetSki Logo" class="logo-image" style="height: 45px;">
+                <img src="assets/media/photos/logo-circular.png" alt="Marbella JetSki Logo" class="logo-image" style="height: 75px;">
                 <span class="logo-text">MARBELLA<span class="logo-highlight">JETSKI</span></span>
             </a>
             
@@ -690,7 +802,7 @@
                 <a href="index.html#boats" class="nav-link">Yachts</a>
                 <a href="index.html#racing-lessons" class="nav-link">Racing</a>
                 <a href="lessons.html" class="nav-link active">Lessons</a>
-                <a href="about-daniel.html" class="nav-link">About Us</a>
+                <a href="about-us.html" class="nav-link">About Us</a>
                 <a href="index.html#contact" class="nav-link">Contact</a>
             </div>
             
@@ -810,6 +922,76 @@
         </div>
     </section>
 
+    <!-- ========== CAREER TIMELINE SECTION ========== -->
+    <section class="timeline-section" id="timeline">
+        <div class="timeline-container">
+            <div class="timeline-header" data-aos="fade-up">
+                <h2>The <span>Racing</span> Journey</h2>
+                <p>From growing up on the Mediterranean waves to conquering the Spanish National Championships</p>
+            </div>
+            
+            <div class="timeline-wrapper">
+                <div class="timeline-line"></div>
+                
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-dot">1998</div>
+                    <div class="timeline-content">
+                        <h3>Family Legacy Begins</h3>
+                        <p>The Stiers family establishes <span class="highlight">STIERS E HIJOS S.L.</span> in Marbella, laying the foundation for what would become the Costa del Sol's premier water sports destination.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-dot">2000s</div>
+                    <div class="timeline-content">
+                        <h3>Growing Up on the Water</h3>
+                        <p>Young Daniel spends his childhood on jet skis, learning every nuance of the Mediterranean. Natural talent meets <span class="highlight">relentless practice</span>.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-dot">2020</div>
+                    <div class="timeline-content">
+                        <h3>Quality Certification</h3>
+                        <p>Marbella JetSki achieves <span class="highlight">ISO 9001:2015 & 14001:2015</span> certification, proving commitment to quality and environmental excellence.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-dot">2023</div>
+                    <div class="timeline-content">
+                        <h3>First Year Competing</h3>
+                        <p>Daniel enters his first competitive season with the RFEM, earning a <span class="highlight">3rd place finish</span> — an impressive debut that signals the champion to come.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-dot">2024</div>
+                    <div class="timeline-content">
+                        <h3>National Champion — 1st Place</h3>
+                        <p><span class="highlight">National Champion</span> with 4 gold medals at the Campeonato de España and Copa del Rey. Daniel claims <span class="highlight">1st Place</span> in Offshore, Circuit, and Rallyjet disciplines with 7 total medals.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-dot">2025</div>
+                    <div class="timeline-content">
+                        <h3>Andalusia Champion + National Podium</h3>
+                        <p><span class="highlight">Campeón de Andalucía 2025</span> and <span class="highlight">3rd Overall National</span> — Daniel continues to dominate at regional level while competing at the top of the national stage.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-dot">NOW</div>
+                    <div class="timeline-content">
+                        <h3>Training the Next Generation</h3>
+                        <p>Today, Daniel combines his <span class="highlight">championship expertise</span> with his family's 25+ years of experience to offer world-class training and unforgettable water experiences.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ========== SEA-DOO MODIFIED RACE MACHINE ========== -->
     <section id="the-machine" style="padding:80px 0;background:linear-gradient(135deg,#0a0a1a 0%,#1a1a3e 50%,#0d1b2a 100%);color:white;overflow:hidden;">
         <div style="max-width:1200px;margin:0 auto;padding:0 20px;">
@@ -868,6 +1050,7 @@
             </div>
             
             <div class="racing-videos-grid">
+                <!-- Featured Video - Promo -->
                 <div class="racing-video-card racing-featured-video" data-aos="zoom-in">
                     <div class="video-badge"><i class="fas fa-star"></i> Featured</div>
                     <video controls preload="metadata" poster="assets/media/racing/promo-racing.jpg">
@@ -880,6 +1063,7 @@
                     </div>
                 </div>
                 
+                <!-- Basque Cup International -->
                 <div class="racing-video-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="video-badge"><i class="fas fa-globe"></i> International</div>
                     <video controls preload="metadata">
@@ -891,6 +1075,7 @@
                     </div>
                 </div>
                 
+                <!-- Rallyjet Castellón -->
                 <div class="racing-video-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="video-badge"><i class="fas fa-flag-checkered"></i> Rallyjet</div>
                     <video controls preload="metadata">
@@ -902,6 +1087,7 @@
                     </div>
                 </div>
                 
+                <!-- Race Start 1 -->
                 <div class="racing-video-card" data-aos="fade-up" data-aos-delay="250">
                     <div class="video-badge"><i class="fas fa-play"></i> Race Start</div>
                     <video controls preload="metadata">
@@ -974,6 +1160,7 @@
     <section class="lessons-cta-section" data-aos="fade-up">
         <h2>Ready to <span class="gradient-text">Ride?</span></h2>
         <p>View our racing lesson packages and book directly. Prices from &euro;299 for a 30-minute session.</p>
+        <p style="font-size:0.85rem;color:rgba(255,255,255,0.55);margin-top:6px;"><i class="fas fa-id-card" style="margin-right:5px;"></i>Minimum age 18. A valid jet ski or boat licence is required for all racing lessons.</p>
         <div class="cta-buttons">
             <a href="index.html#racing-lessons" class="cta-btn primary">
                 <i class="fas fa-tag"></i>
@@ -1014,7 +1201,7 @@
                             <li><a href="index.html#jetski">Jet Ski Hire</a></li>
                             <li><a href="index.html#watersports">Water Sports</a></li>
                             <li><a href="index.html#boats">Yacht Charters</a></li>
-                            <li><a href="about-daniel.html">About Us</a></li>
+                            <li><a href="about-us.html">About Us</a></li>
                             <li><a href="booking.html">Book Online</a></li>
                         </ul>
                     </div>
