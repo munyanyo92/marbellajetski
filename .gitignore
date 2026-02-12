@@ -7,9 +7,8 @@
 # Raw source media (too large for git)
 VIDEOS FOTOS WEB/
 
-# Large video files (exceed GitHub 100MB limit — host externally)
-assets/media/racing/*.mp4
-assets/media/videos/*.mp4
+# Largest video excluded (652 MB exceeds LFS free tier budget)
+assets/media/racing/race-start-1.mp4
 
 # VS Code
 .vscode/
