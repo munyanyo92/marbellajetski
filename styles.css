@@ -76,6 +76,14 @@ html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+html.menu-open,
+html.menu-open body {
+    overflow: hidden !important;
+    position: relative;
+    height: 100%;
 }
 
 body {
@@ -2864,88 +2872,113 @@ section {
     }
 }
 
+/* Hide mobile-menu-footer on desktop — only shows inside mobile nav */
+.mobile-menu-footer {
+    display: none;
+}
+
 @media (max-width: 1100px) {
     /* ── Professional Mobile Menu ── */
     .nav-menu {
-        display: flex;
+        display: none !important;
         position: fixed;
         top: 0;
         left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(165deg, #0a1628 0%, #0d1f3c 40%, #0a1628 100%);
-        backdrop-filter: blur(24px);
-        -webkit-backdrop-filter: blur(24px);
+        width: 100%;
+        height: 100%;
+        background: #0a1628;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 0 40px 80px;
-        gap: 2px;
-        z-index: 999;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1),
-                    visibility 0.35s;
+        padding: 80px 24px 100px;
+        gap: 0;
+        z-index: 9999;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     .nav-menu.active {
-        opacity: 1;
-        visibility: visible;
+        display: flex !important;
     }
 
-    /* Staggered entrance for links */
-    .nav-menu.active .nav-link {
-        animation: menuFadeIn 0.4s ease forwards;
-    }
-    .nav-menu.active .nav-link:nth-child(1) { animation-delay: 0.05s; }
-    .nav-menu.active .nav-link:nth-child(2) { animation-delay: 0.08s; }
-    .nav-menu.active .nav-link:nth-child(3) { animation-delay: 0.11s; }
-    .nav-menu.active .nav-link:nth-child(4) { animation-delay: 0.14s; }
-    .nav-menu.active .nav-link:nth-child(5) { animation-delay: 0.17s; }
-    .nav-menu.active .nav-link:nth-child(6) { animation-delay: 0.20s; }
-    .nav-menu.active .nav-link:nth-child(7) { animation-delay: 0.23s; }
-    .nav-menu.active .nav-link:nth-child(8) { animation-delay: 0.26s; }
-    .nav-menu.active .nav-link:nth-child(9) { animation-delay: 0.29s; }
-
-    @keyframes menuFadeIn {
-        from { opacity: 0; transform: translateY(12px); }
-        to   { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Nav links – centered, generous tap targets */
+    /* Nav links – centered, clean list */
     .nav-link {
-        padding: 13px 28px;
-        width: auto;
+        display: block;
+        padding: 14px 32px;
+        width: 100%;
+        max-width: 320px;
         border-bottom: none;
-        border-radius: 12px;
-        font-size: 20px;
+        border-radius: 10px;
+        font-size: 18px;
         font-weight: 600;
-        color: rgba(255,255,255,0.7) !important;
+        color: rgba(255,255,255,0.75) !important;
         text-align: center;
-        letter-spacing: 0.4px;
-        opacity: 0;
-        transition: color 0.2s, background 0.2s, transform 0.2s;
+        letter-spacing: 0.3px;
+        transition: color 0.2s, background 0.2s;
     }
 
     .nav-link:hover,
+    .nav-link:active,
     .nav-link.active {
         color: #fff !important;
-        background: rgba(0, 180, 216, 0.12);
+        background: rgba(0, 180, 216, 0.15);
     }
 
     .nav-link::after {
-        display: none;
+        display: none !important;
+    }
+
+    /* ── Mobile menu footer: lang + CTA inside menu ── */
+    .nav-menu .mobile-menu-footer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+        margin-top: 24px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .mobile-menu-footer .nav-cta {
+        padding: 12px 24px;
+        font-size: 14px;
+        border-radius: 50px;
+    }
+
+    .mobile-menu-footer .nav-lang-btn {
+        border-color: rgba(255,255,255,0.25);
+    }
+
+    /* Lang dropdown opens upward inside mobile menu */
+    .mobile-menu-footer .nav-lang-menu {
+        top: auto;
+        bottom: calc(100% + 8px);
+        right: 0;
+        left: auto;
+    }
+
+    /* Hide desktop nav-actions on mobile always */
+    .nav-actions {
+        display: none !important;
     }
 
     /* Hamburger button */
     .nav-toggle {
         display: flex;
-        z-index: 1001;
+        z-index: 10000;
+        position: relative;
     }
 
     /* Hamburger → X animation */
     .nav-toggle span {
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: #fff;
+        transition: all 0.3s ease;
         transform-origin: center;
     }
     .nav-toggle.active span:nth-child(1) {
@@ -2959,36 +2992,6 @@ section {
     .nav-toggle.active span:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
         background: #fff !important;
-    }
-
-    /* Show nav-actions (lang + CTA) at bottom of overlay */
-    .nav-menu.active ~ .nav-actions {
-        display: flex !important;
-        position: fixed;
-        bottom: 32px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 1000;
-        gap: 14px;
-        flex-direction: row;
-        align-items: center;
-        animation: menuFadeIn 0.5s 0.32s ease forwards;
-        opacity: 0;
-    }
-
-    .nav-menu.active ~ .nav-actions .nav-lang-btn {
-        border-color: rgba(255,255,255,0.25);
-    }
-    .nav-menu.active ~ .nav-actions .nav-lang-btn span {
-        display: inline !important;
-    }
-    .nav-menu.active ~ .nav-actions .nav-lang-btn .fa-chevron-down {
-        display: inline !important;
-    }
-    .nav-menu.active ~ .nav-actions .nav-cta {
-        padding: 12px 28px;
-        font-size: 15px;
-        border-radius: 50px;
     }
     
     .jetski-option {

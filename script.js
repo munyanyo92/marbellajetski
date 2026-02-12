@@ -111,8 +111,9 @@ function initNavigation() {
     
     // Mobile menu toggle
     navToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
+        const isOpen = navMenu.classList.toggle('active');
         navToggle.classList.toggle('active');
+        document.documentElement.classList.toggle('menu-open', isOpen);
     });
     
     // Close mobile menu on link click
@@ -120,6 +121,7 @@ function initNavigation() {
         link.addEventListener('click', () => {
             navMenu.classList.remove('active');
             navToggle.classList.remove('active');
+            document.documentElement.classList.remove('menu-open');
         });
     });
     
