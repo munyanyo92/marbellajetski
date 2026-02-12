@@ -111,8 +111,9 @@ function initNavigation() {
     
     // Mobile menu toggle
     navToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
+        const isOpen = navMenu.classList.toggle('active');
         navToggle.classList.toggle('active');
+        document.documentElement.classList.toggle('menu-open', isOpen);
     });
     
     // Close mobile menu on link click
@@ -120,6 +121,45 @@ function initNavigation() {
         link.addEventListener('click', () => {
             navMenu.classList.remove('active');
             navToggle.classList.remove('active');
+            document.documentElement.classList.remove('menu-open');
+        });
+    });
+
+    // Close mobile menu on backdrop tap (clicking the overlay, not links)
+    navMenu.addEventListener('click', (e) => {
+        if (e.target === navMenu) {
+            navMenu.classList.remove('active');
+            navToggle.classList.remove('active');
+            document.documentElement.classList.remove('menu-open');
+        }
+    });
+
+    // Close mobile menu on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+            navToggle.classList.remove('active');
+            document.documentElement.classList.remove('menu-open');
+        }
+    });
+
+    // Language dropdown: click toggle (hover doesn't work on mobile)
+    document.querySelectorAll('.nav-lang-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const dropdown = btn.closest('.nav-lang-dropdown');
+            // Close any other open dropdowns
+            document.querySelectorAll('.nav-lang-dropdown.open').forEach(d => {
+                if (d !== dropdown) d.classList.remove('open');
+            });
+            dropdown.classList.toggle('open');
+        });
+    });
+
+    // Close language dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+        document.querySelectorAll('.nav-lang-dropdown.open').forEach(d => {
+            if (!d.contains(e.target)) d.classList.remove('open');
         });
     });
     
@@ -950,6 +990,32 @@ function wmoDesc(code) {
     };
     var m = maps[lang] || maps.en;
     return m[code] || m._default;
+}
+
+/* ========== Duration Selection on Homepage Pricing ========== */
+function selectDuration(el) {
+    // Remove selected from all rows in the same pricing table
+    var table = el.closest('.pricing-table');
+    if (!table) return;
+    table.querySelectorAll('.price-row').forEach(function(row) {
+        row.classList.remove('selected');
+    });
+    // Add selected to clicked row
+    el.classList.add('selected');
+    
+    // Update the corresponding book button's href with the selected activity
+    var activity = el.getAttribute('data-activity');
+    if (!activity) return;
+    
+    // Find the book button in the same option-content container
+    var optionContent = table.closest('.option-content');
+    if (!optionContent) return;
+    var bookBtn = optionContent.querySelector('.jetski-book-btn');
+    if (!bookBtn) return;
+    
+    // Update the href - preserve the base path but change the activity param
+    var basePath = bookBtn.getAttribute('href').split('?')[0];
+    bookBtn.setAttribute('href', basePath + '?activity=' + activity);
 }
 
 /* F: Make service-card / jetski-option cards fully clickable */

@@ -724,6 +724,23 @@
                 <a href="lessons.html" class="nav-link">Lessons</a>
                 <a href="about-us.html" class="nav-link">About Us</a>
                 <a href="index.html#contact" class="nav-link">Contact</a>
+                <!-- Mobile-only footer -->
+                <div class="mobile-menu-footer">
+                    <div class="nav-lang-dropdown">
+                        <button class="nav-lang-btn" aria-label="Language">
+                            <img src="https://flagcdn.com/w40/gb.png" alt="English" width="24" height="16">
+                            <span>EN</span>
+                            <i class="fas fa-chevron-down" style="font-size:10px;margin-left:2px"></i>
+                        </button>
+                        <div class="nav-lang-menu">
+                            <a href="index.html" class="active"><img src="https://flagcdn.com/w40/gb.png" alt="English" width="20" height="14"> English</a>
+                            <a href="es/index.html"><img src="https://flagcdn.com/w40/es.png" alt="Español" width="20" height="14"> Español</a>
+                            <a href="fr/index.html"><img src="https://flagcdn.com/w40/fr.png" alt="Français" width="20" height="14"> Français</a>
+                            <a href="nl/index.html"><img src="https://flagcdn.com/w40/nl.png" alt="Nederlands" width="20" height="14"> Nederlands</a>
+                        </div>
+                    </div>
+                    <a href="booking.html" class="nav-cta"><span>Book Now</span><i class="fas fa-calendar-check"></i></a>
+                </div>
             </div>
             <div class="nav-actions">
                 <div class="nav-lang-dropdown">
@@ -1634,7 +1651,33 @@
         // Auto-filter to yacht and open specific accordion if ?yacht= param present
         const urlParams = new URLSearchParams(window.location.search);
         const yachtParam = urlParams.get('yacht');
-        if (yachtParam) {
+        const activityParam = urlParams.get('activity');
+        
+        if (activityParam) {
+            // Auto-select the matching activity radio button
+            setTimeout(() => {
+                const radio = document.querySelector('input[name="activity"][value="' + activityParam + '"]');
+                if (radio) {
+                    // First click the correct category tab
+                    const label = radio.closest('.activity-option');
+                    if (label) {
+                        const cat = label.getAttribute('data-cat');
+                        if (cat) {
+                            const tab = document.querySelector('.cat-tab[data-cat="' + cat + '"]');
+                            if (tab) tab.click();
+                        }
+                    }
+                    // Then select the radio
+                    setTimeout(() => {
+                        radio.checked = true;
+                        radio.dispatchEvent(new Event('change', { bubbles: true }));
+                        // Scroll to booking form
+                        const bookingForm = document.querySelector('.booking-form, .step-content, #activityList');
+                        if (bookingForm) bookingForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }, 150);
+                }
+            }, 100);
+        } else if (yachtParam) {
             // Click the Yacht Charters tab
             const yachtTab = document.querySelector('.cat-tab[data-cat="yacht"]');
             if (yachtTab) yachtTab.click();

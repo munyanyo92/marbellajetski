@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marbella JetSki | Jetski Verhuur en Watersporten aan de Costa del Sol</title>
-    <meta name="description" content="Jetski verhuur, luxe jachten en watersporten in Marbella. Meer dan 25 jaar ervaring. Familiebedrijf van 4-voudig nationaal kampioen Daniel Stiers. Boek je avontuur!">
+    <title>Marbella JetSki | #1 Jetski &amp; Watersporten aan de Costa del Sol</title>
+    <meta name="description" content="Jetski verhuur, luxe jachten en watersporten in Marbella. Meer dan 25 jaar ervaring. Familiebedrijf van 4-voudig Spaans kampioen Daniel Stiers. Boek je zomer 2026 avontuur!">
     <meta name="keywords" content="jetski marbella, watersporten costa del sol, boot huren marbella, excursies puerto banus, wateractiviteiten spanje">
     
+    <!-- Enhanced SEO -->
     <meta name="author" content="Marbella JetSki - Daniel Stiers">
     <meta name="robots" content="index, follow">
     <meta name="googlebot" content="index, follow">
@@ -17,26 +18,32 @@
     <link rel="alternate" hreflang="nl" href="https://marbellajetski.com/nl/">
     <link rel="alternate" hreflang="x-default" href="https://marbellajetski.com">
     
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://marbellajetski.com/nl/">
-    <meta property="og:title" content="Marbella JetSki | Jetski en Watersporten aan de Costa del Sol">
-    <meta property="og:description" content="Jetski verhuur, luxe jachten en watersporten in Marbella. Meer dan 25 jaar ervaring. Familiebedrijf van kampioen Daniel Stiers.">
+    <meta property="og:title" content="Marbella JetSki | #1 Watersporten aan de Costa del Sol">
+    <meta property="og:description" content="Jetski verhuur, luxe jachten en watersporten in Marbella. Meer dan 25 jaar ervaring. Familiebedrijf van 4-voudig Spaans kampioen Daniel Stiers.">
     <meta property="og:image" content="https://marbellajetski.com/wp-content/uploads/2025/08/18328-mar-scaled.jpg">
     <meta property="og:locale" content="nl_NL">
     
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Marbella JetSki | Jetski Costa del Sol">
+    <meta name="twitter:title" content="Marbella JetSki | #1 Watersporten Marbella">
     <meta name="twitter:description" content="Jetski verhuur, luxe jachten en watersporten aan de Costa del Sol.">
     <meta name="twitter:image" content="https://marbellajetski.com/wp-content/uploads/2025/08/18328-mar-scaled.jpg">
     
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="../assets/media/photos/logo-circular.png">
     <link rel="apple-touch-icon" href="../assets/media/photos/logo-circular.png">
+    
+    <!-- PWA Manifest -->
     <link rel="manifest" href="../manifest.json">
     <meta name="theme-color" content="#0ea5e9">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Marbella JetSki">
     
+    <!-- Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -73,35 +80,62 @@
         "founder": {
             "@type": "Person",
             "name": "Daniel Stiers",
-            "jobTitle": "Oprichter en Professioneel Kampioen"
+            "jobTitle": "Oprichter & Professioneel Racekampioen"
         },
         "foundingDate": "1998"
     }
     </script>
-
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="https://marbellajetski.com">
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
     <link rel="dns-prefetch" href="https://unpkg.com">
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link rel="stylesheet" href="../styles.css?v=2026020923">
+    
+    <link rel="stylesheet" href="../styles.css?v=2026021114">
+
 </head>
 <body>
-    <a href="#main-content" class="skip-link">Ga naar inhoud</a>
+    <a href="#main-content" class="skip-link">Naar inhoud</a>
     <script>
+        if ('caches' in window) {
+            caches.keys().then(names => {
+                names.forEach(name => {
+                    if (name !== 'marbellajetski-v31-real-media') caches.delete(name);
+                });
+            });
+        }
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(registrations => {
+                registrations.forEach(r => r.update());
+            });
+        }
         document.addEventListener('DOMContentLoaded', function() {
             if (typeof AOS !== 'undefined') {
-                AOS.init({ duration: 700, easing: 'ease-out-cubic', once: true, offset: 50, delay: 0 });
+                AOS.init({
+                    duration: 700,
+                    easing: 'ease-out-cubic',
+                    once: true,
+                    offset: 50,
+                    delay: 0
+                });
             }
         });
     </script>
 
+    <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#home" class="nav-logo">
@@ -115,8 +149,27 @@
                 <a href="#jetski" class="nav-link">Jetski</a>
                 <a href="#watersports" class="nav-link">Watersporten</a>
                 <a href="#boats" class="nav-link">Jachten</a>
+                <a href="#racing-lessons" class="nav-link">Racen</a>
+                <a href="../lessons.html" class="nav-link">Lessen</a>
                 <a href="../about-us.html" class="nav-link">Over Ons</a>
                 <a href="#contact" class="nav-link">Contact</a>
+                <!-- Mobile-only footer -->
+                <div class="mobile-menu-footer">
+                    <div class="nav-lang-dropdown">
+                        <button class="nav-lang-btn" aria-label="Taal">
+                            <img src="https://flagcdn.com/w40/nl.png" alt="Nederlands" width="24" height="16">
+                            <span>NL</span>
+                            <i class="fas fa-chevron-down" style="font-size:10px;margin-left:2px"></i>
+                        </button>
+                        <div class="nav-lang-menu">
+                            <a href="../index.html"><img src="https://flagcdn.com/w40/gb.png" alt="English" width="20" height="14"> English</a>
+                            <a href="../es/index.html"><img src="https://flagcdn.com/w40/es.png" alt="Español" width="20" height="14"> Español</a>
+                            <a href="../fr/index.html"><img src="https://flagcdn.com/w40/fr.png" alt="Français" width="20" height="14"> Français</a>
+                            <a href="index.html" class="active"><img src="https://flagcdn.com/w40/nl.png" alt="Nederlands" width="20" height="14"> Nederlands</a>
+                        </div>
+                    </div>
+                    <a href="../booking.html" class="nav-cta"><span>Reserveren</span><i class="fas fa-calendar-check"></i></a>
+                </div>
             </div>
             
             <div class="nav-actions">
@@ -130,11 +183,11 @@
                         <a href="../index.html"><img src="https://flagcdn.com/w40/gb.png" alt="English" width="20" height="14"> English</a>
                         <a href="../es/index.html"><img src="https://flagcdn.com/w40/es.png" alt="Español" width="20" height="14"> Español</a>
                         <a href="../fr/index.html"><img src="https://flagcdn.com/w40/fr.png" alt="Français" width="20" height="14"> Français</a>
-                        <a href="../nl/index.html" class="active"><img src="https://flagcdn.com/w40/nl.png" alt="Nederlands" width="20" height="14"> Nederlands</a>
+                        <a href="index.html" class="active"><img src="https://flagcdn.com/w40/nl.png" alt="Nederlands" width="20" height="14"> Nederlands</a>
                     </div>
                 </div>
-                <a href="../nl/booking.html" class="nav-cta">
-                    <span>Boeken</span>
+                <a href="../booking.html" class="nav-cta">
+                    <span>Reserveren</span>
                     <i class="fas fa-calendar-check"></i>
                 </a>
             </div>
@@ -147,20 +200,22 @@
         </div>
     </nav>
 
-    <main id="main-content">
-    <section class="hero" id="home">
-        <!-- Promo Overlay -->
-        <div class="hero-promo-overlay" data-aos="fade-down" data-aos-delay="1200">
-            <span class="hero-promo-icon">☀️</span>
-            <div class="hero-promo-text">
-                <strong>Boek Vóór de Zomer en Bespaar 15%!</strong>
-                <span>Vroegboekkorting op alle jet ski- en jachtreserveringen voor juni–september 2026</span>
-            </div>
-            <a href="../booking.html" class="hero-promo-btn">
-                <i class="fas fa-calendar-check"></i>
-                Nu Boeken
-            </a>
+    <!-- Promo Banner -->
+    <div class="hero-promo-overlay">
+        <span class="hero-promo-icon">☀️</span>
+        <div class="hero-promo-text">
+            <strong>Boek vóór de zomer &amp; bespaar 10%!</strong>
+            <span>Vroegboekkorting op alle jetski- en jachtreserveringen voor juni–september 2026</span>
         </div>
+        <a href="../booking.html" class="hero-promo-btn">
+            <i class="fas fa-calendar-check"></i>
+            Boek Nu
+        </a>
+    </div>
+
+    <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero" id="home">
         <div class="hero-video-container">
             <video autoplay muted loop playsinline poster="https://marbellajetski.com/wp-content/uploads/2021/09/18328-mar-scaled.jpg">
                 <source src="https://videos.pexels.com/video-files/4115690/4115690-uhd_2560_1440_25fps.mp4" type="video/mp4">
@@ -170,19 +225,24 @@
         
         <div class="hero-bg">
             <img src="https://marbellajetski.com/wp-content/uploads/2021/09/18328-mar-scaled.jpg" 
-                 alt="Yamaha jetski in Marbella" class="hero-bg-image" loading="eager" fetchpriority="high" decoding="async" data-speed="0.5">
+                 alt="Jetski Marbella - Actie op het water" 
+                 class="hero-bg-image"
+                 loading="eager"
+                 fetchpriority="high"
+                 decoding="async"
+                 data-speed="0.5">
             <div class="hero-overlay"></div>
         </div>
         
         <div class="hero-content">
             <h1 class="hero-title" data-aos="fade-up" data-aos-delay="400">
-                <span class="title-line">Beleef het</span>
-                <span class="title-highlight">Ultieme Avontuur</span>
+                <span class="title-line">Beleef de</span>
+                <span class="title-highlight">Ultieme Sensatie</span>
                 <span class="title-line">op de Middellandse Zee</span>
             </h1>
             
             <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="600">
-                Jetski Verhuur · Luxe Jachten · Watersporten
+                Premium Jetski Verhuur · Luxe Jachtcharters · Watersporten Avonturen
             </p>
             
             <div class="hero-stats" data-aos="fade-up" data-aos-delay="800">
@@ -198,23 +258,23 @@
                 <div class="stat-divider"></div>
                 <div class="stat-item">
                     <span class="stat-number no-plus">4.9/5 ★</span>
-                    <span class="stat-label">Beoordeling</span>
+                    <span class="stat-label">Waardering</span>
                 </div>
             </div>
             
             <div class="hero-actions" data-aos="fade-up" data-aos-delay="1000">
-                <a href="../nl/booking.html" class="btn btn-primary btn-glow btn-summer">
+                <a href="../booking.html" class="btn btn-primary btn-glow btn-summer">
                     <i class="fas fa-calendar-alt"></i>
                     <span>Boek Je Avontuur</span>
                 </a>
-                <a href="https://api.whatsapp.com/send?phone=34655442232&text=Hallo!%20Ik%20wil%20graag%20een%20wateractiviteit%20boeken." class="btn btn-whatsapp btn-glow" target="_blank" rel="noopener noreferrer">
+                <a href="https://api.whatsapp.com/send?phone=34655442232&text=Hallo!%20Ik%20wil%20graag%20een%20watersportervaring%20boeken!" class="btn btn-whatsapp btn-glow" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-whatsapp"></i>
-                    <span>WhatsApp</span>
+                    <span>WhatsApp Ons</span>
                 </a>
             </div>
         </div>
 
-        <!-- Weer Widget -->
+        <!-- Weather Widget -->
         <div class="weather-box">
             <span class="weather-loc"><i class="fas fa-map-marker-alt"></i> Marbella</span>
             <div class="weather-row">
@@ -250,25 +310,27 @@
         
     </section>
 
-    <!-- Diensten -->
+    <!-- Quick Services Overview -->
     <section class="services-quick" id="services">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <span class="section-tag">Wat Wij Bieden</span>
-                <h2 class="section-title">Jouw <span class="gradient-text">Water</span>avontuur Wacht</h2>
-                <p class="section-subtitle">Van spannende jetski-ritten tot ontspannende jachtcruises, wij hebben de perfecte ervaring voor iedereen</p>
+                <h2 class="section-title">Jouw <span class="gradient-text">Wateravontuur</span> Wacht</h2>
+                <p class="section-subtitle">Van adrenaline-verhogende jetskiritten tot ontspannen jachtcruises — voor iedereen de perfecte ervaring</p>
             </div>
             
             <div class="services-grid">
                 <div class="service-card featured premium-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-icon">
                         <img src="https://marbellajetski.com/wp-content/uploads/2023/05/IMG_1247-scaled.webp" alt="Jetski" loading="lazy">
-                        <div class="icon-overlay"><i class="fas fa-water"></i></div>
+                        <div class="icon-overlay">
+                            <i class="fas fa-water"></i>
+                        </div>
                     </div>
                     <div class="service-content">
-                        <span class="service-tag">Meest Populair</span>
-                        <h3>Jetski</h3>
-                        <p>Beleef de spanning met onze nieuwste Yamaha's. Circuit of kustexcursies beschikbaar.</p>
+                        <span class="service-tag">Populairst</span>
+                        <h3>Jetski Verhuur</h3>
+                        <p>Beleef de spanning op onze nieuwste Yamaha jetski's. Circuit- of kustexcursies beschikbaar.</p>
                         <div class="service-price">
                             <span class="from">Vanaf</span>
                             <span class="price">€70</span>
@@ -283,16 +345,18 @@
                 
                 <div class="service-card premium-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="service-icon">
-                        <img src="https://marbellajetski.com/wp-content/uploads/2025/08/ChatGPT-Image-12-ago-2025-11_28_51.png" alt="Jacht Verhuur">
-                        <div class="icon-overlay"><i class="fas fa-ship"></i></div>
+                        <img src="../assets/media/photos/boats/catamaran_bali_40_2020_3_img1.jpeg" alt="Catamaran Jachtcharter Marbella" loading="lazy" style="object-position:center">
+                        <div class="icon-overlay">
+                            <i class="fas fa-ship"></i>
+                        </div>
                     </div>
                     <div class="service-content">
                         <span class="service-tag">Luxe</span>
-                        <h3>Jacht Verhuur</h3>
-                        <p>Vaar langs de kust in stijl. Kapitein, brandstof, drankjes en paddle inbegrepen.</p>
+                        <h3>Jachtcharters</h3>
+                        <p>Vaar langs de kust in stijl. Kapitein, brandstof, drankjes en paddleboard inbegrepen.</p>
                         <div class="service-price">
                             <span class="from">Vanaf</span>
-                            <span class="price">€400</span>
+                            <span class="price">€250</span>
                             <span class="duration">/ uur</span>
                         </div>
                         <a href="#boats" class="service-link link-underline">
@@ -304,16 +368,18 @@
                 
                 <div class="service-card premium-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="service-icon">
-                        <img src="https://marbellajetski.com/wp-content/uploads/2023/05/IMG_3961-1024x683.webp" alt="Watersporten" loading="lazy">
-                        <div class="icon-overlay"><i class="fas fa-umbrella-beach"></i></div>
+                        <img src="https://marbellajetski.com/wp-content/uploads/2023/05/IMG_9493-scaled.webp" alt="Watersporten" loading="lazy">
+                        <div class="icon-overlay">
+                            <i class="fas fa-umbrella-beach"></i>
+                        </div>
                     </div>
                     <div class="service-content">
                         <span class="service-tag">Familieplezier</span>
                         <h3>Watersporten</h3>
-                        <p>Wakeboard, bananenboot, crazy sofa, donuts en nog veel meer voor alle leeftijden.</p>
+                        <p>Wakeboarden, bananenboot, crazy sofa, donuts en meer voor alle leeftijden!</p>
                         <div class="service-price">
                             <span class="from">Vanaf</span>
-                            <span class="price">€25</span>
+                            <span class="price">€20</span>
                             <span class="duration">/ persoon</span>
                         </div>
                         <a href="#watersports" class="service-link link-underline">
@@ -325,20 +391,45 @@
                 
                 <div class="service-card premium-card" data-aos="fade-up" data-aos-delay="400">
                     <div class="service-icon">
-                        <img src="https://marbellajetski.com/wp-content/uploads/2021/05/2022-Yamaha-VXCRUISERHO-EU-Cyan-Action-006-03.webp" alt="Begeleide jetski excursies" loading="lazy">
-                        <div class="icon-overlay"><i class="fas fa-route"></i></div>
+                        <img src="https://marbellajetski.com/wp-content/uploads/2023/05/DSC_0245-scaled.webp" alt="Begeleide jetskiexcursies aan de Costa del Sol" loading="lazy" style="object-position:center">
+                        <div class="icon-overlay">
+                            <i class="fas fa-route"></i>
+                        </div>
                     </div>
                     <div class="service-content">
                         <span class="service-tag">Avontuur</span>
                         <h3>Begeleide Excursies</h3>
-                        <p>Verken Puerto Banús, Fuengirola en verborgen baaien met onze ervaren gidsen.</p>
+                        <p>Ontdek Puerto Banús, Fuengirola en verborgen baaien met onze ervaren gidsen.</p>
                         <div class="service-price">
                             <span class="from">Vanaf</span>
                             <span class="price">€170</span>
                             <span class="duration">/ uur</span>
                         </div>
                         <a href="#jetski" class="service-link link-underline">
-                            <span>Tour Boeken</span>
+                            <span>Boek Tour</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="service-card premium-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-icon">
+                        <img src="../assets/media/racing/racing-seadoo-2.jpg" alt="Jetski Race-ervaring Marbella" loading="lazy" style="object-position:50% 18%">
+                        <div class="icon-overlay">
+                            <i class="fas fa-flag-checkered"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <span class="service-tag">Racen</span>
+                        <h3>Race-ervaring</h3>
+                        <p>Train met een professionele racer. Circuitsessies, techniekcoaching en pure adrenaline.</p>
+                        <div class="service-price">
+                            <span class="from">Vanaf</span>
+                            <span class="price">€299</span>
+                            <span class="duration">/ sessie</span>
+                        </div>
+                        <a href="#racing-lessons" class="service-link link-underline">
+                            <span>Ontdek Racen</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -347,69 +438,78 @@
         </div>
     </section>
 
-    <!-- Waarom Ons Kiezen -->
+    <!-- Why Choose Us Section -->
     <section class="why-choose-section">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <span class="section-tag">Waarom Marbella JetSki?</span>
                 <h2 class="section-title">Het <span class="gradient-text">Verschil</span> Is Duidelijk</h2>
-                <p class="section-subtitle">Wij zijn niet zomaar een verhuurbedrijf — wij zijn het meest betrouwbare watersportcentrum van de Costa del Sol</p>
+                <p class="section-subtitle">Wij zijn niet zomaar een verhuurbedrijf — wij zijn het meest vertrouwde watersportcentrum van de Costa del Sol</p>
             </div>
             
             <div class="usp-grid">
                 <div class="usp-card featured" data-aos="fade-up" data-aos-delay="100">
-                    <div class="usp-icon"><i class="fas fa-water"></i></div>
-                    <h4>Directe Toegang tot Zee</h4>
-                    <p>Wij zijn het <strong>enige watersportcentrum met directe toegang tot zee</strong> buiten de havens van Marbella. Geen wachtrijen, geen gedoe.</p>
+                    <div class="usp-icon"><i class="fas fa-satellite-dish"></i></div>
+                    <h4>GPS-gevolgde Vloot (OtoTrak)</h4>
+                    <p>Elke jetski wordt <strong>live gevolgd via OtoTrak GPS</strong> voor realtime monitoring. Ons operatiecentrum volgt snelheid, positie en perimeter — voor maximale veiligheid.</p>
                 </div>
                 
                 <div class="usp-card" data-aos="fade-up" data-aos-delay="150">
                     <div class="usp-icon"><i class="fas fa-trophy"></i></div>
-                    <h4>Geleid door een Kampioen</h4>
-                    <p>Eigenaar Daniel Stiers is <strong>4-voudig Spaans Kampioen</strong> (RFEM 2024) met 7 medailles. Zijn wedstrijdervaring maakt het verschil.</p>
+                    <h4>Premium Jetski-ervaringen</h4>
+                    <p>Wij combineren <strong>veiligheid, kwaliteit en spanning</strong> voor de beste jetski-ervaring aan de Costa del Sol. Professionele uitrusting, deskundig team en onvergetelijke herinneringen.</p>
                 </div>
                 
                 <div class="usp-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="usp-icon"><i class="fas fa-shield-alt"></i></div>
-                    <h4>Gediplomeerd Team</h4>
-                    <p><strong>Ons hele team heeft maritieme veiligheidscertificaten</strong>. Elke activiteit bevat een veiligheidsbriefing, gecertificeerde uitrusting en een hulpboot op minder dan 300m.</p>
+                    <h4>Maritiem Gekwalificeerd Team</h4>
+                    <p>Ons <strong>volledige team beschikt over maritieme veiligheidskwalificaties</strong>. Elke rit bevat een verplichte veiligheidsbriefing, gecertificeerde uitrusting en een ondersteuningsboot binnen 300 m.</p>
                 </div>
                 
                 <div class="usp-card" data-aos="fade-up" data-aos-delay="250">
                     <div class="usp-icon"><i class="fas fa-camera"></i></div>
-                    <h4>Gratis Foto's en Video's</h4>
-                    <p><strong>Professionele foto's en video's</strong> van je avontuur inbegrepen bij elke ervaring. Leg herinneringen vast zonder je zorgen te maken over je telefoon.</p>
+                    <h4>Professionele Foto's</h4>
+                    <p>Ons team maakt <strong>hoogwaardige digitale foto's tijdens je activiteit</strong>. Na de sessie kun je je herinneringen bekijken en kopen. Laat je telefoon veilig aan land!</p>
                 </div>
                 
                 <div class="usp-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="usp-icon"><i class="fas fa-history"></i></div>
                     <h4>Familiebedrijf Sinds 1998</h4>
-                    <p>Meer dan <strong>25 jaar ervaring</strong>. STIERS E HIJOS S.L. heeft tienduizenden tevreden klanten bediend met een persoonlijke en familiale aanpak.</p>
+                    <p>Meer dan <strong>25 jaar betrouwbare ervaring</strong>. STIERS E HIJOS S.L. heeft tienduizenden tevreden klanten bediend met een persoonlijke, familiale aanpak.</p>
                 </div>
                 
                 <div class="usp-card" data-aos="fade-up" data-aos-delay="350">
                     <div class="usp-icon"><i class="fas fa-certificate"></i></div>
-                    <h4>ISO 9001 en 14001 Gecertificeerd</h4>
-                    <p>Gecertificeerd door OCA Global voor <strong>kwaliteits- en milieubeheer</strong>. Dagelijkse mechanische inspecties en actuele ITB-certificeringen.</p>
+                    <h4>ISO 9001 & 14001 Gecertificeerd</h4>
+                    <p>Gecertificeerd door OCA Global voor zowel <strong>kwaliteits- als milieubeheer</strong>. Dagelijkse mechanische inspecties en actuele ITB-certificeringen op alle vaartuigen.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Jetski -->
+    <!-- Jet Ski Section -->
     <section class="jetski-section" id="jetski">
         <div class="section-bg-pattern"></div>
+        
         <div class="container">
             <div class="section-header light" data-aos="fade-up">
                 <span class="section-tag">Jetski Verhuur</span>
                 <h2 class="section-title">Voel de <span class="gradient-text">Kracht</span></h2>
-                <p class="section-subtitle">Nieuwste Yamaha VX modellen 2024-2025 (TR-1 HO, 1049 cc, ~125 pk) — GPS-getrackt voor veiligheid</p>
+                <p class="section-subtitle">Nieuwste 2024-2025 Yamaha VX (TR-1 HO, 1049 cc, ~125 pk) — GPS-gevolgd voor veiligheid en prestaties</p>
             </div>
             
             <div class="jetski-options">
+                <!-- Circuit Option -->
                 <div class="jetski-option" data-aos="fade-right">
                     <div class="option-visual">
-                        <img src="https://marbellajetski.com/wp-content/uploads/2023/05/DSC_0062-scaled.webp" alt="Jetski Circuit">
+                        <div class="swiper jetski-carousel">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="https://marbellajetski.com/wp-content/uploads/2023/05/DSC_0062-scaled.webp" alt="Jetski Circuit" loading="lazy"></div>
+                                <div class="swiper-slide"><img src="https://marbellajetski.com/wp-content/uploads/2023/05/IMG_1247-scaled.webp" alt="Yamaha Jetski vloot" loading="lazy"></div>
+                                <div class="swiper-slide"><img src="https://marbellajetski.com/wp-content/uploads/2023/05/IMG_0052-scaled.webp" alt="Jetski circuit actie" loading="lazy"></div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
                         <div class="option-badge">
                             <i class="fas fa-flag-checkered"></i>
                             <span>Ideaal voor Beginners</span>
@@ -417,7 +517,7 @@
                     </div>
                     <div class="option-content">
                         <div class="option-header">
-                            <h3>Jetski op Circuit</h3>
+                            <h3>Jetski in het Circuit</h3>
                             <div class="difficulty">
                                 <span class="difficulty-label">Moeilijkheid:</span>
                                 <div class="difficulty-dots">
@@ -428,47 +528,55 @@
                                 <span>Makkelijk</span>
                             </div>
                         </div>
-                        <p>Perfect voor beginners of om te oefenen in een veilige en gecontroleerde omgeving. Leer de basis voordat je de open zee opgaat!</p>
+                        <p>Ideaal voor beginners of wie een leuke rit wil in een veilige, gecontroleerde omgeving. Circuit met 4 boeien binnen een gecontroleerd gebied. Onder toezicht van instructeurs met ondersteuningsboten. Max. 4 jetski's tegelijk. Alle jetski's zijn GPS-gevolgd voor operationele veiligheid (OtoTrak-systeem).</p>
+                        <p class="info-note" style="background:rgba(0,180,216,0.08);border-left:3px solid var(--primary);padding:10px 14px;border-radius:6px;font-size:0.9em;margin-top:8px;"><i class="fas fa-info-circle" style="color:var(--primary);margin-right:6px;"></i>Elke jetski kan 2 personen vervoeren en je kunt van bestuurder wisselen tijdens de sessie — dezelfde prijs.</p>
                         
-                        <div class="pricing-table">
-                            <div class="price-row">
+                        <div class="pricing-table" data-booking-type="circuit">
+                            <div class="price-row" data-activity="jetski-circuit-20" onclick="selectDuration(this)">
                                 <span class="duration"><i class="fas fa-clock"></i> 20 minuten</span>
                                 <span class="price">€70</span>
                             </div>
-                            <div class="price-row">
+                            <div class="price-row popular" data-activity="jetski-circuit-30" onclick="selectDuration(this)">
+                                <span class="popular-badge">Populairst</span>
                                 <span class="duration"><i class="fas fa-clock"></i> 30 minuten</span>
                                 <span class="price">€90</span>
                             </div>
-                            <div class="price-row popular">
-                                <span class="popular-badge">Meest Populair</span>
+                            <div class="price-row" data-activity="jetski-circuit-60" onclick="selectDuration(this)">
                                 <span class="duration"><i class="fas fa-clock"></i> 1 uur</span>
                                 <span class="price">€170</span>
                             </div>
-                            <div class="price-row">
-                                <span class="duration"><i class="fas fa-clock"></i> 2 uur</span>
-                                <span class="price">€330</span>
-                            </div>
                         </div>
+                        <p class="vat-note"><i class="fas fa-receipt"></i> Alle prijzen zijn inclusief btw (IVA)</p>
                         
                         <div class="option-features">
                             <div class="feature"><i class="fas fa-check-circle"></i> Veiligheidsbriefing inbegrepen</div>
-                            <div class="feature"><i class="fas fa-check-circle"></i> Reddingsvest inbegrepen</div>
-                            <div class="feature"><i class="fas fa-check-circle"></i> Begeleiding door instructeur</div>
+                            <div class="feature"><i class="fas fa-check-circle"></i> Reddingsvest verstrekt</div>
+                            <div class="feature"><i class="fas fa-check-circle"></i> Toezicht door instructeur</div>
+                            <div class="feature"><i class="fas fa-check-circle"></i> GPS-gevolgd (OtoTrak)</div>
+                            <div class="feature"><i class="fas fa-camera"></i> Optionele professionele fotoservice (€25)</div>
                         </div>
                         
-                        <a href="../nl/booking.html" class="btn btn-primary">
-                            <span>Circuit Boeken</span>
+                        <a href="../booking.html?activity=jetski-circuit-30" class="btn btn-primary jetski-book-btn" data-default="jetski-circuit-30">
+                            <span>Boek Circuitrit</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
                 
+                <!-- Excursion Option -->
                 <div class="jetski-option reverse" data-aos="fade-left">
                     <div class="option-visual">
-                        <img src="https://marbellajetski.com/wp-content/uploads/2023/05/DSC_0245-scaled.webp" alt="Jetski excursie langs de Costa del Sol">
+                        <div class="swiper jetski-carousel">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="https://marbellajetski.com/wp-content/uploads/2023/05/DSC_0245-scaled.webp" alt="Jetskiexcursie langs de Costa del Sol kust" loading="lazy"></div>
+                                <div class="swiper-slide"><img src="https://marbellajetski.com/wp-content/uploads/2023/05/DSC_0055-scaled.webp" alt="Kustjetskitour" loading="lazy"></div>
+                                <div class="swiper-slide"><img src="https://marbellajetski.com/wp-content/uploads/2023/05/DSC_0031-scaled.webp" alt="Jetskiexcursie vloot" loading="lazy"></div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
                         <div class="option-badge premium">
                             <i class="fas fa-compass"></i>
-                            <span>Kust Avontuur</span>
+                            <span>Kustavontuur</span>
                         </div>
                     </div>
                     <div class="option-content">
@@ -484,29 +592,48 @@
                                 <span>Gemiddeld</span>
                             </div>
                         </div>
-                        <p>Verken de prachtige kust! Kies tussen Puerto Banús, Fuengirola of onze Kust Tour door Marbella. Ontdek verborgen baaien en adembenemende uitzichten.</p>
+                        <p>Begeleide excursies op open zee langs de prachtige Costa del Sol kustlijn. Kies uit Puerto Banús, Fuengirola, of onze kenmerkende Marbella Kusttour. Ontdek verborgen baaien en adembenemende uitzichten op de kust en bezienswaardigheden van Marbella. Mogelijke dolfijnwaarnemingen onderweg (niet gegarandeerd). Alle jetski's zijn GPS-gevolgd voor uw veiligheid.</p>
+                        <p class="info-note" style="background:rgba(255,193,7,0.12);border-left:3px solid var(--accent-gold);padding:10px 14px;border-radius:6px;font-size:0.9em;margin-top:8px;"><i class="fas fa-exclamation-triangle" style="color:var(--accent-gold);margin-right:6px;"></i><strong>Minimaal 2 jetski's vereist. Maximaal 4 jetski's per excursie.</strong></p>
+                        <p class="info-note" style="background:rgba(0,180,216,0.08);border-left:3px solid var(--primary);padding:10px 14px;border-radius:6px;font-size:0.9em;margin-top:8px;"><i class="fas fa-info-circle" style="color:var(--primary);margin-right:6px;"></i>Elke jetski kan 2 personen vervoeren (1–2 personen) en je kunt van bestuurder wisselen tijdens de sessie — dezelfde prijs per jetski.</p>
                         
                         <div class="excursion-routes">
-                            <div class="route"><i class="fas fa-map-marker-alt"></i><span>Puerto Banús</span></div>
-                            <div class="route"><i class="fas fa-map-marker-alt"></i><span>Fuengirola</span></div>
-                            <div class="route"><i class="fas fa-map-marker-alt"></i><span>Kust van Marbella</span></div>
-                        </div>
-                        
-                        <div class="excursion-price">
-                            <div class="price-big">
-                                <span class="amount">€170</span>
-                                <span class="per">/ 1 uur excursie</span>
+                            <div class="route">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Puerto Banús</span>
+                            </div>
+                            <div class="route">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Fuengirola</span>
+                            </div>
+                            <div class="route">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Marbella Kusttour</span>
                             </div>
                         </div>
                         
+                        <div class="pricing-table" data-booking-type="excursion">
+                            <div class="price-row popular" data-activity="jetski-excursion-60" onclick="selectDuration(this)">
+                                <span class="popular-badge">Populairst</span>
+                                <span class="duration"><i class="fas fa-clock"></i> 1 uur excursie</span>
+                                <span class="price">€170</span>
+                            </div>
+                            <div class="price-row" data-activity="jetski-excursion-120" onclick="selectDuration(this)">
+                                <span class="duration"><i class="fas fa-clock"></i> 2 uur excursie</span>
+                                <span class="price">€330</span>
+                            </div>
+                        </div>
+                        <p class="vat-note"><i class="fas fa-receipt"></i> Alle prijzen zijn inclusief btw (IVA)</p>
+                        
                         <div class="option-features">
                             <div class="feature"><i class="fas fa-check-circle"></i> Begeleide tour met expert</div>
-                            <div class="feature"><i class="fas fa-check-circle"></i> Fotostops bij panoramische punten</div>
-                            <div class="feature"><i class="fas fa-check-circle"></i> Hulpboot in de buurt</div>
+                            <div class="feature"><i class="fas fa-check-circle"></i> Fotostops bij uitkijkpunten</div>
+                            <div class="feature"><i class="fas fa-check-circle"></i> Ondersteuningsboot in de buurt</div>
+                            <div class="feature"><i class="fas fa-check-circle"></i> Mogelijke dolfijnwaarneming</div>
+                            <div class="feature"><i class="fas fa-check-circle"></i> GPS-gevolgd (OtoTrak)</div>
                         </div>
                         
-                        <a href="../nl/booking.html" class="btn btn-primary">
-                            <span>Excursie Boeken</span>
+                        <a href="../booking.html?activity=jetski-excursion-60" class="btn btn-primary jetski-book-btn" data-default="jetski-excursion-60">
+                            <span>Boek Excursie</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -515,308 +642,542 @@
         </div>
     </section>
 
-    <!-- Watersporten -->
+    <!-- Water Sports Section -->
     <section class="watersports-section" id="watersports">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <span class="section-tag">Watersporten en Activiteiten</span>
-                <h2 class="section-title"><span class="gradient-text">Grenzeloos</span> Plezier voor Iedereen</h2>
-                <p class="section-subtitle">Van adrenaline-gevuld wakeboarden tot opblaasbare attracties voor het hele gezin — wij hebben alles!</p>
+                <span class="section-tag">Watersporten & Activiteiten</span>
+                <h2 class="section-title">Eindeloos <span class="gradient-text">Plezier</span> voor Iedereen</h2>
+                <p class="section-subtitle">Van adrenaline-verhogende waterskiën tot familieplezier op sleepbanden — wij hebben het allemaal!</p>
             </div>
             
+            <!-- Activity Categories -->
             <div class="activity-categories">
-                <button class="category-btn active" data-category="all">Alle</button>
+                <button class="category-btn active" data-category="all">Alle Activiteiten</button>
                 <button class="category-btn" data-category="individual">Individueel</button>
-                <button class="category-btn" data-category="family">Familie</button>
-                <button class="category-btn" data-category="thrill">Adrenaline</button>
+                <button class="category-btn" data-category="family">Familieplezier</button>
+                <button class="category-btn" data-category="thrill">Sensatiezoekers</button>
                 <button class="category-btn" data-category="relaxed">Ontspannen</button>
             </div>
             
             <div class="activities-grid">
+                <!-- Wakeboarding -->
                 <div class="activity-card" data-category="individual thrill" data-aos="fade-up" data-aos-delay="100">
                     <div class="activity-image">
-                        <img src="https://marbellajetski.com/wp-content/uploads/2021/05/wakeboard-wakeboard-saltando-al-atardecer-scaled.jpg" alt="Wakeboarden in Marbella" loading="lazy">
+                        <img src="../assets/media/photos/wakeboard.jpg" alt="Wakeboarden in Marbella" loading="lazy">
                         <div class="activity-overlay">
                             <span class="activity-duration"><i class="fas fa-clock"></i> 20 min</span>
                             <span class="activity-price">€90</span>
                         </div>
                     </div>
                     <div class="activity-content">
-                        <div class="activity-difficulty"><span class="difficulty-badge high">Hoge Intensiteit</span></div>
-                        <h4>Wakeboard</h4>
-                        <p>Glijd over het water met maximale adrenaline. Perfect voor de avonturiers!</p>
-                        <a href="../nl/booking.html" class="activity-book">Boeken <i class="fas fa-arrow-right"></i></a>
+                        <div class="activity-difficulty">
+                            <span class="difficulty-badge high">Hoge Intensiteit</span>
+                        </div>
+                        <h4>Wakeboarden</h4>
+                        <p>Glijd over het water met maximale adrenaline. Ideaal voor sensatiezoekers!</p>
+                        <a href="../booking.html" class="activity-book">Boek Nu <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
+                <!-- Water Skiing -->
                 <div class="activity-card" data-category="individual thrill" data-aos="fade-up" data-aos-delay="150">
                     <div class="activity-image">
-                        <img src="https://marbellajetski.com/wp-content/uploads/2023/05/DSC_0111-scaled.webp" alt="Waterski in Marbella" loading="lazy">
+                        <img src="../assets/media/photos/waterski-action.jpg" alt="Waterskiën in Marbella" loading="lazy">
                         <div class="activity-overlay">
                             <span class="activity-duration"><i class="fas fa-clock"></i> 20 min</span>
                             <span class="activity-price">€90</span>
                         </div>
                     </div>
                     <div class="activity-content">
-                        <div class="activity-difficulty"><span class="difficulty-badge high">Hoge Intensiteit</span></div>
-                        <h4>Waterski</h4>
-                        <p>Klassiek waterskiën op volle snelheid. Een iconische ervaring!</p>
-                        <a href="../nl/booking.html" class="activity-book">Boeken <i class="fas fa-arrow-right"></i></a>
+                        <div class="activity-difficulty">
+                            <span class="difficulty-badge high">Hoge Intensiteit</span>
+                        </div>
+                        <h4>Waterskiën</h4>
+                        <p>Klassiek waterskiën op volle snelheid. Een iconische watersportervaring!</p>
+                        <a href="../booking.html" class="activity-book">Boek Nu <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
+                <!-- Crazy Sofa -->
                 <div class="activity-card" data-category="family" data-aos="fade-up" data-aos-delay="200">
                     <div class="activity-image">
-                        <img src="https://marbellajetski.com/wp-content/uploads/2023/05/IMG_9586-scaled.webp" alt="Crazy Sofa in Marbella" loading="lazy">
+                        <img src="https://marbellajetski.com/wp-content/uploads/2023/05/IMG_9586-scaled.webp" alt="Crazy Sofa sleepband in Marbella" loading="lazy">
                         <div class="activity-overlay">
-                            <span class="activity-duration"><i class="fas fa-clock"></i> 10 min</span>
-                            <span class="activity-price">€25<small>/pers.</small></span>
+                            <span class="activity-duration"><i class="fas fa-clock"></i> 15 min</span>
+                            <span class="activity-price">€20<small>/persoon</small></span>
                         </div>
                         <div class="capacity-badge"><i class="fas fa-users"></i> Tot 6</div>
                     </div>
                     <div class="activity-content">
-                        <div class="activity-difficulty"><span class="difficulty-badge easy">Makkelijk-Gemiddeld</span></div>
+                        <div class="activity-difficulty">
+                            <span class="difficulty-badge easy">Makkelijk-Gemiddeld</span>
+                        </div>
                         <h4>Crazy Sofa</h4>
                         <p>De favoriet voor alle leeftijden! Hou je goed vast voor een wilde rit.</p>
-                        <a href="../nl/booking.html" class="activity-book">Boeken <i class="fas fa-arrow-right"></i></a>
+                        <a href="../booking.html" class="activity-book">Boek Nu <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
+                <!-- Water Bull -->
                 <div class="activity-card" data-category="family thrill" data-aos="fade-up" data-aos-delay="250">
                     <div class="activity-image">
-                        <img src="https://marbellajetski.com/wp-content/uploads/2023/05/DSC_0188-scaled.webp" alt="Water Bull in Marbella" loading="lazy">
+                        <img src="https://marbellajetski.com/wp-content/uploads/2023/05/DSC_0188-scaled.webp" alt="Water Bull sleepband in Marbella" loading="lazy">
                         <div class="activity-overlay">
                             <span class="activity-duration"><i class="fas fa-clock"></i> 10 min</span>
-                            <span class="activity-price">€25<small>/pers.</small></span>
+                            <span class="activity-price">€20<small>/persoon</small></span>
                         </div>
                         <div class="capacity-badge"><i class="fas fa-users"></i> Tot 6</div>
                     </div>
                     <div class="activity-content">
-                        <div class="activity-difficulty"><span class="difficulty-badge medium">Gemiddeld</span></div>
+                        <div class="activity-difficulty">
+                            <span class="difficulty-badge medium">Gemiddeld</span>
+                        </div>
                         <h4>Water Bull</h4>
-                        <p>Scheur over de golven op volle snelheid — kun jij het volhouden?</p>
-                        <a href="../nl/booking.html" class="activity-book">Boeken <i class="fas fa-arrow-right"></i></a>
+                        <p>Surf op de golven op hoge snelheid — kun jij erop blijven zitten?</p>
+                        <a href="../booking.html" class="activity-book">Boek Nu <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
+                <!-- Banana Boat -->
                 <div class="activity-card" data-category="family thrill" data-aos="fade-up" data-aos-delay="300">
                     <div class="activity-image">
                         <img src="https://marbellajetski.com/wp-content/uploads/2023/05/IMG_9493-scaled.webp" alt="Bananenboot in Marbella" loading="lazy">
                         <div class="activity-overlay">
                             <span class="activity-duration"><i class="fas fa-clock"></i> 10 min</span>
-                            <span class="activity-price">€25<small>/pers.</small></span>
+                            <span class="activity-price">€20<small>/persoon</small></span>
                         </div>
                         <div class="capacity-badge"><i class="fas fa-users"></i> Tot 8</div>
                     </div>
                     <div class="activity-content">
-                        <div class="activity-difficulty"><span class="difficulty-badge medium">Gemiddeld-Hoog</span></div>
+                        <div class="activity-difficulty">
+                            <span class="difficulty-badge medium">Gemiddeld-Hoog</span>
+                        </div>
                         <h4>Bananenboot</h4>
-                        <p>De klassieke wateruitdaging! Geweldig voor groepen en feestjes.</p>
-                        <a href="../nl/booking.html" class="activity-book">Boeken <i class="fas fa-arrow-right"></i></a>
+                        <p>De klassieke wateruitdaging! Geweldig voor groepen en feesten.</p>
+                        <a href="../booking.html" class="activity-book">Boek Nu <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
+                <!-- Air Stream -->
                 <div class="activity-card" data-category="thrill" data-aos="fade-up" data-aos-delay="350">
                     <div class="activity-image">
-                        <img src="https://marbellajetski.com/wp-content/uploads/2023/05/DSCF6926-scaled.jpeg" alt="Air Stream in Marbella" loading="lazy">
+                        <img src="../assets/media/photos/airstream-action.jpg" alt="Air Stream sleepband in Marbella" loading="lazy">
                         <div class="activity-overlay">
                             <span class="activity-duration"><i class="fas fa-clock"></i> 10 min</span>
-                            <span class="activity-price">€25<small>/pers.</small></span>
+                            <span class="activity-price">€20<small>/persoon</small></span>
                         </div>
                         <div class="capacity-badge"><i class="fas fa-users"></i> 1-6</div>
                     </div>
                     <div class="activity-content">
-                        <div class="activity-difficulty"><span class="difficulty-badge medium">Gemiddeld-Hoog</span></div>
+                        <div class="activity-difficulty">
+                            <span class="difficulty-badge medium">Gemiddeld-Hoog</span>
+                        </div>
                         <h4>Air Stream</h4>
-                        <p>Vlieg stabiel over de golven. Voel de wind!</p>
-                        <a href="../nl/booking.html" class="activity-book">Boeken <i class="fas fa-arrow-right"></i></a>
+                        <p>Vlieg over de golven met stabiliteit. Voel de wind!</p>
+                        <a href="../booking.html" class="activity-book">Boek Nu <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
+                <!-- Donut Ride -->
                 <div class="activity-card" data-category="family thrill" data-aos="fade-up" data-aos-delay="400">
                     <div class="activity-image">
-                        <img src="https://marbellajetski.com/wp-content/uploads/2023/05/IMG_0292-scaled.webp" alt="Water donut in Marbella" loading="lazy">
+                        <img src="https://marbellajetski.com/wp-content/uploads/2023/05/IMG_0292-scaled.webp" alt="Donut Sleepband Rit in Marbella" loading="lazy">
                         <div class="activity-overlay">
                             <span class="activity-duration"><i class="fas fa-clock"></i> 10 min</span>
-                            <span class="activity-price">€25<small>/pers.</small></span>
+                            <span class="activity-price">€20<small>/persoon</small></span>
                         </div>
                         <div class="capacity-badge"><i class="fas fa-users"></i> Tot 6</div>
                     </div>
                     <div class="activity-content">
-                        <div class="activity-difficulty"><span class="difficulty-badge medium">Gemiddeld</span></div>
-                        <h4>Water Donut</h4>
-                        <p>Sleepactie met unieke bochten en wendingen!</p>
-                        <a href="../nl/booking.html" class="activity-book">Boeken <i class="fas fa-arrow-right"></i></a>
+                        <div class="activity-difficulty">
+                            <span class="difficulty-badge medium">Gemiddeld</span>
+                        </div>
+                        <h4>Donut Rit</h4>
+                        <p>Sleepband-actie met unieke draaiingen en bochten!</p>
+                        <a href="../booking.html" class="activity-book">Boek Nu <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
+                <!-- Stand-Up Paddleboarding -->
                 <div class="activity-card" data-category="relaxed individual" data-aos="fade-up" data-aos-delay="450">
                     <div class="activity-image">
-                        <img src="https://marbellajetski.com/wp-content/uploads/2023/05/IMG_3961-scaled.webp" alt="Stand Up Paddle in Marbella" loading="lazy">
+                        <img src="../assets/media/photos/paddle-surf-man.jpg" alt="Stand-Up Paddleboarden in Marbella" loading="lazy" style="object-fit:cover;object-position:center 30%;">
                         <div class="activity-overlay">
                             <span class="activity-duration"><i class="fas fa-clock"></i> 1 uur</span>
                             <span class="activity-price">€25</span>
                         </div>
                     </div>
                     <div class="activity-content">
-                        <div class="activity-difficulty"><span class="difficulty-badge easy">Makkelijk</span></div>
-                        <h4>Stand Up Paddle</h4>
-                        <p>Verken de kust op je eigen tempo. Het is ook geweldige lichaamsbeweging!</p>
-                        <a href="../nl/booking.html" class="activity-book">Boeken <i class="fas fa-arrow-right"></i></a>
+                        <div class="activity-difficulty">
+                            <span class="difficulty-badge easy">Makkelijk</span>
+                        </div>
+                        <h4>Stand-Up Paddleboarden</h4>
+                        <p>Verken de kust op je eigen tempo. Ook een geweldige workout!</p>
+                        <a href="../booking.html" class="activity-book">Boek Nu <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
+                <!-- Pedal Boats -->
                 <div class="activity-card" data-category="relaxed family" data-aos="fade-up" data-aos-delay="500">
                     <div class="activity-image">
-                        <img src="https://marbellajetski.com/wp-content/uploads/2021/07/IMG_6830-1-scaled.jpg" alt="Waterfiets in Marbella" loading="lazy">
+                        <img src="../assets/media/photos/hidropedal-newbeetle.jpg" alt="Waterfietsen in Marbella" loading="lazy" style="object-fit:cover;object-position:center 40%;">
                         <div class="activity-overlay">
                             <span class="activity-duration"><i class="fas fa-clock"></i> 1 uur</span>
                             <span class="activity-price">€30</span>
                         </div>
-                        <div class="capacity-badge"><i class="fas fa-users"></i> Tot 6</div>
+                        <div class="capacity-badge"><i class="fas fa-users"></i> Tot 5</div>
                     </div>
                     <div class="activity-content">
-                        <div class="activity-difficulty"><span class="difficulty-badge easy">Makkelijk</span></div>
+                        <div class="activity-difficulty">
+                            <span class="difficulty-badge easy">Makkelijk</span>
+                        </div>
                         <h4>Waterfietsen</h4>
-                        <p>Ontspannen familieplezier met glijbaan. Perfect voor rustig water.</p>
-                        <a href="../nl/booking.html" class="activity-book">Boeken <i class="fas fa-arrow-right"></i></a>
+                        <p>Ontspannen familieplezier met glijbaan! Ideaal voor kalm water.</p>
+                        <a href="../booking.html" class="activity-book">Boek Nu <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Double Kayaks -->
+                <div class="activity-card" data-category="relaxed family individual" data-aos="fade-up" data-aos-delay="550">
+                    <div class="activity-image">
+                        <img src="../assets/media/photos/kayak-double.jpg" alt="Dubbelkajak in Marbella" loading="lazy" style="object-fit:cover;object-position:center;">
+                        <div class="activity-overlay">
+                            <span class="activity-duration"><i class="fas fa-clock"></i> 1 uur</span>
+                            <span class="activity-price">€30</span>
+                        </div>
+                        <div class="capacity-badge"><i class="fas fa-users"></i> 2 personen</div>
+                    </div>
+                    <div class="activity-content">
+                        <div class="activity-difficulty">
+                            <span class="difficulty-badge easy">Makkelijk</span>
+                        </div>
+                        <h4>Dubbelkajaks</h4>
+                        <p>Verken samen de kustlijn! Ideaal voor koppels en vrienden die van peddelen houden.</p>
+                        <a href="../booking.html" class="activity-book">Boek Nu <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
+            <p class="vat-note" style="text-align:center;margin-top:24px;color:var(--text-secondary);"><i class="fas fa-receipt"></i> Alle prijzen zijn inclusief btw (IVA)</p>
         </div>
     </section>
 
-    <!-- Jachten -->
+    <!-- Yacht Charter Section -->
     <section class="yacht-section" id="boats">
         <div class="yacht-bg"></div>
+        
         <div class="container">
             <div class="section-header light" data-aos="fade-up">
                 <span class="section-tag">Luxe Vloot</span>
-                <h2 class="section-title"><span class="gradient-text">Jacht</span> en Boot Verhuur</h2>
-                <p class="section-subtitle">Vaar langs de kust van Marbella in stijl. All-inclusive luxe ervaringen.</p>
+                <h2 class="section-title">Jacht- &amp; Boot <span class="gradient-text">Charters</span></h2>
+                <p class="section-subtitle">Vaar langs Marbella's prachtige kustlijn in stijl. All-inclusive luxe ervaringen.</p>
             </div>
             
             <div class="yacht-features" data-aos="fade-up" data-aos-delay="200">
-                <div class="yacht-feature"><i class="fas fa-user-tie"></i><span>Professionele Kapitein</span></div>
-                <div class="yacht-feature"><i class="fas fa-gas-pump"></i><span>Brandstof Inbegrepen</span></div>
-                <div class="yacht-feature"><i class="fas fa-champagne-glasses"></i><span>Drankjes en Wijn</span></div>
-                <div class="yacht-feature"><i class="fas fa-water"></i><span>Stand Up Paddle</span></div>
-                <div class="yacht-feature"><i class="fas fa-cookie"></i><span>Hapjes</span></div>
+                <div class="yacht-feature">
+                    <i class="fas fa-user-tie"></i>
+                    <span>Professionele Kapitein</span>
+                </div>
+                <div class="yacht-feature">
+                    <i class="fas fa-gas-pump"></i>
+                    <span>Brandstof Inbegrepen</span>
+                </div>
+                <div class="yacht-feature">
+                    <i class="fas fa-champagne-glasses"></i>
+                    <span>Drankjes & Wijn</span>
+                </div>
+                <div class="yacht-feature">
+                    <i class="fas fa-water"></i>
+                    <span>Paddleboard</span>
+                </div>
+                <div class="yacht-feature">
+                    <i class="fas fa-cookie"></i>
+                    <span>Versnaperingen</span>
+                </div>
             </div>
             
             <div class="yacht-fleet">
-                <div class="yacht-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="yacht-image">
-                        <img src="https://marbellajetski.com/wp-content/uploads/2025/08/ChatGPT-Image-12-ago-2025-11_28_51.png" alt="Sea Ray 240">
-                        <div class="yacht-badge">Meest Gevraagd</div>
+                <!-- Rinker 296 Captiva -->
+                <div class="yacht-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="yacht-image" onclick="openBoatModal('rinker')" style="cursor:pointer;">
+                        <img src="../assets/media/photos/rinker-296-alt.jpg" alt="Rinker 296 Captiva" style="object-fit:cover;object-position:center 60%;">
+                        <div class="yacht-badge">Beste Prijs</div>
+                        <div class="yacht-image-overlay"><i class="fas fa-expand"></i> Details Bekijken</div>
                     </div>
                     <div class="yacht-info">
-                        <h3>Sea Ray 240</h3>
+                        <h3><a href="../boats/rinker-296.html" onclick="openBoatModal('rinker');return false;" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.3);transition:border-color 0.3s;" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.3)'">Rinker 296 Captiva</a></h3>
                         <div class="yacht-specs">
-                            <span><i class="fas fa-ruler"></i> 24 voet</span>
-                            <span><i class="fas fa-users"></i> 8 personen</span>
-                            <span><i class="fas fa-tachometer-alt"></i> 35 knopen</span>
+                            <span><i class="fas fa-ruler"></i> 9,4 m</span>
+                            <span><i class="fas fa-users"></i> 8 gasten</span>
+                            <span><i class="fas fa-anchor"></i> Puerto Banús Steiger 5</span>
                         </div>
-                        <p>Perfect voor dagtochten en kleine groepen. Sportief en leuk!</p>
-                        <a href="../nl/booking.html" class="btn btn-outline-light">Boeken</a>
+                        <p>Ruime cruiser met kajuit. Welkomstdrankje, stereo, brandstof en btw allemaal inbegrepen.</p>
+                        <div class="yacht-pricing-inline">
+                            <span class="yacht-from">Vanaf <strong>€400</strong></span>
+                            <button class="yacht-toggle-btn" onclick="this.closest('.yacht-card').classList.toggle('expanded')">
+                                Alle Prijzen <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <div class="yacht-price-details">
+                            <div class="yacht-price-row"><span>2 uur</span><span>€400</span></div>
+                            <div class="yacht-price-row"><span>3 uur</span><span>€600</span></div>
+                            <div class="yacht-price-row"><span>4 uur</span><span>€800</span></div>
+                            <div class="yacht-price-row"><span>6 uur</span><span>€1.100</span></div>
+                            <div class="yacht-price-row"><span>8 uur</span><span>€1.400</span></div>
+                        </div>
+                        <a href="../booking.html?yacht=rinker" class="btn btn-outline-light">Boek Deze Boot</a>
                     </div>
                 </div>
                 
-                <div class="yacht-card featured" data-aos="fade-up" data-aos-delay="200">
-                    <div class="yacht-image">
-                        <img src="https://marbellajetski.com/wp-content/uploads/2025/08/2021-cranchi-endurance-39-power-9670500-20250131064459679-1_LARGE.jpg" alt="Cranchi 39">
+                <!-- Cranchi 39 -->
+                <div class="yacht-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="yacht-image" onclick="openBoatModal('cranchi')" style="cursor:pointer;">
+                        <img src="../assets/media/photos/cranchi-39.jpg" alt="Cranchi 39" style="object-fit:cover;object-position:center 72%;">
                         <div class="yacht-badge premium">Premium</div>
+                        <div class="yacht-image-overlay"><i class="fas fa-expand"></i> Details Bekijken</div>
                     </div>
                     <div class="yacht-info">
-                        <h3>Cranchi 39</h3>
+                        <h3><a href="../boats/cranchi-39.html" onclick="openBoatModal('cranchi');return false;" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.3);transition:border-color 0.3s;" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.3)'">Cranchi 39</a></h3>
                         <div class="yacht-specs">
-                            <span><i class="fas fa-ruler"></i> 39 voet</span>
-                            <span><i class="fas fa-users"></i> 12 personen</span>
-                            <span><i class="fas fa-tachometer-alt"></i> 32 knopen</span>
+                            <span><i class="fas fa-ruler"></i> 12,3 m</span>
+                            <span><i class="fas fa-users"></i> 9 gasten</span>
+                            <span><i class="fas fa-bed"></i> Benedenkajuit</span>
                         </div>
-                        <p>Elegant Italiaans design. Perfect voor feesten en VIP-ervaringen.</p>
-                        <a href="../nl/booking.html" class="btn btn-primary">Boeken</a>
+                        <p>Elegant Italiaans open ontwerp met benedenkajuit. Ideaal voor feesten en VIP-ervaringen.</p>
+                        <div class="yacht-pricing-inline">
+                            <span class="yacht-from">Vanaf <strong>€550</strong></span>
+                            <button class="yacht-toggle-btn" onclick="this.closest('.yacht-card').classList.toggle('expanded')">
+                                Alle Prijzen <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <div class="yacht-price-details">
+                            <div class="yacht-price-row"><span>2 uur</span><span>€550</span></div>
+                            <div class="yacht-price-row"><span>3 uur</span><span>€680</span></div>
+                            <div class="yacht-price-row"><span>4 uur</span><span>€850</span></div>
+                            <div class="yacht-price-row"><span>6 uur</span><span>€1.150</span></div>
+                            <div class="yacht-price-row"><span>8 uur</span><span>€1.550</span></div>
+                        </div>
+                        <a href="../booking.html?yacht=cranchi" class="btn btn-primary">Boek Deze Boot</a>
                     </div>
                 </div>
                 
-                <div class="yacht-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="yacht-image">
-                        <img src="https://marbellajetski.com/wp-content/uploads/2025/08/676709ae66657-l.jpeg" alt="Azimut 39 Fly">
-                        <div class="yacht-badge luxury">Ultiem Luxe</div>
+                <!-- Azimut 39 Fly -->
+                <div class="yacht-card featured" data-aos="fade-up" data-aos-delay="250">
+                    <div class="yacht-image" onclick="openBoatModal('azimut')" style="cursor:pointer;">
+                        <img src="../assets/media/photos/azimut-39.jpg" alt="Azimut 39 Fly" style="object-fit:cover;object-position:center 40%;">
+                        <div class="yacht-badge luxury">Flybridge Luxe</div>
+                        <div class="yacht-image-overlay"><i class="fas fa-expand"></i> Details Bekijken</div>
                     </div>
                     <div class="yacht-info">
-                        <h3>Azimut 39 Fly</h3>
+                        <h3><a href="../boats/azimut-39.html" onclick="openBoatModal('azimut');return false;" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.3);transition:border-color 0.3s;" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.3)'">Azimut 39 Fly</a></h3>
                         <div class="yacht-specs">
-                            <span><i class="fas fa-ruler"></i> 39 voet</span>
-                            <span><i class="fas fa-users"></i> 12 personen</span>
+                            <span><i class="fas fa-ruler"></i> 12,3 m</span>
+                            <span><i class="fas fa-users"></i> 12 gasten</span>
                             <span><i class="fas fa-layer-group"></i> Flybridge</span>
                         </div>
-                        <p>De ultieme luxe-ervaring met flybridge. Onvergetelijke momenten.</p>
-                        <a href="../nl/booking.html" class="btn btn-outline-light">Boeken</a>
+                        <p>Het ultieme luxe flybridge-jacht. Twee flessen champagne, wijn, paddle surf en volledige verzekering inbegrepen.</p>
+                        <div class="yacht-pricing-inline">
+                            <span class="yacht-from">Vanaf <strong>€600</strong></span>
+                            <button class="yacht-toggle-btn" onclick="this.closest('.yacht-card').classList.toggle('expanded')">
+                                Alle Prijzen <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <div class="yacht-price-details">
+                            <div class="yacht-price-row"><span>2 uur</span><span>€600</span></div>
+                            <div class="yacht-price-row"><span>3 uur</span><span>€800</span></div>
+                            <div class="yacht-price-row"><span>4 uur</span><span>€1.000</span></div>
+                            <div class="yacht-price-row"><span>6 uur</span><span>€1.500</span></div>
+                            <div class="yacht-price-row"><span>8 uur</span><span>€1.800</span></div>
+                        </div>
+                        <a href="../booking.html?yacht=azimut" class="btn btn-outline-light">Boek Deze Boot</a>
+                    </div>
+                </div>
+                
+                <!-- Catamaran Bali 4.0 -->
+                <div class="yacht-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="yacht-image" onclick="openBoatModal('catamaran')" style="cursor:pointer;">
+                        <img src="../assets/media/photos/catamaran-bali-3.jpg" alt="Catamaran Bali 4.0" style="object-fit:cover;object-position:center 40%;">
+                        <div class="yacht-badge luxury">Catamaran</div>
+                        <div class="yacht-image-overlay"><i class="fas fa-expand"></i> Details Bekijken</div>
+                    </div>
+                    <div class="yacht-info">
+                        <h3><a href="../boats/catamaran-bali.html" onclick="openBoatModal('catamaran');return false;" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.3);transition:border-color 0.3s;" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.3)'">Catamaran Bali 4.0 <small>(2020)</small></a></h3>
+                        <div class="yacht-specs">
+                            <span><i class="fas fa-ruler"></i> 12,5 m</span>
+                            <span><i class="fas fa-users"></i> 12 gasten + bemanning</span>
+                            <span><i class="fas fa-bed"></i> 4 kajuiten / 4 WC</span>
+                        </div>
+                        <p>Ruime catamaran met 7 m breedte en dubbele Volvo-motoren. Inclusief handdoeken, paddle surf, snorkel, rosé, bier, cava en frisdranken.</p>
+                        <div class="yacht-pricing-inline">
+                            <span class="yacht-from">Vanaf <strong>€750</strong>/2u</span>
+                            <button class="yacht-toggle-btn" onclick="this.closest('.yacht-card').classList.toggle('expanded')">
+                                Alle Prijzen <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <div class="yacht-price-details">
+                            <div class="yacht-price-row"><span>2 uur</span><span>€750</span></div>
+                            <div class="yacht-price-row"><span>3 uur</span><span>€1.000</span></div>
+                            <div class="yacht-price-row"><span>4 uur</span><span>€1.150</span></div>
+                            <div class="yacht-price-row"><span>6 uur</span><span>€1.750</span></div>
+                            <div class="yacht-price-row"><span>8 uur</span><span>€2.250</span></div>
+                        </div>
+                        <a href="../booking.html?yacht=catamaran" class="btn btn-outline-light">Boek Deze Boot</a>
                     </div>
                 </div>
             </div>
             
-            <div class="yacht-pricing" data-aos="fade-up" data-aos-delay="400">
-                <h4>Huurtarieven</h4>
-                <div class="pricing-options">
-                    <div class="price-option"><span class="hours">2u</span><span class="amount">€600</span></div>
-                    <div class="price-option"><span class="hours">3u</span><span class="amount">€800</span></div>
-                    <div class="price-option popular">
-                        <span class="popular-tag">Beste Prijs</span>
-                        <span class="hours">4u</span><span class="amount">€1.000</span>
-                    </div>
-                    <div class="price-option"><span class="hours">6u</span><span class="amount">€1.500</span></div>
-                    <div class="price-option"><span class="hours">8u</span><span class="amount">€1.800</span></div>
-                </div>
+            <div class="yacht-note" data-aos="fade-up" data-aos-delay="400" style="text-align:center;margin-top:40px;padding:20px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;">
+                <p style="color:rgba(255,255,255,0.7);font-size:0.9rem;margin:0;"><i class="fas fa-info-circle" style="margin-right:8px;color:var(--primary);"></i>Alle boten worden beheerd door <strong>Marbella Ocean Boats</strong> vanuit Puerto Banús. Elk charter omvat een professionele kapitein, brandstof, verzekering en versnaperingen. Alle prijzen zijn inclusief btw (IVA). <a href="https://api.whatsapp.com/send?phone=34655442232&text=Hallo!%20Ik%20wil%20graag%20informatie%20over%20jachtcharters" target="_blank" rel="noopener noreferrer" style="color:var(--primary);">Neem contact met ons op voor maatwerkpakketten.</a></p>
             </div>
         </div>
     </section>
 
-    <!-- Over Ons -->
+    <!-- ========== RACING LESSONS SECTION ========== -->
+    <section class="lessons-section" id="racing-lessons">
+        <div class="lessons-container">
+            <div class="lessons-header" data-aos="fade-up">
+                <span class="section-tag">Racelessen</span>
+                <h2>Jetski <span class="gradient-text">Racelessen</span></h2>
+                <p>Leer van een professionele racepiloot. Privélessen voor alle niveaus — van beginners tot ervaren rijders die wedstrijdtechnieken willen beheersen.</p>
+            </div>
+            
+            <div class="lessons-grid">
+                <!-- Basic Racing Lesson -->
+                <div class="lesson-card beginner" data-aos="fade-up" data-aos-delay="0">
+                    <div class="card-image">
+                        <img src="../assets/media/racing/racing-seadoo-1.jpg" alt="Basis raceles Marbella">
+                        <span class="level-tag beginner">Basis</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Basis Raceles</h3>
+                        <p class="desc">Kennismaking met racetechnieken. Leer gascontrole, lichaamshouding, bochttechniek en circuitnavigatie met een professionele piloot.</p>
+                        <ul class="features">
+                            <li><i class="fas fa-check"></i> 30 minuten sessie</li>
+                            <li><i class="fas fa-check"></i> Persoonlijke coaching door een piloot</li>
+                            <li><i class="fas fa-check"></i> Veiligheidsbriefing & alle uitrusting</li>
+                            <li><i class="fas fa-check"></i> Basis circuittechniek</li>
+                            <li><i class="fas fa-check"></i> Alle niveaus welkom</li>
+                        </ul>
+                        <div class="card-footer">
+                            <div class="price"><strong>&euro;299</strong></div>
+                            <a href="https://api.whatsapp.com/send?phone=34655442232&text=Hallo!%20Ik%20wil%20graag%20een%20basis%20raceles%20boeken%20(30min)." class="book-btn" target="_blank" rel="noopener noreferrer">
+                                Boek <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Intermediate Racing Lesson -->
+                <div class="lesson-card intermediate" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-image">
+                        <img src="../assets/media/racing/racing-seadoo-2.jpg" alt="Raceles Marbella">
+                        <span class="level-tag intermediate">Gevorderd</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Race-ervaring</h3>
+                        <p class="desc">Volledige racesessie met een professionele piloot. Leer geavanceerde bochttechniek, boeitechniek, golfanalyse en snelheidsbeheer op het wedstrijdcircuit.</p>
+                        <ul class="features">
+                            <li><i class="fas fa-check"></i> 1 uur intensieve sessie</li>
+                            <li><i class="fas fa-check"></i> Circuit- & open watertechniek</li>
+                            <li><i class="fas fa-check"></i> Persoonlijke coaching door een piloot</li>
+                            <li><i class="fas fa-check"></i> Wedstrijdniveau jetski</li>
+                            <li><i class="fas fa-check"></i> GoPro-opname beschikbaar</li>
+                        </ul>
+                        <div class="card-footer">
+                            <div class="price"><strong>&euro;499</strong></div>
+                            <a href="https://api.whatsapp.com/send?phone=34655442232&text=Hallo!%20Ik%20wil%20graag%20een%201u%20race-ervaring%20boeken." class="book-btn" target="_blank" rel="noopener noreferrer">
+                                Boek <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Advanced Racing Masterclass -->
+                <div class="lesson-card advanced" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-image">
+                        <img src="../assets/media/racing/racing-seadoo-3.jpg" alt="Racing Masterclass — Jetski Marbella">
+                        <span class="level-tag advanced">Masterclass</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Racing Masterclass</h3>
+                        <p class="desc">De ultieme 2-uur durende intensieve training met een professionele piloot. Beheers racestart, offshore racelijnen, slalomtechniek en competitief rijden op professioneel niveau.</p>
+                        <ul class="features">
+                            <li><i class="fas fa-check"></i> 2 uur intensieve sessie</li>
+                            <li><i class="fas fa-check"></i> Persoonlijke coaching door een piloot</li>
+                            <li><i class="fas fa-check"></i> Circuit, offshore & slalom</li>
+                            <li><i class="fas fa-check"></i> GoPro-opname inbegrepen</li>
+                            <li><i class="fas fa-check"></i> Voor ervaren rijders</li>
+                        </ul>
+                        <div class="card-footer">
+                            <div class="price"><strong>&euro;699</strong></div>
+                            <a href="https://api.whatsapp.com/send?phone=34655442232&text=Hallo!%20Ik%20ben%20geïnteresseerd%20in%20de%20Racing%20Masterclass%20(2u)." class="book-btn" target="_blank" rel="noopener noreferrer">
+                                Boek <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p style="text-align:center;font-size:0.82rem;color:var(--text-secondary);margin-top:18px;"><i class="fas fa-receipt" style="margin-right:5px;color:var(--primary);opacity:0.7;"></i>Alle prijzen zijn inclusief btw (IVA)</p>
+            <p style="text-align:center;font-size:0.82rem;color:var(--text-secondary);margin-top:8px;"><i class="fas fa-id-card" style="margin-right:5px;color:var(--accent-gold);opacity:0.8;"></i>Minimumleeftijd 18 jaar. Een geldig jetski- of vaarbewijs is vereist voor alle racelessen.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
     <section class="about-section" id="about">
         <div class="container">
             <div class="about-grid">
                 <div class="about-content" data-aos="fade-right">
                     <span class="section-tag">Ons Verhaal</span>
-                    <h2 class="section-title">Maak Kennis met <span class="gradient-text">Daniel Stiers</span></h2>
-                    <h3 class="about-subtitle">Professioneel Kampioen en Oprichter</h3>
+                    <h2 class="section-title">Over <span class="gradient-text">Ons</span></h2>
+                    <h3 class="about-subtitle">Familiebedrijf Sinds 1998</h3>
                     
                     <div class="about-text">
-                        <p class="lead">Met bijna <strong>twee decennia ervaring</strong> in de watersportindustrie heeft Daniel Stiers Marbella JetSki uitgebouwd tot de toonaangevende watersportbestemming van de Costa del Sol.</p>
-                        <p>Wat begon als een passie in 1998 is uitgegroeid tot een familiebedrijf dat meer dan 50.000 tevreden klanten heeft bediend. Daniels achtergrond als <strong>professioneel jetski-piloot</strong> en <strong>racewinnaar</strong> brengt ongeëvenaarde expertise mee.</p>
-                        <p>Als gecertificeerd kampioen heeft Daniel meerdere professionele races gewonnen, en brengt die competitiegeest en technische excellentie over naar onze trainingen en veiligheidsprotocollen.</p>
+                        <p class="lead"><strong>Marbella JetSki</strong> (STIERS E HIJOS S.L.) is het vertrouwde watersportcentrum van de Costa del Sol sinds 1998. Wij bieden jetskiritten, kustexcursies, jachtcharters, watersporten en professionele racelessen.</p>
+                        
+                        <p>Onze directeur, Daniel Stiers, is tevens een <strong>professionele jetski-racepiloot</strong> — 4-voudig Spaans kampioen, Andalusisch kampioen en Copa del Rey-medaillewinnaar. Hij biedt privé-racelessen aan voor klanten die de ultieme ervaring zoeken.</p>
                     </div>
                     
                     <div class="about-achievements">
                         <div class="achievement">
                             <i class="fas fa-trophy"></i>
-                            <div><strong>4x Spaans Kampioen</strong><span>RFEM 2024 — 7 Medailles</span></div>
+                            <div>
+                                <strong>Spaans Kampioen 2024</strong>
+                                <span>Circuit, Rallyjet & Offshore (RFEM)</span>
+                            </div>
                         </div>
                         <div class="achievement">
-                            <i class="fas fa-history"></i>
-                            <div><strong>Sinds 1998</strong><span>Familiebedrijf, +25 Jaar</span></div>
+                            <i class="fas fa-medal"></i>
+                            <div>
+                                <strong>Andalusisch Kampioen 2025</strong>
+                                <span>Runabout GP2</span>
+                            </div>
                         </div>
                         <div class="achievement">
-                            <i class="fas fa-users"></i>
-                            <div><strong>Familiebedrijf</strong><span>Persoonlijke Service bij Elke Ervaring</span></div>
+                            <i class="fas fa-flag-checkered"></i>
+                            <div>
+                                <strong>2e — Basquet Cup Internationaal</strong>
+                                <span>Offshore Racing, Getaria</span>
+                            </div>
                         </div>
                         <div class="achievement">
                             <i class="fas fa-certificate"></i>
-                            <div><strong>ISO 9001 en 14001</strong><span>Kwaliteit en Milieu</span></div>
+                            <div>
+                                <strong>ISO 9001 & 14001</strong>
+                                <span>Kwaliteits- & Milieucertificering</span>
+                            </div>
                         </div>
                     </div>
                     
                     <blockquote class="about-quote">
-                        <p>"Elke klant die met ons rijdt, zou dezelfde opwinding moeten voelen die ik voel als ik wedstrijden rijd. Veiligheid, spanning en onvergetelijke herinneringen — dat is wat wij bieden."</p>
-                        <cite>— Daniel Stiers, Directeur en 4-voudig Spaans Kampioen</cite>
+                        <p>"Elke klant die bij ons rijdt, moet dezelfde sensatie voelen die ik voel als ik race. Veiligheid, spanning en onvergetelijke herinneringen — dat is wat wij leveren."</p>
+                        <cite>— Daniel Stiers, Directeur & 4-voudig Spaans Kampioen</cite>
                     </blockquote>
                 </div>
                 
                 <div class="about-visual" data-aos="fade-left">
                     <div class="visual-stack">
-                        <div class="about-image main">
-                            <img src="https://marbellajetski.com/wp-content/uploads/2021/05/About_us.jpg" alt="Daniel Stiers">
+                        <div class="about-image main" style="display:flex;align-items:center;justify-content:center;background:transparent;box-shadow:none;">
+                            <img src="../assets/media/photos/logo-circular.png" alt="Marbella JetSki Logo" style="width:80%;max-width:320px;height:auto;object-fit:contain;">
                         </div>
                         <div class="about-image secondary">
                             <img src="https://marbellajetski.com/wp-content/uploads/2022/05/WhatsApp-Image-2022-05-13-at-7.22.08-PM.jpeg" alt="ISO 9001 Certificaat">
@@ -825,6 +1186,7 @@
                             <img src="https://marbellajetski.com/wp-content/uploads/2022/05/WhatsApp-Image-2022-05-13-at-7.22.21-PM.jpeg" alt="ISO 14001 Certificaat">
                         </div>
                     </div>
+                    
                     <div class="experience-badge">
                         <div class="badge-content">
                             <span class="years">4x</span>
@@ -836,93 +1198,160 @@
         </div>
     </section>
 
-    <!-- Video's -->
+    <!-- Video Section -->
     <section class="video-section" id="videos">
         <div class="container">
             <div class="section-header light" data-aos="fade-up">
                 <span class="section-tag">Video's</span>
-                <h2 class="section-title">Beleef het in <span class="gradient-text">Actie</span></h2>
-                <p class="section-subtitle">Bekijk hoe een dag op het water eruitziet bij Marbella Jet Ski</p>
+                <h2 class="section-title">Bekijk Ons in <span class="gradient-text">Actie</span></h2>
+                <p class="section-subtitle">Bekijk hoe een dag op het water met Marbella JetSki eruitziet</p>
             </div>
-            <div class="video-grid">
+            <div class="video-grid" id="videoGrid">
                 <div class="video-wrapper" data-aos="fade-up">
-                    <iframe src="https://www.youtube.com/embed/SF-65XTOGeY" title="Marbella Jet Ski - Activiteiten" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    <video controls preload="metadata" poster="../assets/media/videos/thumbs/promo-marbella-1-thumb.jpg" loading="lazy">
+                        <source src="../assets/media/videos/promo-marbella-1.mp4" type="video/mp4">
+                    </video>
                 </div>
                 <div class="video-wrapper" data-aos="fade-up" data-aos-delay="100">
-                    <iframe src="https://www.youtube.com/embed/vnXlYmVHv7U" title="Marbella Jet Ski - Promotievideo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    <video controls preload="metadata" poster="../assets/media/videos/thumbs/promo-marbella-3-thumb.jpg" loading="lazy">
+                        <source src="../assets/media/videos/promo-marbella-3.mp4" type="video/mp4">
+                    </video>
                 </div>
                 <div class="video-wrapper" data-aos="fade-up" data-aos-delay="200">
-                    <iframe src="https://www.youtube.com/embed/xRQtwb8hM8o" title="Marbella Jet Ski - Watersporten" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    <video controls preload="metadata" poster="../assets/media/videos/thumbs/promo-marbella-5-thumb.jpg" loading="lazy">
+                        <source src="../assets/media/videos/promo-marbella-5.mp4" type="video/mp4">
+                    </video>
                 </div>
                 <div class="video-wrapper" data-aos="fade-up" data-aos-delay="300">
-                    <iframe src="https://www.youtube.com/embed/PCStE_UmEjw" title="Marbella Jet Ski - Kort Clipje" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    <video controls preload="metadata" poster="../assets/media/videos/thumbs/promo-marbella-4-thumb.jpg" loading="lazy">
+                        <source src="../assets/media/videos/promo-marbella-4.mp4" type="video/mp4">
+                    </video>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Galerij -->
+    <!-- Gallery Section -->
     <section class="gallery-section" id="gallery">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <span class="section-tag">Galerij</span>
-                <h2 class="section-title"><span class="gradient-text">Foto</span> Galerij</h2>
-                <p class="section-subtitle">Beleef de spanning van de beste wateravonturen van de Costa del Sol</p>
+                <h2 class="section-title">Foto <span class="gradient-text">Galerij</span></h2>
+                <p class="section-subtitle">Beleef de sensatie van de beste watersporten aan de Costa del Sol</p>
             </div>
             
             <div class="gallery-grid" data-aos="fade-up">
                 <div class="gallery-item large" onclick="openLightbox(0)">
-                    <img src="https://marbellajetski.com/wp-content/uploads/2023/05/IMG_0052-scaled.webp" alt="Yamaha jetski in actie" loading="lazy">
-                    <div class="gallery-overlay"><span class="gallery-tag">Jetski</span><i class="fas fa-search-plus"></i></div>
+                    <img src="https://marbellajetski.com/wp-content/uploads/2023/05/IMG_0052-scaled.webp" alt="Jetski actie in Marbella" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Jetski</span>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
                 </div>
                 <div class="gallery-item" onclick="openLightbox(1)">
-                    <img src="https://marbellajetski.com/wp-content/uploads/2025/08/ChatGPT-Image-12-ago-2025-11_28_51.png" alt="Jacht Sea Ray 240" loading="lazy">
-                    <div class="gallery-overlay"><span class="gallery-tag">Sea Ray 240</span><i class="fas fa-search-plus"></i></div>
+                    <img src="../assets/media/photos/cranchi-39.jpg" alt="Cranchi 39 Jacht" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Cranchi 39</span>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
                 </div>
-                <div class="gallery-item" onclick="openLightbox(2)">
-                    <img src="https://marbellajetski.com/wp-content/uploads/2025/08/2021-cranchi-endurance-39-power-9670500-20250131064459679-1_LARGE.jpg" alt="Jacht Cranchi 39" loading="lazy">
-                    <div class="gallery-overlay"><span class="gallery-tag">Cranchi 39</span><i class="fas fa-search-plus"></i></div>
+                <div class="gallery-item tall" onclick="openLightbox(2)">
+                    <img src="../assets/media/photos/azimut-39.jpg" alt="Azimut 39 Fly Jacht" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Azimut 39 Fly</span>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
                 </div>
-                <div class="gallery-item tall" onclick="openLightbox(3)">
-                    <img src="https://marbellajetski.com/wp-content/uploads/2025/08/676709ae66657-l.jpeg" alt="Jacht Azimut 39 Fly" loading="lazy">
-                    <div class="gallery-overlay"><span class="gallery-tag">Azimut 39 Fly</span><i class="fas fa-search-plus"></i></div>
+                <div class="gallery-item" onclick="openLightbox(3)">
+                    <img src="https://marbellajetski.com/wp-content/uploads/2023/05/IMG_3961-scaled.webp" alt="Marbella strandlocatie" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Ons Strand</span>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
                 </div>
                 <div class="gallery-item" onclick="openLightbox(4)">
-                    <img src="https://marbellajetski.com/wp-content/uploads/2023/05/IMG_3961-scaled.webp" alt="Ons strand in Marbella" loading="lazy">
-                    <div class="gallery-overlay"><span class="gallery-tag">Ons Strand</span><i class="fas fa-search-plus"></i></div>
+                    <img src="https://marbellajetski.com/wp-content/uploads/2021/07/IMG_6208-scaled.jpg" alt="Luxe jachtcharter Marbella" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Jachtcharter</span>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
                 </div>
                 <div class="gallery-item" onclick="openLightbox(5)">
-                    <img src="https://marbellajetski.com/wp-content/uploads/2021/07/IMG_6208-scaled.jpg" alt="Luxe jacht huren Marbella" loading="lazy">
-                    <div class="gallery-overlay"><span class="gallery-tag">Jacht Huren</span><i class="fas fa-search-plus"></i></div>
+                    <img src="https://marbellajetski.com/wp-content/uploads/2023/05/IMG_3846-scaled.webp" alt="Watersporten aan de Costa del Sol" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Waterpret</span>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
                 </div>
-                <div class="gallery-item" onclick="openLightbox(6)">
-                    <img src="https://marbellajetski.com/wp-content/uploads/2023/05/IMG_3846-scaled.webp" alt="Watersporten Costa del Sol" loading="lazy">
-                    <div class="gallery-overlay"><span class="gallery-tag">Fun</span><i class="fas fa-search-plus"></i></div>
-                </div>
-                <div class="gallery-item wide" onclick="openLightbox(7)">
+                <div class="gallery-item wide" onclick="openLightbox(6)">
                     <img src="https://marbellajetski.com/wp-content/uploads/2023/05/DSC_0055-scaled.webp" alt="Jetski excursie Costa del Sol" loading="lazy">
-                    <div class="gallery-overlay"><span class="gallery-tag">Excursies</span><i class="fas fa-search-plus"></i></div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Excursies</span>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(7)">
+                    <img src="https://marbellajetski.com/wp-content/uploads/2023/05/DSC_0031-scaled.webp" alt="Watersportvloot Marbella" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Luxe Vloot</span>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
                 </div>
                 <div class="gallery-item" onclick="openLightbox(8)">
-                    <img src="https://marbellajetski.com/wp-content/uploads/2023/05/DSC_0031-scaled.webp" alt="Luxe vloot Marbella" loading="lazy">
-                    <div class="gallery-overlay"><span class="gallery-tag">Luxe Vloot</span><i class="fas fa-search-plus"></i></div>
+                    <img src="../assets/media/racing/racing-benalmadena-1.jpg" alt="Daniel Stiers racen bij Benalmádena kampioenschap" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Racen</span>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item wide" onclick="openLightbox(9)">
+                    <img src="../assets/media/racing/racing-circuit-benidorm.png" alt="Circuit racen Benidorm Valencia" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Circuitrace</span>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(10)">
+                    <img src="../assets/media/racing/promo-racing.jpg" alt="Jetski race promotie" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Pro Racing</span>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item tall" onclick="openLightbox(11)">
+                    <img src="../assets/media/racing/dani-stiers-race-start.jpg" alt="Dani Stiers #7 racestart" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Racestart</span>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
                 </div>
             </div>
             
             <div class="gallery-cta" data-aos="fade-up">
-                <p>Volg ons voor meer actiefoto's en behind-the-scenes content!</p>
+                <p>Volg ons voor meer actiefoto's en behind-the-scenes!</p>
                 <div class="social-links">
                     <a href="https://www.instagram.com/jetskimarbella/" target="_blank" rel="noopener noreferrer" class="social-link instagram">
-                        <i class="fab fa-instagram"></i><span>@jetskimarbella</span>
+                        <i class="fab fa-instagram"></i>
+                        <span>@jetskimarbella</span>
                     </a>
                     <a href="https://www.facebook.com/jetskimarbella/" target="_blank" rel="noopener noreferrer" class="social-link facebook">
-                        <i class="fab fa-facebook-f"></i><span>Facebook</span>
+                        <i class="fab fa-facebook-f"></i>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="https://www.tiktok.com/@jetskimarbella" target="_blank" rel="noopener noreferrer" class="social-link" style="background:linear-gradient(135deg,#25f4ee,#fe2c55);color:#fff;">
+                        <i class="fab fa-tiktok"></i>
+                        <span>TikTok</span>
+                    </a>
+                    <a href="https://www.youtube.com/@marbellajetski" target="_blank" rel="noopener noreferrer" class="social-link" style="background:#ff0000;color:#fff;">
+                        <i class="fab fa-youtube"></i>
+                        <span>YouTube</span>
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Lightbox -->
     <div class="lightbox" id="lightbox">
         <button class="lightbox-close" onclick="closeLightbox()"><i class="fas fa-times"></i></button>
         <button class="lightbox-prev" onclick="changeLightboxImage(-1)"><i class="fas fa-chevron-left"></i></button>
@@ -930,19 +1359,19 @@
         <button class="lightbox-next" onclick="changeLightboxImage(1)"><i class="fas fa-chevron-right"></i></button>
     </div>
 
-    <!-- Beoordelingen -->
+    <!-- Testimonials Section -->
     <section class="testimonials-section">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <span class="section-tag badge-premium">Klantbeoordelingen</span>
-                <h2 class="section-title">Wat Onze <span class="gradient-text">Klanten</span> Zeggen</h2>
+                <h2 class="section-title">Wat Onze <span class="gradient-text">Gasten</span> Zeggen</h2>
                 <div class="review-summary">
                     <div class="rating-stars">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <span class="rating-text">4.9/5 gebaseerd op meer dan 500 beoordelingen</span>
+                    <span class="rating-text">4.9/5 op basis van 500+ beoordelingen</span>
                     <a href="https://g.page/r/CQZi6KpCVabZEB0/review" target="_blank" rel="noopener noreferrer" class="write-review">
-                        <i class="fas fa-pen"></i> Schrijf een Review
+                        <i class="fas fa-pen"></i> Schrijf een Beoordeling
                     </a>
                 </div>
             </div>
@@ -953,7 +1382,7 @@
                         <div class="testimonial-card glass-premium">
                             <div class="testimonial-source"><i class="fab fa-google"></i> Google Review</div>
                             <div class="testimonial-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <p class="testimonial-text">"Absoluut ongelooflijke ervaring! De jetski excursie naar Puerto Banús was het hoogtepunt van onze reis. Het personeel was professioneel en zorgde ervoor dat we ons altijd veilig voelden."</p>
+                            <p class="testimonial-text">"Een ongelooflijke ervaring! De jetski-excursie naar Puerto Banús was het hoogtepunt van onze reis. Het personeel was professioneel en we voelden ons de hele tijd veilig."</p>
                             <div class="testimonial-author">
                                 <div class="author-avatar">JD</div>
                                 <div class="author-info"><strong>James D.</strong><span>Londen, VK</span></div>
@@ -964,7 +1393,7 @@
                         <div class="testimonial-card">
                             <div class="testimonial-source"><i class="fab fa-google"></i> Google Review</div>
                             <div class="testimonial-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <p class="testimonial-text">"We boekten het jacht voor de verjaardag van mijn vrouw en het overtrof alle verwachtingen. De crew was fantastisch, de drankjes bleven komen en het uitzicht was adembenemend."</p>
+                            <p class="testimonial-text">"We hebben het jacht geboekt voor de verjaardag van mijn vrouw en het overtrof alle verwachtingen. De bemanning was fantastisch, de drankjes vloeiden rijkelijk en het uitzicht was adembenemend!"</p>
                             <div class="testimonial-author">
                                 <div class="author-avatar">MK</div>
                                 <div class="author-info"><strong>Michael K.</strong><span>Berlijn, Duitsland</span></div>
@@ -975,7 +1404,7 @@
                         <div class="testimonial-card">
                             <div class="testimonial-source"><i class="fab fa-google"></i> Google Review</div>
                             <div class="testimonial-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <p class="testimonial-text">"De kinderen waren dol op de bananenboot! We komen al 5 jaar elke zomer terug. Het is een familietraditie geworden!"</p>
+                            <p class="testimonial-text">"De kinderen vonden de bananenboot geweldig! We komen al 5 jaar elke zomer terug. Het is nu een familietraditie!"</p>
                             <div class="testimonial-author">
                                 <div class="author-avatar">SR</div>
                                 <div class="author-info"><strong>Sarah R.</strong><span>Dublin, Ierland</span></div>
@@ -986,7 +1415,7 @@
                         <div class="testimonial-card">
                             <div class="testimonial-source"><i class="fab fa-tripadvisor"></i> TripAdvisor</div>
                             <div class="testimonial-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <p class="testimonial-text">"Ik was nog nooit op een jetski geweest en was best zenuwachtig. Maar Daniel en zijn team stelden me helemaal op mijn gemak. Aan het eind wilde ik niet meer stoppen! Geweldige ervaring."</p>
+                            <p class="testimonial-text">"Als iemand die nog nooit op een jetski had gezeten, was ik zenuwachtig. Maar Daniel en zijn team stelden me helemaal op mijn gemak. Aan het einde wilde ik er niet meer af! Geweldige ervaring."</p>
                             <div class="testimonial-author">
                                 <div class="author-avatar">LP</div>
                                 <div class="author-info"><strong>Laura P.</strong><span>Parijs, Frankrijk</span></div>
@@ -999,14 +1428,14 @@
         </div>
     </section>
 
-    <!-- Boeken -->
+    <!-- Booking CTA Section -->
     <section class="booking-section" id="booking">
         <div class="booking-bg"></div>
         <div class="container">
             <div class="section-header light" data-aos="fade-up">
-                <span class="section-tag">Boek Je Plek</span>
+                <span class="section-tag">Reserveer Je Plek</span>
                 <h2 class="section-title">Boek Je <span class="gradient-text">Avontuur</span></h2>
-                <p class="section-subtitle">Reserveringen zomer 2026 nu open! Zeker je datums op tijd.</p>
+                <p class="section-subtitle">Boekingen voor zomer 2026 zijn nu open! Verzeker je data vroegtijdig.</p>
             </div>
             
             <div class="booking-container" data-aos="fade-up">
@@ -1014,48 +1443,50 @@
                     <div class="booking-trust-item">
                         <i class="fas fa-shield-alt"></i>
                         <strong>Volledig Verzekerd</strong>
-                        <span>Aansprakelijkheidsverzekering</span>
+                        <span>Aansprakelijkheidsdekking</span>
                     </div>
                     <div class="booking-trust-item">
                         <i class="fas fa-undo"></i>
-                        <strong>Gratis Annuleren</strong>
-                        <span>+24u van tevoren = volledige terugbetaling</span>
+                        <strong>Gratis Annulering</strong>
+                        <span>24u+ vooraf = volledige terugbetaling</span>
                     </div>
                     <div class="booking-trust-item">
                         <i class="fas fa-cloud-sun"></i>
                         <strong>Weergarantie</strong>
-                        <span>Slecht weer = gratis omboeking</span>
+                        <span>Slecht weer = gratis verplaatsing</span>
                     </div>
                 </div>
                 
-                <a href="../nl/booking.html" class="btn btn-primary btn-lg btn-glow booking-main-cta">
+                <a href="../booking.html" class="btn btn-primary btn-lg btn-glow booking-main-cta">
                     <i class="fas fa-calendar-alt"></i>
                     <span>Nu Online Boeken</span>
                 </a>
                 
                 <div class="booking-divider">
                     <span class="booking-divider-line"></span>
-                    <span>of neem direct contact op</span>
+                    <span>of neem rechtstreeks contact op</span>
                     <span class="booking-divider-line"></span>
                 </div>
                 
                 <div class="booking-contact-actions">
-                    <a href="https://api.whatsapp.com/send?phone=34655442232&text=Hallo!%20Ik%20wil%20graag%20een%20wateractiviteit%20boeken." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
-                        <i class="fab fa-whatsapp"></i><span>WhatsApp</span>
+                    <a href="https://api.whatsapp.com/send?phone=34655442232&text=Hallo!%20Ik%20wil%20graag%20een%20watersportervaring%20boeken!" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp Ons</span>
                     </a>
                     <a href="tel:+34655442232" class="btn btn-outline btn-glass">
-                        <i class="fas fa-phone-alt"></i><span>+34 655 442 232</span>
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+34 655 442 232</span>
                     </a>
                 </div>
                 
                 <p class="booking-note">
-                    <i class="fas fa-clock"></i> Elke dag geopend van 11u tot 20u · Walk-in reserveringen op Playa de las Dunas
+                    <i class="fas fa-clock"></i> Dagelijks geopend 11:00 – 20:00 · Inloop welkom op Playa de las Dunas
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Veelgestelde Vragen -->
+    <!-- FAQ Section -->
     <section class="faq-section" id="faq">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
@@ -1066,41 +1497,41 @@
             <div class="faq-grid" data-aos="fade-up">
                 <div class="faq-item">
                     <button class="faq-question" aria-expanded="false">
-                        <span>Welke leeftijd is vereist om deel te nemen?</span>
+                        <span>Welke leeftijd moet je hebben om mee te doen?</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>Voor jetski moet je minimaal 18 jaar zijn, of 16 met een ondertekende ouderlijke toestemming. Voor familie-activiteiten zoals waterfietsen en bananenboot kunnen kinderen deelnemen onder begeleiding van een volwassene.</p>
+                        <p>Om een jetski te besturen moet je minimaal 18 jaar oud zijn, of 16 jaar met schriftelijke toestemming van een ouder. Voor familieactiviteiten zoals waterfietsen en bananenboot mogen kinderen deelnemen onder begeleiding van een volwassene.</p>
                     </div>
                 </div>
                 
                 <div class="faq-item">
                     <button class="faq-question" aria-expanded="false">
-                        <span>Heb ik een rijbewijs nodig om een jetski te huren?</span>
+                        <span>Heb ik een vaarbewijs nodig om een jetski te huren?</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>Geen rijbewijs nodig! Wij geven een volledige veiligheidsbriefing voor elke activiteit. Onze jetski's zijn makkelijk te besturen en onze instructeurs zorgen ervoor dat je je op je gemak voelt voordat je vertrekt.</p>
+                        <p>Nee, er is geen vaarbewijs nodig! Wij geven een uitgebreide veiligheidsbriefing voor elke activiteit. Onze jetski's zijn eenvoudig te bedienen en onze instructeurs zorgen ervoor dat je je op je gemak voelt voordat je het water opgaat.</p>
                     </div>
                 </div>
                 
                 <div class="faq-item">
                     <button class="faq-question" aria-expanded="false">
-                        <span>Wat als ik moet annuleren?</span>
+                        <span>Wat gebeurt er als ik moet annuleren?</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>Annuleer meer dan 24 uur van tevoren voor volledige terugbetaling of gratis omboeken. Minder dan 24u geldt een toeslag van 50%. Annuleringen wegens slecht weer worden altijd 100% terugbetaald. Bekijk ons volledige <a href="../nl/terms.html#cancellation">annuleringsbeleid</a>.</p>
+                        <p>Annuleer 24+ uur van tevoren voor volledige terugbetaling of gratis omboeking. Minder dan 24 uur vooraf brengt 50% kosten met zich mee. Weergerelateerde annuleringen worden altijd 100% terugbetaald. Bekijk ons volledige <a href="../terms.html#cancellation">annuleringsbeleid</a>.</p>
                     </div>
                 </div>
                 
                 <div class="faq-item">
                     <button class="faq-question" aria-expanded="false">
-                        <span>Is de verzekering inbegrepen?</span>
+                        <span>Is verzekering inbegrepen?</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>Ja! Alle activiteiten bevatten een Aansprakelijkheidsverzekering. Dit dekt letsel aan derden en materiële schade bij normaal gebruik. Schade door nalatigheid kan leiden tot reparatiekosten tegen marktprijs.</p>
+                        <p>Ja! Alle activiteiten bevatten een Wettelijke Aansprakelijkheidsverzekering. Deze dekt letsel aan derden en materiële schade bij normaal gebruik. Houd er rekening mee dat schade veroorzaakt door nalatigheid of het niet opvolgen van veiligheidsinstructies kan leiden tot reparatiekosten tegen marktprijzen.</p>
                     </div>
                 </div>
                 
@@ -1110,7 +1541,7 @@
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>Wij accepteren creditcards/debitcards (Visa, Mastercard) en contant. Online reserveringen vereisen een aanbetaling van 30% of volledige betaling — de rest betaal je ter plaatse.</p>
+                        <p>Wij accepteren creditcards en betaalkaarten (Visa, Mastercard), bankoverschrijving en contant ter plaatse.</p>
                     </div>
                 </div>
                 
@@ -1120,17 +1551,17 @@
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>Veiligheid gaat voor. Ons gekwalificeerde team controleert de weergegevens van AEMET voor elke sessie. Als de omstandigheden niet veilig zijn, plannen we je gratis in of geven we 100% terug — zonder vragen.</p>
+                        <p>Veiligheid staat voorop. Ons gekwalificeerd personeel controleert AEMET-weerdata vóór elke sessie. Als de omstandigheden onveilig zijn, plannen we je gratis om of geven we 100% terugbetaling — zonder vragen. De beslissing wordt genomen door ons team en is definitief.</p>
                     </div>
                 </div>
                 
                 <div class="faq-item">
                     <button class="faq-question" aria-expanded="false">
-                        <span>Zijn de activiteiten het hele jaar beschikbaar?</span>
+                        <span>Zijn activiteiten het hele jaar beschikbaar?</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>Ons hoofdseizoen loopt van april tot oktober, met maximale beschikbaarheid in de zomermaanden. We kunnen opereren op mooie dagen buiten het seizoen — neem contact met ons op om de beschikbaarheid te checken!</p>
+                        <p>Ons hoofdseizoen loopt van mei tot oktober, met piekbeschikbaarheid in de zomermaanden. Bij mooi weer kunnen we ook buiten het seizoen opereren — neem contact met ons op om de beschikbaarheid te controleren!</p>
                     </div>
                 </div>
                 
@@ -1140,7 +1571,17 @@
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>Neem gewoon een zwembroek/badpak, zonnebrand, handdoek en een geldig identiteitsbewijs mee (voor jetski). Wij leveren alle veiligheidsuitrusting inclusief reddingsvesten en helmen. We raden waterschoenen en wisselkleding aan. Laat je telefoon aan land — die is niet toegestaan op het water.</p>
+                        <p>Neem alleen zwemkleding, zonnebrand, een handdoek en een geldig identiteitsbewijs mee (paspoort of identiteitskaart voor jetski-rijders). Wij verstrekken alle veiligheidsuitrusting inclusief reddingsvesten en helmen. Wij raden waterschoenen aan en het meenemen van droge kleding. Laat je telefoon aan land — die mag niet mee op het water.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Maken jullie foto's en video's?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ja! Professionele foto's en video's van je ervaring zijn beschikbaar bij elke activiteit. Ons personeel legt de actie vast zodat jij je op het plezier kunt concentreren. Met jouw toestemming kunnen we beelden ook gebruiken voor promotionele doeleinden.</p>
                     </div>
                 </div>
                 
@@ -1150,41 +1591,61 @@
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>We zitten aan Playa de las Dunas, Urbanización Pinomar, Marbella (afslag km 189.5 van de AP-7). Er is gratis parkeren in de nabijgelegen straten. We zitten direct aan het strand — zoek de Marbella JetSki vlaggen! <a href="https://share.google/UalmgpKnGVW3vfctf" target="_blank" rel="noopener noreferrer">Bekijk op Google Maps</a>.</p>
+                        <p>Wij bevinden ons aan Playa de las Dunas, Urbanización Pinomar, Marbella (afslag km 189,5 op de AP-7). Gratis straatparkeren is in de buurt beschikbaar. We zijn direct aan het strand — zoek naar de Marbella JetSki-vlaggen! <a href="https://share.google/UalmgpKnGVW3vfctf" target="_blank" rel="noopener noreferrer">Routebeschrijving op Google Maps</a>.</p>
                     </div>
                 </div>
                 
                 <div class="faq-item">
                     <button class="faq-question" aria-expanded="false">
-                        <span>Welke veiligheidsmaatregelen hebben jullie?</span>
+                        <span>Kan ik boeken voor een groep of feest?</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>Veiligheid is onze prioriteit. Elke deelnemer krijgt een <strong>verplichte briefing van 10-15 minuten</strong> over bediening, signalen, navigatieregels en noodprocedures. We leveren ISO 12402-5 reddingsvesten en CE-helmen. Onze Yamaha VX's 2024-2025 hebben GPS-tracking (OtoTrak) en automatische motorstop. Een <strong>hulpboot met gekwalificeerde schipper</strong> is altijd binnen 300m, met EHBO-kit en AED-defibrillator.</p>
+                        <p>Absoluut! Wij verzorgen vrijgezellenfeesten, verjaardagen, bedrijfsuitjes en grote groepen. Onze groepsactiviteiten (bananenboot, crazy sofa, donut) kosten €20/persoon, en we bieden jachtcharters voor maximaal 12 gasten. Neem contact met ons op via <a href="https://api.whatsapp.com/send?phone=34655442232&text=Hallo!%20Ik%20wil%20graag%20informatie%20over%20een%20groepsboeking." target="_blank" rel="noopener noreferrer">WhatsApp</a> voor maatwerk groepspakketten.</p>
                     </div>
                 </div>
                 
                 <div class="faq-item">
                     <button class="faq-question" aria-expanded="false">
-                        <span>Moet ik van tevoren reserveren?</span>
+                        <span>Moet ik van tevoren boeken?</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>We raden sterk aan om van tevoren te boeken in het hoogseizoen (juni-september) want plekken zijn snel vol. Walk-in reserveringen worden geaccepteerd op basis van beschikbaarheid. Je kunt online, via WhatsApp, telefonisch of ter plaatse boeken.</p>
+                        <p>Wij raden sterk aan om vooraf te boeken tijdens het hoogseizoen (juni–september) omdat plekken snel vol zitten. Inloop is welkom wanneer er beschikbaarheid is. Je kunt online boeken, via WhatsApp, telefonisch of persoonlijk op onze strandlocatie.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Welke veiligheidsmaatregelen zijn er?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Veiligheid is onze hoogste prioriteit. Elke deelnemer ontvangt een <strong>verplichte veiligheidsbriefing van 10-15 minuten</strong> over bediening, handgebaren, navigatieregels en noodprocedures. Wij verstrekken ISO 12402-5 reddingsvesten en CE-helmen, en onze 2024-2025 Yamaha VX jetski's zijn GPS-gevolgd (OtoTrak) met automatische noodstop. Een <strong>professionele ondersteuningsboot met een gekwalificeerde schipper</strong> is altijd binnen 300 m, uitgerust met een EHBO-kit. We controleren ook realtime weersomstandigheden via Puertos del Estado en AEMET voor elke sessie.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Welke kwalificaties heeft jullie team?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ons volledige team beschikt over <strong>maritieme veiligheidskwalificaties</strong>. Eigenaar Daniel Stiers is 4-voudig Spaans kampioen (RFEM 2024). Alle vaartuigen ondergaan dagelijkse mechanische inspecties en beschikken over actuele ITB-certificeringen (technische bootinspectie). Wij zijn ISO 9001 (kwaliteit) en ISO 14001 (milieu) gecertificeerd door OCA Global, en na elk gebruik worden volledige uitrustingscontroles uitgevoerd.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact -->
+    <!-- Contact Section -->
     <section class="contact-section" id="contact">
         <div class="container">
             <div class="contact-grid">
                 <div class="contact-info" data-aos="fade-right">
                     <span class="section-tag">Neem Contact Op</span>
-                    <h2 class="section-title"><span class="gradient-text">Contact</span></h2>
-                    <p class="contact-intro">Klaar voor jouw wateravontuur? Neem contact met ons op via een van deze kanalen!</p>
+                    <h2 class="section-title">Contact <span class="gradient-text">Ons</span></h2>
+                    <p class="contact-intro">Klaar om je wateravontuur werkelijkheid te maken? Bereik ons via een van deze kanalen!</p>
                     
                     <div class="contact-methods">
                         <a href="tel:+34655442232" class="contact-method">
@@ -1193,7 +1654,7 @@
                         </a>
                         <a href="https://api.whatsapp.com/send?phone=34655442232" target="_blank" rel="noopener noreferrer" class="contact-method whatsapp">
                             <div class="method-icon"><i class="fab fa-whatsapp"></i></div>
-                            <div class="method-details"><strong>WhatsApp</strong><span>Snel Antwoord!</span></div>
+                            <div class="method-details"><strong>WhatsApp</strong><span>Snel antwoord!</span></div>
                         </a>
                         <a href="mailto:jetskimarbella@gmail.com" class="contact-method">
                             <div class="method-icon"><i class="fas fa-envelope"></i></div>
@@ -1201,7 +1662,7 @@
                         </a>
                         <div class="contact-method">
                             <div class="method-icon"><i class="fas fa-clock"></i></div>
-                            <div class="method-details"><strong>Openingstijden</strong><span>Elke dag 11u - 20u</span></div>
+                            <div class="method-details"><strong>Openingstijden</strong><span>Dagelijks 11:00 - 20:00</span></div>
                         </div>
                         <div class="contact-method">
                             <div class="method-icon"><i class="fas fa-map-marker-alt"></i></div>
@@ -1221,11 +1682,14 @@
                 
                 <div class="contact-map" data-aos="fade-left">
                     <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3207.413988239384!2d-4.8009563!3d36.4958676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7320b6ce1b6197%3A0xd9a65542aae86206!2sMarbella%20Jet%20Ski%20-%20Motos%20de%20agua!5e0!3m2!1snl!2snl!4v1755151608714!5m2!1snl!2snl"
-                        width="100%" height="450" style="border:0; border-radius: 20px;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade" title="Locatie van Marbella JetSki op Google Maps"></iframe>
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3207.413988239384!2d-4.8009563!3d36.4958676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7320b6ce1b6197%3A0xd9a65542aae86206!2sMarbella%20Jet%20Ski%20-%20Motos%20de%20agua!5e0!3m2!1ses!2ses!4v1755151608714!5m2!1ses!2ses"
+                        width="100%" height="450" style="border:0; border-radius: 20px;" 
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        title="Marbella JetSki locatie op Google Maps">
+                    </iframe>
                     <a href="https://share.google/UalmgpKnGVW3vfctf" target="_blank" rel="noopener noreferrer" class="map-overlay-btn">
-                        <i class="fas fa-external-link-alt"></i> Openen in Google Maps
+                        <i class="fas fa-external-link-alt"></i>
+                        Openen in Google Maps
                     </a>
                 </div>
             </div>
@@ -1234,16 +1698,17 @@
 
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="container">
                 <div class="footer-grid">
                     <div class="footer-brand">
                         <a href="#home" class="footer-logo">
-                            <img src="../assets/media/photos/logo-circular.png" alt="Marbella JetSki Logo" style="height: 60px; margin-bottom: 15px;">
+                            <img src="../assets/media/photos/logo-circular.png" alt="Marbella JetSki Logo" style="height: 70px; margin-bottom: 15px;">
                             <span class="logo-text">MARBELLA<span class="logo-highlight">JETSKI</span></span>
                         </a>
-                        <p>De toonaangevende watersportbestemming van de Costa del Sol. Familiebedrijf sinds 1998, geleid door 4-voudig Spaans kampioen Daniel Stiers.</p>
+                        <p>De beste watersportbestemming aan de Costa del Sol. Familiebedrijf sinds 1998, geleid door 4-voudig Spaans kampioen Daniel Stiers.</p>
                         <div class="footer-certifications">
                             <img src="https://marbellajetski.com/wp-content/uploads/2022/05/WhatsApp-Image-2022-05-13-at-7.22.08-PM.jpeg" alt="ISO 9001 Certificaat" loading="lazy">
                             <img src="https://marbellajetski.com/wp-content/uploads/2022/05/WhatsApp-Image-2022-05-13-at-7.22.21-PM.jpeg" alt="ISO 14001 Certificaat" loading="lazy">
@@ -1254,39 +1719,57 @@
                         <h4>Snelle Links</h4>
                         <ul>
                             <li><a href="#services">Diensten</a></li>
-                            <li><a href="#jetski">Jetski</a></li>
+                            <li><a href="#jetski">Jetski Verhuur</a></li>
                             <li><a href="#watersports">Watersporten</a></li>
-                            <li><a href="#boats">Jacht Verhuur</a></li>
+                            <li><a href="#boats">Jachtcharters</a></li>
                             <li><a href="#about">Over Ons</a></li>
-                            <li><a href="../index.html#racing-lessons">Raceles</a></li>
-                            <li><a href="../nl/booking.html">Boeken</a></li>
+                            <li><a href="#racing-lessons">Racelessen</a></li>
+                            <li><a href="../booking.html">Reserveren</a></li>
                         </ul>
                     </div>
                     
                     <div class="footer-links">
                         <h4>Informatie</h4>
                         <ul>
-                            <li><a href="#faq">Veelgestelde Vragen</a></li>
-                            <li><a href="../nl/booking.html">Online Boeken</a></li>
-                            <li><a href="../nl/terms.html#legal-notice">Juridische Kennisgeving</a></li>
-                            <li><a href="../nl/terms.html#terms">Algemene Voorwaarden</a></li>
-                            <li><a href="../nl/terms.html#privacy">Privacybeleid</a></li>
-                            <li><a href="../nl/terms.html#cancellation">Annuleringsbeleid</a></li>
-                            <li><a href="../nl/terms.html#cookies">Cookiebeleid</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                            <li><a href="../booking.html">Online Boeken</a></li>
+                            <li><a href="../terms.html#legal-notice">Juridische Kennisgeving</a></li>
+                            <li><a href="../terms.html#terms">Algemene Voorwaarden</a></li>
+                            <li><a href="../terms.html#privacy">Privacybeleid</a></li>
+                            <li><a href="../terms.html#cancellation">Annuleringsbeleid</a></li>
+                            <li><a href="../weather-policy.html">Weerbeleid</a></li>
+                            <li><a href="../terms.html#cookies">Cookiebeleid</a></li>
                         </ul>
                     </div>
                     
                     <div class="footer-contact">
-                        <h4>Contact</h4>
-                        <div class="footer-contact-item"><i class="fas fa-phone-alt"></i><a href="tel:+34655442232">+34 655 442 232</a></div>
-                        <div class="footer-contact-item"><i class="fab fa-whatsapp"></i><a href="https://api.whatsapp.com/send?phone=34655442232" target="_blank" rel="noopener noreferrer">WhatsApp</a></div>
-                        <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:jetskimarbella@gmail.com">jetskimarbella@gmail.com</a></div>
-                        <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>Playa de las Dunas<br>29604 Marbella, Málaga</span></div>
-                        <div class="footer-contact-item"><i class="fas fa-clock"></i><span>Elke dag: 11u - 20u</span></div>
+                        <h4>Neem Contact Op</h4>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="tel:+34655442232">+34 655 442 232</a>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://api.whatsapp.com/send?phone=34655442232" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:jetskimarbella@gmail.com">jetskimarbella@gmail.com</a>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Playa de las Dunas<br>29604 Marbella, Málaga</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Dagelijks: 11:00 - 20:00</span>
+                        </div>
                         
                         <div class="footer-social">
                             <a href="https://www.facebook.com/jetskimarbella/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                             <a href="https://www.instagram.com/jetskimarbella/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@jetskimarbella" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://www.youtube.com/@marbellajetski" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                             <a href="https://www.tripadvisor.es/Attraction_Review-g187439-d6949698-Reviews-Marbella_Jet_Ski-Marbella_Costa_del_Sol_Province_of_Malaga_Andalucia.html" target="_blank" rel="noopener noreferrer" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
                         </div>
                     </div>
@@ -1294,24 +1777,62 @@
                 
                 <div class="footer-bottom">
                     <p>© 2026 STIERS E HIJOS S.L. (Marbella JetSki). Alle rechten voorbehouden. NIF: B92917178</p>
-                    <p class="credit">Ontworpen met 💙 voor de Zomer 2026</p>
+                    <p class="credit">Ontworpen met 💙 voor Zomer 2026</p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <a href="https://wa.me/34655442232?text=Hallo!%20Ik%20ben%20geïnteresseerd%20in%20watersporten%20in%20Marbella.%20Kunnen%20jullie%20me%20helpen?" 
-       class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat op WhatsApp" id="whatsappFloat">
+    <!-- Boat Detail Modal -->
+    <div class="boat-modal-overlay" id="boatModal" onclick="if(event.target===this)closeBoatModal()">
+        <div class="boat-modal">
+            <button class="boat-modal-close" onclick="closeBoatModal()" aria-label="Sluiten"><i class="fas fa-times"></i></button>
+            <div class="boat-modal-body">
+                <div class="boat-modal-gallery">
+                    <div class="boat-modal-main-img">
+                        <img id="boatModalMainImg" src="" alt="">
+                        <button class="boat-gallery-nav boat-gallery-prev" onclick="changeBoatImage(-1)"><i class="fas fa-chevron-left"></i></button>
+                        <button class="boat-gallery-nav boat-gallery-next" onclick="changeBoatImage(1)"><i class="fas fa-chevron-right"></i></button>
+                        <div class="boat-img-counter" id="boatImgCounter">1 / 8</div>
+                    </div>
+                    <div class="boat-modal-thumbs" id="boatModalThumbs"></div>
+                </div>
+                <div class="boat-modal-info">
+                    <span class="boat-modal-badge" id="boatModalBadge"></span>
+                    <h2 id="boatModalTitle"></h2>
+                    <p class="boat-modal-desc" id="boatModalDesc"></p>
+                    <div class="boat-modal-specs" id="boatModalSpecs"></div>
+                    <div class="boat-modal-included">
+                        <h4><i class="fas fa-check-circle"></i> Wat Is Inbegrepen</h4>
+                        <ul id="boatModalIncluded"></ul>
+                    </div>
+                    <div class="boat-modal-pricing">
+                        <h4><i class="fas fa-tag"></i> Chartertarieven</h4>
+                        <div class="boat-pricing-table" id="boatModalPricing"></div>
+                    </div>
+                    <a id="boatModalBookBtn" href="../booking.html?yacht=rinker" class="btn btn-primary boat-modal-book">
+                        <i class="fas fa-calendar-check"></i> Boek Deze Boot
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/34655442232?text=Hallo!%20Ik%20ben%20geïnteresseerd%20in%20het%20boeken%20van%20een%20watersportervaring%20in%20Marbella.%20Kunnen%20jullie%20me%20helpen?" 
+       class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat via WhatsApp" id="whatsappFloat">
         <i class="fab fa-whatsapp"></i>
-        <span class="whatsapp-tooltip">Stuur ons een bericht!</span>
+        <span class="whatsapp-tooltip">Chat met ons!</span>
     </a>
 
+    <!-- Back to Top Button -->
     <button class="back-to-top" id="backToTop" aria-label="Terug naar boven">
         <i class="fas fa-chevron-up"></i>
     </button>
 
+    <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="../script.js?v=2026020923"></script>
+    <script src="../script.js?v=2026021113"></script>
 </body>
 </html>

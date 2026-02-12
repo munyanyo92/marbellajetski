@@ -1,0 +1,15 @@
+# Large videos exceeding Vercel 100MB file limit
+assets/media/racing/race-start-1.mp4
+assets/media/racing/promo-racing-video.mp4
+assets/media/racing/international-basque-cup.mp4
+assets/media/racing/racing-rallyjet-castellon.mp4
+
+# Dev files
+VIDEOS FOTOS WEB/
+.venv/
+generate_parking_pdf_es.py
+generate_parking_pdf_en.py
+_scrape_images.py
+*.bak
+*.bak.*
+node_modules/
