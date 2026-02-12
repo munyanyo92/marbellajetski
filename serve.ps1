@@ -20,6 +20,9 @@ $mimeTypes = @{
     ".woff2"= "font/woff2"
     ".ttf"  = "font/ttf"
     ".webmanifest" = "application/manifest+json"
+    ".mp4"  = "video/mp4"
+    ".webm" = "video/webm"
+    ".pdf"  = "application/pdf"
 }
 
 $root = $PSScriptRoot
